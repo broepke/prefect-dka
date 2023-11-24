@@ -10,7 +10,7 @@ def refresh_instances():
     """
     ShellOperation(
         commands=[
-            "aws autoscaling start-instance-refresh --auto-scaling-group-name prefect-autoscale-workers"
+            "aws autoscaling start-instance-refresh --auto-scaling-group-name prefect-workers-asg"
         ],
     ).run()
 
