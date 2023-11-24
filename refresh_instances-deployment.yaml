@@ -1,0 +1,51 @@
+###
+### A complete description of a Prefect Deployment for flow 'Refresh EC2 Instances'
+###
+name: refresh-instances-github
+description: Refresh EC2 Instances On a Schedule Set in Prefect
+version: 1d2056a90b9c98b42bcf07c568372688
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Refresh EC2 Instances
+manifest_path: null
+storage:
+  repository: https://github.com/broepke/prefect-dka
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 8148184b-b56d-4de0-bb67-e56dc14209c4
+  _block_document_name: github-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: ec2/ec2_instance_refresh.py:refresh_instances
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-11-24T16:42:07.890112+00:00'
+triggers: []
+enforce_parameter_schema: null

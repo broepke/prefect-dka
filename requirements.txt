@@ -1,0 +1,17 @@
+black
+prefect
+prefect-snowflake
+prefect-shell
+prefect-slack
+prefect-github
+prefect-aws
+asyncpg 
+s3fs
+pandas
+bs4
+tldextract
+pymongo
+python-whois
+fuzzywuzzy
+python-Levenshtein
+snowflake-connector-python[pandas]
