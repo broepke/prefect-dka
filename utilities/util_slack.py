@@ -16,7 +16,7 @@ def slack_notification(df, column_name, source_scraper, emoji):
         String: Completion message for logging
     """
     if len(df) > 0:
-        slack_webhook = SlackWebhook.load("slack-notification")
+        slack_webhook = SlackWebhook.load("slack-notifications")
         new_additions = " \n ".join(["• " + name for name in df[column_name]])
 
         text_only_message = "New Companies Added to Rookies VFX"
