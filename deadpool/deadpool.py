@@ -160,7 +160,7 @@ def dead_pool_status_check():
     access_token = authenticate_to_wikipedia(username=username, password=password)
 
     # Set the person you wish to check status of
-    wiki_page = "Robert_Durst"
+    wiki_page = "Tina_Turner"
     person = wiki_page.replace("_", " ")
     logger.info("Person: %s", person)
 
