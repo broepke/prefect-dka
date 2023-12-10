@@ -7,6 +7,7 @@ from datetime import datetime
 import requests
 from prefect import task, flow, get_run_logger
 from prefect.blocks.system import Secret
+from utilities.util_slack import death_notification
 
 
 @task(name="Authenticate to Wikipedia")
@@ -94,7 +95,6 @@ def find_field_in_json(json_data, field_name):
     return None
 
 
-
 @task(name="Extract Date Time Object from Wiki Date")
 def extract_datetime_object(date_string):
     """Take the format May 24, 2023 and converts to Python
@@ -161,7 +161,8 @@ def dead_pool_status_check():
 
     # Set the person you wish to check status of
     wiki_page = "Robert_Durst"
-    logger.info("Person: %s", wiki_page.replace("_", " "))
+    person = wiki_page.replace("_", " ")
+    logger.info("Person: %s", person)
 
     # Get the Infobox JSON
     infobox = get_infobox(wiki_page, access_token)
@@ -187,6 +188,14 @@ def dead_pool_status_check():
     if death_date:
         logger.info("Death Date (datetime object): %s", death_date)
         logger.info("DEAD: Deadpool Winning Pick!!!")
+
+        death_notification(
+            person=person,
+            birth_date=birth_date,
+            death_date=death_date,
+            age=age,
+            emoji=":skull_and_crossbones:",
+        )
 
     # If they're not dead yet, log that
     if birth_date and not death_date:

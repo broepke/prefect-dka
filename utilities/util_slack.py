@@ -3,6 +3,48 @@ from prefect_slack import SlackWebhook
 from prefect_slack.messages import send_incoming_webhook_message
 
 
+def death_notification(person, birth_date, death_date, age, emoji):
+    """Deadpool Slack notifcation
+
+    Args:
+        person (str): Name of the Person
+        birth_date (str): Birth Date
+        death_date (str): Death Date
+        age (str): Age
+        emoji (str): Slack formatted emjo e.g., :bat:
+
+    Returns:
+        _type_: _description_
+    """
+    slack_webhook = SlackWebhook.load("slack-notifications")
+
+    death_details = (
+        f"• Birth Date: {birth_date} \n• Death Date: {death_date} \n• Age: {age}"
+    )
+
+    text_only_message = f"{person} has died at the age of {age}"
+
+    message_block = [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": emoji + " New Death Alert For: " + person + " " + emoji,
+            },
+        },
+        {"type": "divider"},
+        {"type": "section", "text": {"type": "mrkdwn", "text": death_details}},
+    ]
+
+    result = send_incoming_webhook_message(
+        slack_webhook=slack_webhook,
+        text=text_only_message,
+        slack_blocks=message_block,
+    )
+
+    return result
+
+
 def slack_notification(df, column_name, source_scraper, emoji):
     """General function to post a message to slack using the "Prefect" slack app
 
