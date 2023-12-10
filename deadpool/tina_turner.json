@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Infobox person\n",
+    "type": "infobox",
+    "has_parts": [
+      {
+        "name": "Tina Turner",
+        "type": "section",
+        "has_parts": [
+          {
+            "type": "image",
+            "value": "Turner in 1985",
+            "images": [
+              {
+                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tina_turner_21021985_01_350.jpg/220px-Tina_turner_21021985_01_350.jpg",
+                "alternative_text": "Turner holding a microphone during a performance",
+                "caption": "Turner in 1985",
+                "height": 220,
+                "width": 220
+              }
+            ]
+          },
+          {
+            "name": "Born",
+            "type": "field",
+            "value": "Anna Mae Bullock November 26, 1939 Brownsville, Tennessee, US",
+            "links": [
+              {
+                "url": "Brownsville,_Tennessee",
+                "text": "Brownsville, Tennessee"
+              }
+            ]
+          },
+          {
+            "name": "Died",
+            "type": "field",
+            "value": "May 24, 2023 (aged 83) Küsnacht, Zürich, Switzerland",
+            "links": [{ "url": "Küsnacht", "text": "Küsnacht" }]
+          },
+          {
+            "name": "Other names",
+            "type": "field",
+            "value": "Martha Nell Turner"
+          },
+          {
+            "name": "Citizenship",
+            "type": "list",
+            "values": ["United States (until 2013)", "Switzerland (from 2013)"]
+          },
+          {
+            "name": "Occupations",
+            "type": "field",
+            "value": "Singer songwriter actress author"
+          },
+          { "name": "Years active", "type": "field", "value": "1956–2009" },
+          {
+            "name": "Works",
+            "type": "field",
+            "value": "Full discography",
+            "links": [
+              { "url": "Tina_Turner_discography", "text": "Full discography" }
+            ]
+          },
+          {
+            "name": "Spouses",
+            "type": "list",
+            "values": [
+              "Ike Turner (m. 1962; div. 1978)",
+              "Erwin Bach (m. 2013)"
+            ],
+            "links": [{ "url": "Ike_Turner", "text": "Ike Turner" }]
+          },
+          {
+            "name": "Children",
+            "type": "field",
+            "value": "4",
+            "links": [{ "url": "Tina_Turner#cite_note-Tina_Turner:_Singer-1" }]
+          },
+          {
+            "name": "Relatives",
+            "type": "list",
+            "values": [
+              "Alline Bullock (sister)",
+              "Afida Turner (daughter-in-law)",
+              "Eugene Bridges (first cousin once removed)"
+            ],
+            "links": [
+              { "url": "Alline_Bullock", "text": "Alline Bullock" },
+              { "url": "Afida_Turner", "text": "Afida Turner" },
+              { "url": "Eugene_Bridges", "text": "Eugene Bridges" }
+            ]
+          },
+          {
+            "name": "Awards",
+            "type": "field",
+            "value": "Full list",
+            "links": [
+              {
+                "url": "List_of_awards_and_nominations_received_by_Tina_Turner",
+                "text": "Full list"
+              }
+            ]
+          },
+          { "type": "field", "value": "Musical career" },
+          {
+            "name": "Genres",
+            "type": "field",
+            "value": "Rock R&B soul pop rock and roll",
+            "links": [
+              { "url": "Rock_music", "text": "Rock" },
+              { "url": "Contemporary_R&B", "text": "R&B" },
+              { "url": "Soul_music", "text": "soul" },
+              { "url": "Pop_music", "text": "pop" },
+              { "url": "Rock_and_roll", "text": "rock and roll" },
+              { "url": "Tina_Turner#cite_note-2" },
+              { "url": "Tina_Turner#cite_note-3" }
+            ]
+          },
+          { "name": "Instrument(s)", "type": "field", "value": "Vocals" },
+          {
+            "name": "Labels",
+            "type": "field",
+            "value": "Sonja Pompeii United Artists Capitol Parlophone Virgin",
+            "links": [
+              { "url": "Sonja_Records", "text": "Sonja" },
+              { "url": "Pompeii_Records", "text": "Pompeii" },
+              { "url": "United_Artists_Records", "text": "United Artists" },
+              { "url": "Capitol_Records", "text": "Capitol" },
+              { "url": "Parlophone", "text": "Parlophone" },
+              { "url": "Virgin_Records", "text": "Virgin" }
+            ]
+          },
+          {
+            "name": "Formerly of",
+            "type": "field",
+            "value": "Ike & Tina Turner",
+            "links": [
+              { "url": "Ike_&_Tina_Turner", "text": "Ike & Tina Turner" }
+            ]
+          },
+          {
+            "name": "Website",
+            "type": "field",
+            "value": "tinaturnerofficial .com",
+            "links": [
+              {
+                "url": "http://tinaturnerofficial.com",
+                "text": "tinaturnerofficial .com"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Signature",
+        "type": "section",
+        "has_parts": [
+          {
+            "type": "image",
+            "images": [
+              {
+                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Tina_Turner_signature.svg/150px-Tina_Turner_signature.svg.png",
+                "height": 150,
+                "width": 150
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
