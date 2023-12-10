@@ -1,20 +1,29 @@
 """
 Script to look up a person's birth and death on Wikipedia
 """
-import requests
 import re
 import json
 from datetime import datetime
+import requests
 from prefect import task, flow, get_run_logger
 from prefect.blocks.system import Secret
 
 
 @task(name="Authenticate to Wikipedia")
 def authenticate_to_wikipedia(username, password):
+    """Login to Enterprise Wikimedia Account
+
+    Args:
+        username (str): Wiki enterprise username
+        password (str): Wiki enterprise password
+
+    Returns:
+        str: Access Tonken for Session
+    """
     url = "https://auth.enterprise.wikimedia.com/v1/login"
     payload = {"username": username, "password": password}
 
-    response = requests.post(url, json=payload)
+    response = requests.post(url, json=payload, timeout=5)
     response_json = json.loads(response.text)
 
     access_token = response_json["access_token"]
@@ -45,7 +54,7 @@ def get_infobox(person, access_token):
         "limit": 1,
     }
 
-    response = requests.post(url, json=data, headers=headers)
+    response = requests.post(url, json=data, headers=headers, timeout=5)
 
     infobox_all = json.loads(response.text)
     infobox = infobox_all[0]["infobox"]
@@ -83,6 +92,29 @@ def find_field_in_json(json_data, field_name):
     return None
 
 
+@task(name="Extract Date Time Object from Wiki Date")
+def extract_datetime_object(date_string):
+    """Take the format May 24, 2023 and converts to Python
+       datetime object
+
+    Args:
+        date_string (str): date to be converted
+
+    Returns:
+        datetime: Python datetime object
+    """
+    # Regular expression pattern for dates (assuming format "Month Day, Year")
+    date_pattern = r"(\bJanuary|\bFebruary|\bMarch|\bApril|\bMay|\bJune \
+        |\bJuly|\bAugust|\bSeptember|\bOctober|\bNovember|\bDecember) \d{1,2}, \d{4}"
+
+    # Start with birth dates
+    extracted_date = re.search(date_pattern, date_string)
+    date_str = extracted_date.group(0) if extracted_date else None
+    date = datetime.strptime(date_str, "%B %d, %Y")
+
+    return date
+
+
 @task(name="Calculate Age")
 def get_age(birth_date, death_date):
     """Get the age of the person based on two datetime objects
@@ -111,6 +143,7 @@ def get_age(birth_date, death_date):
 
 @flow(name="Verify Deadpool Alive or Dead and Age")
 def dead_pool_status_check():
+    """Main Flow Logic"""
     logger = get_run_logger()
 
     # Get the credetials from Prefect
@@ -124,11 +157,11 @@ def dead_pool_status_check():
     access_token = authenticate_to_wikipedia(username=username, password=password)
 
     # Set the person you wish to check status of
-    WIKI_PAGE = "Robert_Durst"
-    logger.info("Person: %s", WIKI_PAGE.replace("_", " "))
+    wiki_page = "Robert_Durst"
+    logger.info("Person: %s", wiki_page.replace("_", " "))
 
     # Get the Infobox JSON
-    infobox = get_infobox(WIKI_PAGE, access_token)
+    infobox = get_infobox(wiki_page, access_token)
 
     # Initialize variables to hold birth and death dates
     birth_date = None
@@ -138,26 +171,19 @@ def dead_pool_status_check():
     birth_date = find_field_in_json(infobox, "Born")
     death_date = find_field_in_json(infobox, "Died")
 
-    # Regular expression pattern for dates (assuming format "Month Day, Year")
-    date_pattern = r"(\bJanuary|\bFebruary|\bMarch|\bApril|\bMay|\bJune|\bJuly|\bAugust|\bSeptember|\bOctober|\bNovember|\bDecember) \d{1,2}, \d{4}"
+    birth_date = extract_datetime_object(birth_date)
+    death_date = extract_datetime_object(death_date)
 
-    # Start with birth dates
-    extracted_birth_date = re.search(date_pattern, birth_date)
-    birth_date_str = extracted_birth_date.group(0) if extracted_birth_date else None
-    birth_date = datetime.strptime(birth_date_str, "%B %d, %Y")
     logger.info("Birth Date (datetime object): %s", birth_date)
-
-    # Now conditionally do death dates
-    if death_date:
-        extracted_death_date = re.search(date_pattern, death_date)
-        death_date_str = extracted_death_date.group(0) if extracted_death_date else None
-        death_date = datetime.strptime(death_date_str, "%B %d, %Y")
-        logger.info("Death Date (datetime object): %s", death_date)
-        logger.info("DEAD: Deadpool Winning Pick!!!")
 
     # Calculate the person's age
     age = get_age(birth_date, death_date)
     logger.info("Age: %s", age)
+
+    # Now conditionally do death dates
+    if death_date:
+        logger.info("Death Date (datetime object): %s", death_date)
+        logger.info("DEAD: Deadpool Winning Pick!!!")
 
     # If they're not dead yet, log that
     if birth_date and not death_date:

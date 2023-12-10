@@ -1,4 +1,5 @@
 black
+pylint
 prefect
 prefect-snowflake
 prefect-shell
