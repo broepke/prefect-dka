@@ -76,20 +76,23 @@ def find_field_in_json(json_data, field_name):
         for key, value in json_data.items():
             if key == field_name:
                 return value
-            elif isinstance(value, (dict, list)):
+            if isinstance(value, (dict, list)):
                 result = find_field_in_json(value, field_name)
                 if result is not None:
                     return result
-    elif isinstance(json_data, list):
+
+    if isinstance(json_data, list):
         for item in json_data:
             if isinstance(item, dict):
                 if item.get("name") == field_name and item.get("type") == "field":
                     return item.get("value")
-                elif "has_parts" in item:
+                if "has_parts" in item:
                     result = find_field_in_json(item["has_parts"], field_name)
                     if result is not None:
                         return result
+
     return None
+
 
 
 @task(name="Extract Date Time Object from Wiki Date")
