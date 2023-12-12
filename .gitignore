@@ -153,3 +153,5 @@ cython_debug/
 
 # Prefect
 *.yaml
+credentials.toml
+secrets.toml
