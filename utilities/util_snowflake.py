@@ -26,6 +26,20 @@ def create_table(connection, database_name, schema_name, table_name, DDL):
     with connection.cursor() as cursor:
         cursor.execute(statement)
 
+def update_rows(
+    connection,
+    database_name,
+    schema_name,
+    table_name,
+    set_string,
+    conditionals=None
+):
+    statement = f"UPDATE {database_name}.{schema_name}.{table_name} {set_string} {conditionals};"
+    with connection.cursor() as cursor:
+        cursor.execute(statement)
+    
+    return
+
 
 @task(name="Query Snowflake and Return Exsisting Values")
 def get_existing_values(

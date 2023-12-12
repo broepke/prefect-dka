@@ -2,6 +2,43 @@
 from prefect_slack import SlackWebhook
 from prefect_slack.messages import send_incoming_webhook_message
 
+def bad_wiki_page(person,wiki_page, emoji):
+    """Deadpool Slack notifcation
+
+    Args:
+        person (str): Name of the Person
+        emoji (str): Slack formatted emjo e.g., :bat:
+
+    Returns:
+        _type_: _description_
+    """
+    slack_webhook = SlackWebhook.load("slack-notifications")
+
+    death_details = (
+        f"• Person: {person} \n• Wiki Page: {wiki_page}"
+    )
+
+    text_only_message = f"{person} has a bad Wiki page identifier"
+
+    message_block = [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": emoji + " Bad Wiki Page Alert for: " + person + " " + emoji,
+            },
+        },
+        {"type": "divider"},
+        {"type": "section", "text": {"type": "mrkdwn", "text": death_details}},
+    ]
+
+    result = send_incoming_webhook_message(
+        slack_webhook=slack_webhook,
+        text=text_only_message,
+        slack_blocks=message_block,
+    )
+
+    return result
 
 def death_notification(person, birth_date, death_date, age, emoji):
     """Deadpool Slack notifcation

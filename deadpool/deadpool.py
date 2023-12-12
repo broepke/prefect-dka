@@ -3,11 +3,16 @@ Script to look up a person's birth and death on Wikipedia
 """
 import re
 import json
+import pandas as pd
 from datetime import datetime
 import requests
 from prefect import task, flow, get_run_logger
 from prefect.blocks.system import Secret
 from utilities.util_slack import death_notification
+from utilities.util_slack import bad_wiki_page
+from utilities.util_snowflake import get_existing_values
+from utilities.util_snowflake import update_rows
+from utilities.util_snowflake import get_snowflake_connection
 
 
 @task(name="Authenticate to Wikipedia")
@@ -58,16 +63,11 @@ def get_infobox(person, access_token):
     response = requests.post(url, json=data, headers=headers, timeout=5)
 
     infobox_all = json.loads(response.text)
-    infobox = infobox_all[0]["infobox"]
-
-    # Specify the file path and name
-    file_path = person + ".json"
-
-    # Writing the JSON data to a file
-    with open(file_path, "w") as file:
-        json.dump(infobox, file, indent=4)
-
-    return infobox
+    try:
+        infobox = infobox_all[0]["infobox"]
+        return infobox
+    except:
+        return None
 
 
 def find_field_in_json(json_data, field_name):
@@ -160,55 +160,99 @@ def dead_pool_status_check():
     # Get the credetials from Prefect
     wiki_user_block = Secret.load("wiki-user")
     wiki_pass_block = Secret.load("wiki-pass")
-
     username = wiki_user_block.get()
     password = wiki_pass_block.get()
 
     # Login and Get the Access Token
     access_token = authenticate_to_wikipedia(username=username, password=password)
 
-    # Set the person you wish to check status of
-    wiki_page = "George_W._Bush"
-    person = wiki_page.replace("_", " ")
-    logger.info("Person: %s", person)
+    connection = get_snowflake_connection("snowflake-dka")
 
-    # Get the Infobox JSON
-    infobox = get_infobox(wiki_page, access_token)
+    # Get the full list of people to check
+    names_to_check = get_existing_values(
+        connection,
+        database_name="DEADPOOL",
+        schema_name="ONE",
+        table_name="PICKS",
+        column_name="NAME, WIKI_PAGE",
+        conditionals="WHERE DEATH_DATE IS NULL",
+        return_list=False,
+    )
 
-    # Initialize variables to hold birth and death dates
-    birth_date = None
-    death_date = None
+    # Iterate over the list of links to update and build the final DF
+    for index, row in names_to_check.iterrows():
+        name = row["NAME"]
+        wiki_page = row["WIKI_PAGE"]
 
-    # Get bith and death dates
-    birth_date = find_field_in_json(infobox, "Born")
-    death_date = find_field_in_json(infobox, "Died")
+        # Set the person you wish to check status of
+        person = wiki_page.replace("_", " ")
+        logger.info("Person: %s", person)
 
-    birth_date = extract_datetime_object(birth_date)
-    logger.info("Birth Date (datetime object): %s", birth_date)
+        # Get the Infobox JSON
+        infobox = get_infobox(wiki_page, access_token)
+        if infobox != None:
+            # Initialize variables to hold birth and death dates
+            birth_date = None
+            death_date = None
 
-    if death_date:
-        death_date = extract_datetime_object(death_date)
+            # Get bith and death dates
+            birth_date = find_field_in_json(infobox, "Born")
+            death_date = find_field_in_json(infobox, "Died")
 
-    # Calculate the person's age
-    age = get_age(birth_date, death_date)
-    logger.info("Age: %s", age)
+            birth_date = extract_datetime_object(birth_date)
+            logger.info("Birth Date (datetime object): %s", birth_date)
 
-    # Now conditionally do death dates
-    if death_date:
-        logger.info("Death Date (datetime object): %s", death_date)
-        logger.info("DEAD: Deadpool Winning Pick!!!")
+            if death_date:
+                death_date = extract_datetime_object(death_date)
 
-        death_notification(
-            person=person,
-            birth_date=birth_date,
-            death_date=death_date,
-            age=age,
-            emoji=":skull_and_crossbones:",
-        )
+            # Calculate the person's age
+            age = get_age(birth_date, death_date)
+            logger.info("Age: %s", age)
 
-    # If they're not dead yet, log that
-    if birth_date and not death_date:
-        logger.info("ALIVE: Better Luck Next Time!")
+            # Now conditionally do death dates
+            if death_date:
+                logger.info("Death Date (datetime object): %s", death_date)
+                logger.info("DEAD: Deadpool Winning Pick!!!")
+                
+                set_string = f"""SET birth_date = '{birth_date}', death_date = '{death_date}', age = {age}"""
+                conditionals = f"""WHERE name = '{name}'
+                """
+                update_rows(
+                    connection=connection,
+                    database_name="DEADPOOL",
+                    schema_name="ONE",
+                    table_name="PICKS",
+                    set_string=set_string,
+                    conditionals=conditionals,
+                )
+
+                death_notification(
+                    person=person,
+                    birth_date=birth_date,
+                    death_date=death_date,
+                    age=age,
+                    emoji=":skull_and_crossbones:",
+                )
+
+            # If they're not dead yet, log that
+            if birth_date and not death_date:
+                logger.info("ALIVE: Better Luck Next Time!")
+
+                set_string = f"""SET birth_date = '{birth_date}', age = {age}"""
+                conditionals = f"""WHERE name = '{name}'
+                """
+                update_rows(
+                    connection=connection,
+                    database_name="DEADPOOL",
+                    schema_name="ONE",
+                    table_name="PICKS",
+                    set_string=set_string,
+                    conditionals=conditionals,
+                )
+
+        else:
+            bad_wiki_page(person, wiki_page, ":memo:")
+            logger.info("No valid wiki page for %s", person)
 
 
 if __name__ == "__main__":
