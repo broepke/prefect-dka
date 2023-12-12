@@ -1,0 +1,571 @@
+[
+    {
+        "name": "Infobox officeholder\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "George H. W. Bush",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "Official portrait, 1989",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/George_H._W._Bush_presidential_portrait_%28cropped%29.jpg/220px-George_H._W._Bush_presidential_portrait_%28cropped%29.jpg",
+                                "alternative_text": "Bush's presidential portrait, 1989",
+                                "caption": "Official portrait, 1989",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "41st President of the United States",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 20, 1989 \u2013 January 20, 1993"
+                    },
+                    {
+                        "name": "Vice President",
+                        "type": "field",
+                        "value": "Dan Quayle",
+                        "links": [
+                            {
+                                "url": "Vice_President_of_the_United_States",
+                                "text": "Vice President"
+                            },
+                            {
+                                "url": "Dan_Quayle",
+                                "text": "Dan Quayle"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Ronald Reagan",
+                        "links": [
+                            {
+                                "url": "Ronald_Reagan",
+                                "text": "Ronald Reagan"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Bill Clinton",
+                        "links": [
+                            {
+                                "url": "Bill_Clinton",
+                                "text": "Bill Clinton"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "43rd Vice President of the United States",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 20, 1981 \u2013 January 20, 1989"
+                    },
+                    {
+                        "name": "President",
+                        "type": "field",
+                        "value": "Ronald Reagan"
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Walter Mondale",
+                        "links": [
+                            {
+                                "url": "Walter_Mondale",
+                                "text": "Walter Mondale"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Dan Quayle"
+                    }
+                ]
+            },
+            {
+                "name": "11th Director of Central Intelligence",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 30, 1976 \u2013 January 20, 1977"
+                    },
+                    {
+                        "name": "President",
+                        "type": "field",
+                        "value": "Gerald Ford",
+                        "links": [
+                            {
+                                "url": "Gerald_Ford",
+                                "text": "Gerald Ford"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Deputy",
+                        "type": "list",
+                        "values": [
+                            "Vernon A. Walters",
+                            "E. Henry Knoche"
+                        ],
+                        "links": [
+                            {
+                                "url": "Deputy_Director_of_Central_Intelligence",
+                                "text": "Deputy"
+                            },
+                            {
+                                "url": "Vernon_A._Walters",
+                                "text": "Vernon A. Walters"
+                            },
+                            {
+                                "url": "E._Henry_Knoche",
+                                "text": "E. Henry Knoche"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "William Colby",
+                        "links": [
+                            {
+                                "url": "William_Colby",
+                                "text": "William Colby"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Stansfield Turner",
+                        "links": [
+                            {
+                                "url": "Stansfield_Turner",
+                                "text": "Stansfield Turner"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "2nd Chief of the U.S. Liaison Office to the People's Republic of China",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office September 26, 1974 \u2013 December 7, 1975"
+                    },
+                    {
+                        "name": "President",
+                        "type": "field",
+                        "value": "Gerald Ford"
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "David K. E. Bruce",
+                        "links": [
+                            {
+                                "url": "David_K._E._Bruce",
+                                "text": "David K. E. Bruce"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Thomas S. Gates Jr.",
+                        "links": [
+                            {
+                                "url": "Thomas_S._Gates_Jr.",
+                                "text": "Thomas S. Gates Jr."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Chair of the Republican National Committee",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 19, 1973 \u2013 September 16, 1974"
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Bob Dole",
+                        "links": [
+                            {
+                                "url": "Bob_Dole",
+                                "text": "Bob Dole"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Mary Smith",
+                        "links": [
+                            {
+                                "url": "Mary_Louise_Smith_(politician)",
+                                "text": "Mary Smith"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "10th United States Ambassador to the United Nations",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office March 1, 1971 \u2013 January 18, 1973"
+                    },
+                    {
+                        "name": "President",
+                        "type": "field",
+                        "value": "Richard Nixon",
+                        "links": [
+                            {
+                                "url": "Richard_Nixon",
+                                "text": "Richard Nixon"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Charles Yost",
+                        "links": [
+                            {
+                                "url": "Charles_Yost",
+                                "text": "Charles Yost"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "John A. Scali",
+                        "links": [
+                            {
+                                "url": "John_A._Scali",
+                                "text": "John A. Scali"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Member of the U.S. House of Representatives from Texas 's 7th district",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 3, 1967 \u2013 January 3, 1971"
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "John Dowdy",
+                        "links": [
+                            {
+                                "url": "John_Dowdy",
+                                "text": "John Dowdy"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Bill Archer",
+                        "links": [
+                            {
+                                "url": "Bill_Archer",
+                                "text": "Bill Archer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Personal details",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Born",
+                        "type": "field",
+                        "value": "George Herbert Walker Bush June 12, 1924 Milton, Massachusetts, U.S.",
+                        "links": [
+                            {
+                                "url": "Milton,_Massachusetts",
+                                "text": "Milton, Massachusetts"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Died",
+                        "type": "field",
+                        "value": "November 30, 2018 (aged 94) Houston, Texas, U.S.",
+                        "links": [
+                            {
+                                "url": "Houston",
+                                "text": "Houston"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Resting place",
+                        "type": "field",
+                        "value": "George H.W. Bush Presidential Library and Museum",
+                        "links": [
+                            {
+                                "url": "George_H.W._Bush_Presidential_Library_and_Museum",
+                                "text": "George H.W. Bush Presidential Library and Museum"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Political party",
+                        "type": "field",
+                        "value": "Republican",
+                        "links": [
+                            {
+                                "url": "Republican_Party_(United_States)",
+                                "text": "Republican"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Spouse",
+                        "type": "field",
+                        "value": "Barbara Pierce (m. 1945; died 2018)",
+                        "links": [
+                            {
+                                "url": "Barbara_Bush",
+                                "text": "Barbara Pierce"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Children",
+                        "type": "field",
+                        "value": "George Robin Jeb Neil Marvin Dorothy",
+                        "links": [
+                            {
+                                "url": "George_W._Bush",
+                                "text": "George"
+                            },
+                            {
+                                "url": "Pauline_Robinson_Bush",
+                                "text": "Robin"
+                            },
+                            {
+                                "url": "Jeb_Bush",
+                                "text": "Jeb"
+                            },
+                            {
+                                "url": "Neil_Bush",
+                                "text": "Neil"
+                            },
+                            {
+                                "url": "Marvin_Bush",
+                                "text": "Marvin"
+                            },
+                            {
+                                "url": "Dorothy_Bush_Koch",
+                                "text": "Dorothy"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Parent",
+                        "type": "list",
+                        "values": [
+                            "Prescott Bush (father)"
+                        ],
+                        "links": [
+                            {
+                                "url": "Prescott_Bush",
+                                "text": "Prescott Bush"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Relatives",
+                        "type": "field",
+                        "value": "Bush family",
+                        "links": [
+                            {
+                                "url": "Bush_family",
+                                "text": "Bush family"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Education",
+                        "type": "field",
+                        "value": "Yale University (BA)",
+                        "links": [
+                            {
+                                "url": "Yale_University",
+                                "text": "Yale University"
+                            },
+                            {
+                                "url": "Bachelor_of_Arts",
+                                "text": "BA"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Occupation",
+                        "type": "field",
+                        "value": "Businessman diplomat politician"
+                    },
+                    {
+                        "name": "Civilian awards",
+                        "type": "field",
+                        "value": "Full list",
+                        "links": [
+                            {
+                                "url": "List_of_awards_and_honors_received_by_George_H._W._Bush",
+                                "text": "Full list"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Signature",
+                        "type": "field",
+                        "value": "Signature",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/George_HW_Bush_Signature.svg/128px-George_HW_Bush_Signature.svg.png",
+                                "alternative_text": "Cursive signature in ink",
+                                "height": 128,
+                                "width": 128
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Website",
+                        "type": "field",
+                        "value": "Presidential Library",
+                        "links": [
+                            {
+                                "url": "http://bushlibrary.tamu.edu",
+                                "text": "Presidential Library"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nickname",
+                        "type": "field",
+                        "value": "\"Skin\""
+                    }
+                ]
+            },
+            {
+                "name": "Military service",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Branch/service",
+                        "type": "field",
+                        "value": "United States Navy",
+                        "links": [
+                            {
+                                "url": "United_States_Navy",
+                                "text": "United States Navy"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Years of service",
+                        "type": "field",
+                        "value": "1942\u20131955 (reserve, active service 1942 \u2013 1945)"
+                    },
+                    {
+                        "name": "Rank",
+                        "type": "field",
+                        "value": "Lieutenant",
+                        "links": [
+                            {
+                                "url": "Lieutenant_(navy)",
+                                "text": "Lieutenant"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Unit",
+                        "type": "field",
+                        "value": "Fast Carrier Task Force",
+                        "links": [
+                            {
+                                "url": "Fast_Carrier_Task_Force",
+                                "text": "Fast Carrier Task Force"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Battles/wars",
+                        "type": "field",
+                        "value": "World War IIPacific War",
+                        "links": [
+                            {
+                                "url": "Pacific_War",
+                                "text": "Pacific War"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Military awards",
+                        "type": "list",
+                        "values": [
+                            "Distinguished Flying Cross (DFC)",
+                            "Air Medal (3)",
+                            "Presidential Unit Citation"
+                        ],
+                        "links": [
+                            {
+                                "url": "Distinguished_Flying_Cross_(United_States)",
+                                "text": "Distinguished Flying Cross"
+                            },
+                            {
+                                "url": "Air_Medal",
+                                "text": "Air Medal"
+                            },
+                            {
+                                "url": "George_H._W._Bush#cite_note-1"
+                            },
+                            {
+                                "url": "Presidential_Unit_Citation_(United_States)",
+                                "text": "Presidential Unit Citation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,421 @@
+[
+    {
+        "name": "Infobox officeholder\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "George W. Bush",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "Official portrait, 2003",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/220px-George-W-Bush.jpeg",
+                                "alternative_text": "Bush's official presidential portrait, 2003",
+                                "caption": "Official portrait, 2003",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "43rd President of the United States",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 20, 2001 \u2013 January 20, 2009"
+                    },
+                    {
+                        "name": "Vice President",
+                        "type": "field",
+                        "value": "Dick Cheney",
+                        "links": [
+                            {
+                                "url": "Vice_President_of_the_United_States",
+                                "text": "Vice President"
+                            },
+                            {
+                                "url": "Dick_Cheney",
+                                "text": "Dick Cheney"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Bill Clinton",
+                        "links": [
+                            {
+                                "url": "Bill_Clinton",
+                                "text": "Bill Clinton"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Barack Obama",
+                        "links": [
+                            {
+                                "url": "Barack_Obama",
+                                "text": "Barack Obama"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "46th Governor of Texas",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "In office January 17, 1995 \u2013 December 21, 2000"
+                    },
+                    {
+                        "name": "Lieutenant",
+                        "type": "list",
+                        "values": [
+                            "Bob Bullock",
+                            "Rick Perry"
+                        ],
+                        "links": [
+                            {
+                                "url": "Bob_Bullock",
+                                "text": "Bob Bullock"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Preceded by",
+                        "type": "field",
+                        "value": "Ann Richards",
+                        "links": [
+                            {
+                                "url": "Ann_Richards",
+                                "text": "Ann Richards"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Succeeded by",
+                        "type": "field",
+                        "value": "Rick Perry",
+                        "links": [
+                            {
+                                "url": "Rick_Perry",
+                                "text": "Rick Perry"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Personal details",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Born",
+                        "type": "field",
+                        "value": "George Walker Bush July 6, 1946 New Haven, Connecticut, U.S.",
+                        "links": [
+                            {
+                                "url": "New_Haven,_Connecticut",
+                                "text": "New Haven, Connecticut"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Political party",
+                        "type": "field",
+                        "value": "Republican",
+                        "links": [
+                            {
+                                "url": "Republican_Party_(United_States)",
+                                "text": "Republican"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Spouse",
+                        "type": "field",
+                        "value": "Laura Welch (m. 1977)",
+                        "links": [
+                            {
+                                "url": "Laura_Bush",
+                                "text": "Laura Welch"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Children",
+                        "type": "field",
+                        "value": "Barbara Jenna",
+                        "links": [
+                            {
+                                "url": "Barbara_Bush_(born_1981)",
+                                "text": "Barbara"
+                            },
+                            {
+                                "url": "Jenna_Bush_Hager",
+                                "text": "Jenna"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Parents",
+                        "type": "list",
+                        "values": [
+                            "George H. W. Bush",
+                            "Barbara Pierce"
+                        ],
+                        "links": [
+                            {
+                                "url": "George_H._W._Bush",
+                                "text": "George H. W. Bush"
+                            },
+                            {
+                                "url": "Barbara_Bush",
+                                "text": "Barbara Pierce"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Relatives",
+                        "type": "field",
+                        "value": "Bush family",
+                        "links": [
+                            {
+                                "url": "Bush_family",
+                                "text": "Bush family"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Residence(s)",
+                        "type": "field",
+                        "value": "Prairie Chapel Ranch, Crawford, Texas, U.S.",
+                        "links": [
+                            {
+                                "url": "Prairie_Chapel_Ranch",
+                                "text": "Prairie Chapel Ranch"
+                            },
+                            {
+                                "url": "Crawford,_Texas",
+                                "text": "Crawford, Texas"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Alma mater",
+                        "type": "list",
+                        "values": [
+                            "Yale University (BA)",
+                            "Harvard University (MBA)"
+                        ],
+                        "links": [
+                            {
+                                "url": "Alma_mater",
+                                "text": "Alma mater"
+                            },
+                            {
+                                "url": "Yale_University",
+                                "text": "Yale University"
+                            },
+                            {
+                                "url": "Bachelor_of_Arts",
+                                "text": "BA"
+                            },
+                            {
+                                "url": "Harvard_Business_School",
+                                "text": "Harvard University"
+                            },
+                            {
+                                "url": "Master_of_Business_Administration",
+                                "text": "MBA"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Occupation",
+                        "type": "field",
+                        "value": "Politician businessman"
+                    },
+                    {
+                        "name": "Civilian awards",
+                        "type": "field",
+                        "value": "List of awards and honors",
+                        "links": [
+                            {
+                                "url": "List_of_awards_and_honors_received_by_George_W._Bush",
+                                "text": "List of awards and honors"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Signature",
+                        "type": "field",
+                        "value": "Signature",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/GeorgeWBush_Signature.svg/128px-GeorgeWBush_Signature.svg.png",
+                                "alternative_text": "Cursive signature in ink",
+                                "height": 128,
+                                "width": 128
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Website",
+                        "type": "list",
+                        "values": [
+                            "Official website",
+                            "Presidential Library",
+                            "Presidential Center",
+                            "White House Archives"
+                        ],
+                        "links": [
+                            {
+                                "url": "http://georgewbush.com",
+                                "text": "Official website"
+                            },
+                            {
+                                "url": "http://georgewbushlibrary.smu.edu",
+                                "text": "Presidential Library"
+                            },
+                            {
+                                "url": "http://bushcenter.org",
+                                "text": "Presidential Center"
+                            },
+                            {
+                                "url": "http://georgewbush-whitehouse.archives.gov/index.html",
+                                "text": "White House Archives"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nickname",
+                        "type": "field",
+                        "value": "Dubya"
+                    }
+                ]
+            },
+            {
+                "name": "Military service",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Allegiance",
+                        "type": "field",
+                        "value": "United States",
+                        "links": [
+                            {
+                                "url": "United_States",
+                                "text": "United States"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Branch/service",
+                        "type": "field",
+                        "value": "United States Air Force Texas Air National Guard Alabama Air National Guard",
+                        "links": [
+                            {
+                                "url": "United_States_Air_Force",
+                                "text": "United States Air Force"
+                            },
+                            {
+                                "url": "Texas_Air_National_Guard",
+                                "text": "Texas Air National Guard"
+                            },
+                            {
+                                "url": "Alabama_Air_National_Guard",
+                                "text": "Alabama Air National Guard"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Years of service",
+                        "type": "field",
+                        "value": "1968\u20131974"
+                    },
+                    {
+                        "name": "Rank",
+                        "type": "field",
+                        "value": "First Lieutenant",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/US-O2_insignia.svg/10px-US-O2_insignia.svg.png",
+                                "height": 10,
+                                "width": 10
+                            }
+                        ],
+                        "links": [
+                            {
+                                "url": "First_Lieutenant_(United_States)",
+                                "text": "First Lieutenant"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Unit",
+                        "type": "list",
+                        "values": [
+                            "147th Reconnaissance Wing",
+                            "187th Fighter Wing"
+                        ],
+                        "links": [
+                            {
+                                "url": "147th_Reconnaissance_Wing",
+                                "text": "147th Reconnaissance Wing"
+                            },
+                            {
+                                "url": "187th_Fighter_Wing",
+                                "text": "187th Fighter Wing"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Battles/wars",
+                        "type": "field",
+                        "value": "Cold War",
+                        "links": [
+                            {
+                                "url": "Cold_War",
+                                "text": "Cold War"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Military awards",
+                        "type": "list",
+                        "values": [
+                            "Air Force Pilot's Badge",
+                            "Outstanding Unit Award",
+                            "National Defense Service Medal"
+                        ],
+                        "links": [
+                            {
+                                "url": "United_States_Aviator_Badge",
+                                "text": "Air Force Pilot's Badge"
+                            },
+                            {
+                                "url": "Air_Force_Outstanding_Unit_Award",
+                                "text": "Outstanding Unit Award"
+                            },
+                            {
+                                "url": "National_Defense_Service_Medal",
+                                "text": "National Defense Service Medal"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

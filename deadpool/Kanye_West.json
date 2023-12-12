@@ -1,0 +1,272 @@
+[
+    {
+        "name": "Infobox person\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "Kanye West",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "West in April 2009",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg/220px-Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
+                                "caption": "West in April 2009",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Born",
+                        "type": "field",
+                        "value": "Kanye Omari West June 8, 1977 Atlanta, Georgia, U.S.",
+                        "links": [
+                            {
+                                "url": "Atlanta",
+                                "text": "Atlanta"
+                            },
+                            {
+                                "url": "Georgia_(U.S._state)",
+                                "text": "Georgia"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Other names",
+                        "type": "field",
+                        "value": "Ye Yeezus Saint Pablo Yeezy Louis Vuitton Don",
+                        "links": [
+                            {
+                                "url": "Kanye_West#cite_note-name-1"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Occupations",
+                        "type": "field",
+                        "value": "Rapper singer songwriter record producer fashion designer"
+                    },
+                    {
+                        "name": "Years active",
+                        "type": "field",
+                        "value": "1996\u2013present"
+                    },
+                    {
+                        "name": "Organization",
+                        "type": "field",
+                        "value": "Donda",
+                        "links": [
+                            {
+                                "url": "Donda_(company)",
+                                "text": "Donda"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Spouse",
+                        "type": "field",
+                        "value": "Kim Kardashian (m. 2014; div. 2022)",
+                        "links": [
+                            {
+                                "url": "Kim_Kardashian",
+                                "text": "Kim Kardashian"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Children",
+                        "type": "field",
+                        "value": "4"
+                    },
+                    {
+                        "name": "Parent",
+                        "type": "list",
+                        "values": [
+                            "Donda West (mother)"
+                        ],
+                        "links": [
+                            {
+                                "url": "Donda_West",
+                                "text": "Donda West"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Relatives",
+                        "type": "list",
+                        "values": [
+                            "Devo Harris (cousin)",
+                            "Tony Williams (cousin)"
+                        ],
+                        "links": [
+                            {
+                                "url": "Devo_Harris",
+                                "text": "Devo Harris"
+                            },
+                            {
+                                "url": "The_WRLDFMS_Tony_Williams",
+                                "text": "Tony Williams"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Awards",
+                        "type": "field",
+                        "value": "Full list",
+                        "links": [
+                            {
+                                "url": "List_of_awards_and_nominations_received_by_Kanye_West",
+                                "text": "Full list"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Musical career"
+                    },
+                    {
+                        "name": "Origin",
+                        "type": "field",
+                        "value": "Chicago, Illinois, U.S.",
+                        "links": [
+                            {
+                                "url": "Chicago",
+                                "text": "Chicago"
+                            },
+                            {
+                                "url": "Illinois",
+                                "text": "Illinois"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Genres",
+                        "type": "field",
+                        "value": "Hip hop progressive rap pop art pop gospel",
+                        "links": [
+                            {
+                                "url": "Hip_hop_music",
+                                "text": "Hip hop"
+                            },
+                            {
+                                "url": "Progressive_rap",
+                                "text": "progressive rap"
+                            },
+                            {
+                                "url": "Pop_music",
+                                "text": "pop"
+                            },
+                            {
+                                "url": "Art_pop",
+                                "text": "art pop"
+                            },
+                            {
+                                "url": "Gospel_music",
+                                "text": "gospel"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Discography",
+                        "type": "field",
+                        "value": "Albums singles songs production",
+                        "links": [
+                            {
+                                "url": "Kanye_West_albums_discography",
+                                "text": "Albums"
+                            },
+                            {
+                                "url": "Kanye_West_singles_discography",
+                                "text": "singles"
+                            },
+                            {
+                                "url": "List_of_songs_recorded_by_Kanye_West",
+                                "text": "songs"
+                            },
+                            {
+                                "url": "Kanye_West_production_discography",
+                                "text": "production"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Labels",
+                        "type": "field",
+                        "value": "GOOD Island Def Jam Def Jam Roc-A-Fella",
+                        "links": [
+                            {
+                                "url": "GOOD_Music",
+                                "text": "GOOD"
+                            },
+                            {
+                                "url": "Island_Def_Jam",
+                                "text": "Island Def Jam"
+                            },
+                            {
+                                "url": "Def_Jam_Recordings",
+                                "text": "Def Jam"
+                            },
+                            {
+                                "url": "Roc-A-Fella_Records",
+                                "text": "Roc-A-Fella"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Member of",
+                        "type": "field",
+                        "value": "Sunday Service Choir The Hitmen",
+                        "links": [
+                            {
+                                "url": "Sunday_Service_Choir",
+                                "text": "Sunday Service Choir"
+                            },
+                            {
+                                "url": "The_Hitmen_(production_team)",
+                                "text": "The Hitmen"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Formerly of",
+                        "type": "field",
+                        "value": "Child Rebel Soldier Kids See Ghosts The Throne",
+                        "links": [
+                            {
+                                "url": "Child_Rebel_Soldier",
+                                "text": "Child Rebel Soldier"
+                            },
+                            {
+                                "url": "Kids_See_Ghosts",
+                                "text": "Kids See Ghosts"
+                            },
+                            {
+                                "url": "Watch_the_Throne",
+                                "text": "The Throne"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Signature",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kanyewestsignature.svg/150px-Kanyewestsignature.svg.png",
+                                "height": 150,
+                                "width": 150
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

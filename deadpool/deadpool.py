@@ -60,6 +60,13 @@ def get_infobox(person, access_token):
     infobox_all = json.loads(response.text)
     infobox = infobox_all[0]["infobox"]
 
+    # Specify the file path and name
+    file_path = person + ".json"
+
+    # Writing the JSON data to a file
+    with open(file_path, "w") as file:
+        json.dump(infobox, file, indent=4)
+
     return infobox
 
 
@@ -107,15 +114,16 @@ def extract_datetime_object(date_string):
         datetime: Python datetime object
     """
     # Regular expression pattern for dates (assuming format "Month Day, Year")
-    date_pattern = r"(\bJanuary|\bFebruary|\bMarch|\bApril|\bMay|\bJune \
-        |\bJuly|\bAugust|\bSeptember|\bOctober|\bNovember|\bDecember) \d{1,2}, \d{4}"
+    date_pattern = r"(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}"
 
-    # Start with birth dates
+    # Extract the date
     extracted_date = re.search(date_pattern, date_string)
-    date_str = extracted_date.group(0) if extracted_date else None
-    date = datetime.strptime(date_str, "%B %d, %Y")
-
-    return date
+    if extracted_date:
+        date_str = extracted_date.group(0)
+        date = datetime.strptime(date_str, "%B %d, %Y")
+        return date
+    else:
+        return None
 
 
 @task(name="Calculate Age")
@@ -160,7 +168,7 @@ def dead_pool_status_check():
     access_token = authenticate_to_wikipedia(username=username, password=password)
 
     # Set the person you wish to check status of
-    wiki_page = "Kanye_West"
+    wiki_page = "George_W._Bush"
     person = wiki_page.replace("_", " ")
     logger.info("Person: %s", person)
 
@@ -176,9 +184,10 @@ def dead_pool_status_check():
     death_date = find_field_in_json(infobox, "Died")
 
     birth_date = extract_datetime_object(birth_date)
-    death_date = extract_datetime_object(death_date)
-
     logger.info("Birth Date (datetime object): %s", birth_date)
+
+    if death_date:
+        death_date = extract_datetime_object(death_date)
 
     # Calculate the person's age
     age = get_age(birth_date, death_date)
