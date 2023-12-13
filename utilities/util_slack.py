@@ -28,8 +28,8 @@ def bad_wiki_page(person,wiki_page, emoji):
                 "text": emoji + " Bad Wiki Page Alert for: " + person + " " + emoji,
             },
         },
-        {"type": "divider"},
         {"type": "section", "text": {"type": "mrkdwn", "text": death_details}},
+        {"type": "divider"},
     ]
 
     result = send_incoming_webhook_message(

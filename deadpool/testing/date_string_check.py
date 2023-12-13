@@ -28,3 +28,4 @@ def extract_datetime_object(date_string):
 # Example usage
 print(extract_datetime_object("Emory Andrew Tate III 1 December 1986 Washington, D.C., U.S."))
 print(extract_datetime_object("Kanye Omari West June 8, 1977 Atlanta, Georgia, U.S."))
+print(extract_datetime_object("Thomas John Brokaw February 6, 1940 Webster, South Dakota, U.S."))

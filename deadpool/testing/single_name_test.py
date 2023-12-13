@@ -52,6 +52,7 @@ def get_infobox(person, access_token):
     response = requests.post(url, json=data, headers=headers, timeout=5)
 
     infobox_all = json.loads(response.text)
+        
     try:
         infobox = infobox_all[0]["infobox"]
 
@@ -59,7 +60,7 @@ def get_infobox(person, access_token):
 
         # Writing the JSON data to a file
         with open(file_path, "w") as file:
-            json.dump(infobox, file, indent=4)
+            json.dump(infobox_all, file, indent=4)
 
         return infobox
 
@@ -121,6 +122,7 @@ def dead_pool_status_check():
     # wiki_page = "O._J._Simpson"
     # wiki_page = "Kanye_West"
     # wiki_page = "Willie_Mays"
+    wiki_page = "Tom_Brokaw"
 
     # Set the person you wish to check status of
     person = wiki_page.replace("_", " ")
@@ -138,7 +140,8 @@ def dead_pool_status_check():
 
         print(birth_date)
         print(death_date)
-
+    else:
+        print("Didn't find infobox")
 
 if __name__ == "__main__":
     dead_pool_status_check()
