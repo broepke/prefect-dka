@@ -1,0 +1,306 @@
+[
+    {
+        "name": "Infobox baseball biography\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "Willie Mays",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "Mays with the San Francisco Giants in 1961",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Willie_Mays_cropped.jpg/220px-Willie_Mays_cropped.jpg",
+                                "alternative_text": "Black-and-white portrait photo of a broadly-smiling man wearing a dark-colored baseball cap with SF embroidered on it",
+                                "caption": "Mays with the San Francisco Giants in 1961",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Center fielder",
+                        "links": [
+                            {
+                                "url": "Center_fielder",
+                                "text": "Center fielder"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Born: May 6, 1931 Westfield, Alabama, U.S.",
+                        "links": [
+                            {
+                                "url": "Westfield,_Alabama",
+                                "text": "Westfield, Alabama"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Batted: Right Threw: Right"
+                    }
+                ]
+            },
+            {
+                "name": "MLB debut",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "May 25, 1951, for the New York Giants"
+                    }
+                ]
+            },
+            {
+                "name": "Last MLB appearance",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "September 9, 1973, for the New York Mets"
+                    }
+                ]
+            },
+            {
+                "name": "MLB statistics",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Batting average",
+                        "type": "field",
+                        "value": ".302",
+                        "links": [
+                            {
+                                "url": "Batting_average_(baseball)",
+                                "text": "Batting average"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hits",
+                        "type": "field",
+                        "value": "3,283",
+                        "links": [
+                            {
+                                "url": "Hit_(baseball)",
+                                "text": "Hits"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Home runs",
+                        "type": "field",
+                        "value": "660",
+                        "links": [
+                            {
+                                "url": "Home_run",
+                                "text": "Home runs"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Runs batted in",
+                        "type": "field",
+                        "value": "1,903",
+                        "links": [
+                            {
+                                "url": "Run_batted_in",
+                                "text": "Runs batted in"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Stolen bases",
+                        "type": "field",
+                        "value": "338",
+                        "links": [
+                            {
+                                "url": "Stolen_base",
+                                "text": "Stolen bases"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Teams",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "As player Birmingham Black Barons (1948) New York / San Francisco Giants (1951 \u20131952, 1954 \u20131972) New York Mets (1972 \u20131973) As coach New York Mets (1974 \u20131979)",
+                        "links": [
+                            {
+                                "url": "Birmingham_Black_Barons",
+                                "text": "Birmingham Black Barons"
+                            },
+                            {
+                                "url": "1948_in_baseball",
+                                "text": "1948"
+                            },
+                            {
+                                "url": "San_Francisco_Giants",
+                                "text": "New York / San Francisco Giants"
+                            },
+                            {
+                                "url": "1951_Major_League_Baseball_season",
+                                "text": "1951"
+                            },
+                            {
+                                "url": "1952_Major_League_Baseball_season",
+                                "text": "1952"
+                            },
+                            {
+                                "url": "1954_Major_League_Baseball_season",
+                                "text": "1954"
+                            },
+                            {
+                                "url": "1972_Major_League_Baseball_season",
+                                "text": "1972"
+                            },
+                            {
+                                "url": "New_York_Mets",
+                                "text": "New York Mets"
+                            },
+                            {
+                                "url": "1972_Major_League_Baseball_season",
+                                "text": "1972"
+                            },
+                            {
+                                "url": "1973_Major_League_Baseball_season",
+                                "text": "1973"
+                            },
+                            {
+                                "url": "New_York_Mets",
+                                "text": "New York Mets"
+                            },
+                            {
+                                "url": "1974_Major_League_Baseball_season",
+                                "text": "1974"
+                            },
+                            {
+                                "url": "1979_Major_League_Baseball_season",
+                                "text": "1979"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Career highlights and awards",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "24\u00d7 All-Star (1954 \u20131973) World Series champion (1954) 2\u00d7 NL MVP (1954, 1965) NL Rookie of the Year (1951) 12\u00d7 Gold Glove Award (1957\u20131968) Roberto Clemente Award (1971) NL batting champion (1954) 4\u00d7 NL home run leader (1955, 1962, 1964, 1965) 4\u00d7 NL stolen base leader (1956\u20131959) Hit 4 home runs in one game on April 30, 1961 San Francisco Giants No. 24 retired New York Mets No. 24 retired San Francisco Giants Wall of Fame Major League Baseball All-Century Team Major League Baseball All-Time Team",
+                        "links": [
+                            {
+                                "url": "Major_League_Baseball_All-Star_Game",
+                                "text": "All-Star"
+                            },
+                            {
+                                "url": "1954_Major_League_Baseball_All-Star_Game",
+                                "text": "1954"
+                            },
+                            {
+                                "url": "1973_Major_League_Baseball_All-Star_Game",
+                                "text": "1973"
+                            },
+                            {
+                                "url": "World_Series",
+                                "text": "World Series"
+                            },
+                            {
+                                "url": "1954_World_Series",
+                                "text": "1954"
+                            },
+                            {
+                                "url": "NL_MVP",
+                                "text": "NL MVP"
+                            },
+                            {
+                                "url": "NL_Rookie_of_the_Year",
+                                "text": "NL Rookie of the Year"
+                            },
+                            {
+                                "url": "Gold_Glove_Award",
+                                "text": "Gold Glove Award"
+                            },
+                            {
+                                "url": "Roberto_Clemente_Award",
+                                "text": "Roberto Clemente Award"
+                            },
+                            {
+                                "url": "List_of_Major_League_Baseball_batting_champions",
+                                "text": "NL batting champion"
+                            },
+                            {
+                                "url": "List_of_Major_League_Baseball_annual_home_run_leaders",
+                                "text": "NL home run leader"
+                            },
+                            {
+                                "url": "List_of_Major_League_Baseball_annual_stolen_base_leaders",
+                                "text": "NL stolen base leader"
+                            },
+                            {
+                                "url": "List_of_Major_League_Baseball_single-game_home_run_leaders",
+                                "text": "4 home runs in one game"
+                            },
+                            {
+                                "url": "San_Francisco_Giants#Retired_numbers",
+                                "text": "San Francisco Giants No. 24"
+                            },
+                            {
+                                "url": "New_York_Mets#Retired_numbers",
+                                "text": "New York Mets No. 24"
+                            },
+                            {
+                                "url": "San_Francisco_Giants_Wall_of_Fame",
+                                "text": "San Francisco Giants Wall of Fame"
+                            },
+                            {
+                                "url": "Major_League_Baseball_All-Century_Team",
+                                "text": "Major League Baseball All-Century Team"
+                            },
+                            {
+                                "url": "Major_League_Baseball_All-Time_Team",
+                                "text": "Major League Baseball All-Time Team"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Member of the National",
+                "type": "section"
+            },
+            {
+                "name": "Baseball Hall of Fame",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Induction",
+                        "type": "field",
+                        "value": "1979",
+                        "links": [
+                            {
+                                "url": "1979_Baseball_Hall_of_Fame_balloting",
+                                "text": "1979"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Vote",
+                        "type": "field",
+                        "value": "94.7% (first ballot)"
+                    }
+                ]
+            }
+        ]
+    }
+]

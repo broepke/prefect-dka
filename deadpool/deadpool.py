@@ -70,35 +70,41 @@ def get_infobox(person, access_token):
         return None
 
 
-def find_field_in_json(json_data, field_name):
-    """Parse JSON Infobox ojbect data for Birth and Death Dates
+def extract_date(json_data, date_type):
+    """
+    Extracts birth or death date from a JSON object, handling variations in the key naming.
 
     Args:
-        json_data (json): Wikipedia Infobox JSON
-        field_name (str): The JSON item desired
+    json_data (list or dict): JSON object representing the data.
+    date_type (str): Type of date to extract, 'Born' or 'Died'.
 
     Returns:
-        str: The extracted value from the desired key.
+    str: Extracted date or None if not found.
     """
-    if isinstance(json_data, dict):
-        for key, value in json_data.items():
-            if key == field_name:
-                return value
-            if isinstance(value, (dict, list)):
-                result = find_field_in_json(value, field_name)
-                if result is not None:
-                    return result
-
+    # Check if the input is a list and iterate through its elements
     if isinstance(json_data, list):
         for item in json_data:
-            if isinstance(item, dict):
-                if item.get("name") == field_name and item.get("type") == "field":
-                    return item.get("value")
-                if "has_parts" in item:
-                    result = find_field_in_json(item["has_parts"], field_name)
-                    if result is not None:
-                        return result
+            result = extract_date(item, date_type)
+            if result:
+                return result
 
+    # Check if the input is a dictionary and process accordingly
+    elif isinstance(json_data, dict):
+        # Check for both exact match and match with colon in the 'name' key
+        # Also check in 'value' key for directly provided dates
+        for key, value in json_data.items():
+            if key == 'name' and (value.strip().lower() == date_type.lower() or value.strip().lower() == f"{date_type.lower()}:"):
+                return json_data.get('value')
+            elif key == 'value' and date_type.lower() in value.lower():
+                return value
+
+            # Otherwise, iterate through nested structures
+            if isinstance(value, (dict, list)):
+                result = extract_date(value, date_type)
+                if result:
+                    return result
+
+    # Return None if the date is not found
     return None
 
 
@@ -113,13 +119,16 @@ def extract_datetime_object(date_string):
     Returns:
         datetime: Python datetime object
     """
+    logger = get_run_logger()
     # Regular expression pattern for dates (assuming format "Month Day, Year")
-    date_pattern = r"(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}"
-
-    # Extract the date
+    date_pattern = r"(?:(\d{1,2}) )?(January|February|March|April|May|June|July|August|September|October|November|December)(?: (\d{1,2}),)? (\d{4})"
+    
+    logger.info("Date String to Extract %s", date_string)
     extracted_date = re.search(date_pattern, date_string)
     if extracted_date:
-        date_str = extracted_date.group(0)
+        day, month, day2, year = extracted_date.groups()
+        day = day or day2  # Use the day that was matched
+        date_str = f"{month} {day}, {year}"
         date = datetime.strptime(date_str, "%B %d, %Y")
         return date
     else:
@@ -196,24 +205,26 @@ def dead_pool_status_check():
             death_date = None
 
             # Get bith and death dates
-            birth_date = find_field_in_json(infobox, "Born")
-            death_date = find_field_in_json(infobox, "Died")
+            birth_date = extract_date(infobox, "Born")
+            death_date = extract_date(infobox, "Died")
 
-            birth_date = extract_datetime_object(birth_date)
-            logger.info("Birth Date (datetime object): %s", birth_date)
+            if birth_date:
+                birth_date = extract_datetime_object(birth_date)
+                logger.info("Birth Date (datetime object): %s", birth_date)
 
             if death_date:
                 death_date = extract_datetime_object(death_date)
 
-            # Calculate the person's age
-            age = get_age(birth_date, death_date)
-            logger.info("Age: %s", age)
+            if birth_date:
+                # Calculate the person's age
+                age = get_age(birth_date, death_date)
+                logger.info("Age: %s", age)
 
             # Now conditionally do death dates
             if death_date:
                 logger.info("Death Date (datetime object): %s", death_date)
                 logger.info("DEAD: Deadpool Winning Pick!!!")
-                
+
                 set_string = f"""SET birth_date = '{birth_date}', death_date = '{death_date}', age = {age}"""
                 conditionals = f"""WHERE name = '{name}'
                 """

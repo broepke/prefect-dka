@@ -1,0 +1,212 @@
+[
+    {
+        "name": "Infobox person\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "Andrew Tate",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "Tate in 2023",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Andrew_Tate_-_James_Tamim_Upload_%28Cropped_Wide_Portrait%29.png/220px-Andrew_Tate_-_James_Tamim_Upload_%28Cropped_Wide_Portrait%29.png",
+                                "alternative_text": "A bald man with a beard looks at something off-camera with a microphone near his face.",
+                                "caption": "Tate in 2023",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Born",
+                        "type": "field",
+                        "value": "Emory Andrew Tate III 1 December 1986 Washington, D.C., U.S.",
+                        "links": [
+                            {
+                                "url": "Washington,_D.C.",
+                                "text": "Washington, D.C."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nationality",
+                        "type": "field",
+                        "value": "American British"
+                    },
+                    {
+                        "name": "Other names",
+                        "type": "field",
+                        "value": "Top G"
+                    },
+                    {
+                        "name": "Occupations",
+                        "type": "field",
+                        "value": "Media personality kickboxer"
+                    },
+                    {
+                        "name": "Years active",
+                        "type": "field",
+                        "value": "2005\u2013present"
+                    },
+                    {
+                        "name": "Parent",
+                        "type": "list",
+                        "values": [
+                            "Emory Tate (father)"
+                        ],
+                        "links": [
+                            {
+                                "url": "Emory_Tate",
+                                "text": "Emory Tate"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Martial arts career"
+                    },
+                    {
+                        "name": "Height",
+                        "type": "field",
+                        "value": "6 ft 3 in (1.9 m)",
+                        "links": [
+                            {
+                                "url": "Andrew_Tate#cite_note-:2-1"
+                            },
+                            {
+                                "url": "Andrew_Tate#cite_note-RXF-2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Weight",
+                        "type": "field",
+                        "value": "205 lb (93 kg; 14.6 st)",
+                        "links": [
+                            {
+                                "url": "Andrew_Tate#cite_note-RXF-2"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Division",
+                        "type": "list",
+                        "values": [
+                            "Cruiserweight",
+                            "Light heavyweight"
+                        ],
+                        "links": [
+                            {
+                                "url": "Cruiserweight_(boxing)#Kickboxing",
+                                "text": "Cruiserweight"
+                            },
+                            {
+                                "url": "Light_heavyweight#Kickboxing",
+                                "text": "Light heavyweight"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Stance",
+                        "type": "field",
+                        "value": "Orthodox",
+                        "links": [
+                            {
+                                "url": "Orthodox_stance",
+                                "text": "Orthodox"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Fighting out of",
+                        "type": "list",
+                        "values": [
+                            "Luton, England",
+                            "Bucharest, Romania"
+                        ],
+                        "links": [
+                            {
+                                "url": "Luton",
+                                "text": "Luton"
+                            },
+                            {
+                                "url": "Bucharest",
+                                "text": "Bucharest"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Team",
+                        "type": "field",
+                        "value": "Storm Gym"
+                    }
+                ]
+            },
+            {
+                "name": "Kickboxing record",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Total",
+                        "type": "field",
+                        "value": "31"
+                    },
+                    {
+                        "name": "Wins",
+                        "type": "field",
+                        "value": "23"
+                    },
+                    {
+                        "name": "By knockout",
+                        "type": "field",
+                        "value": "15"
+                    },
+                    {
+                        "name": "Losses",
+                        "type": "field",
+                        "value": "8"
+                    }
+                ]
+            },
+            {
+                "name": "Mixed martial arts record",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Total",
+                        "type": "field",
+                        "value": "3"
+                    },
+                    {
+                        "name": "Wins",
+                        "type": "field",
+                        "value": "2"
+                    },
+                    {
+                        "name": "By knockout",
+                        "type": "field",
+                        "value": "1"
+                    },
+                    {
+                        "name": "By decision",
+                        "type": "field",
+                        "value": "1"
+                    },
+                    {
+                        "name": "Losses",
+                        "type": "field",
+                        "value": "1"
+                    },
+                    {
+                        "name": "By decision",
+                        "type": "field",
+                        "value": "1"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,451 @@
+[
+    {
+        "name": "Infobox NFL biography\n",
+        "type": "infobox",
+        "has_parts": [
+            {
+                "name": "O. J. Simpson",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "image",
+                        "value": "Simpson in 1990",
+                        "images": [
+                            {
+                                "content_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG/220px-O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG",
+                                "alternative_text": "refer to caption",
+                                "caption": "Simpson in 1990",
+                                "height": 220,
+                                "width": 220
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "No. 32",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Position:",
+                        "type": "field",
+                        "value": "Running back",
+                        "links": [
+                            {
+                                "url": "Running_back",
+                                "text": "Running back"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Personal information",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Born:",
+                        "type": "field",
+                        "value": "July 9, 1947 San Francisco, California, U.S.",
+                        "links": [
+                            {
+                                "url": "San_Francisco",
+                                "text": "San Francisco"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Height:",
+                        "type": "field",
+                        "value": "6 ft 1 in (1.85 m)"
+                    },
+                    {
+                        "name": "Weight:",
+                        "type": "field",
+                        "value": "212 lb (96 kg)"
+                    }
+                ]
+            },
+            {
+                "name": "Career information",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "High school:",
+                        "type": "field",
+                        "value": "Galileo (San Francisco, California)",
+                        "links": [
+                            {
+                                "url": "Galileo_Academy_of_Science_and_Technology",
+                                "text": "Galileo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "College:",
+                        "type": "field",
+                        "value": "CCSF (1965\u20131966) USC (1967\u20131968)",
+                        "links": [
+                            {
+                                "url": "City_College_of_San_Francisco",
+                                "text": "CCSF"
+                            },
+                            {
+                                "url": "USC_Trojans_football",
+                                "text": "USC"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "NFL Draft:",
+                        "type": "field",
+                        "value": "1969 / Round: 1 / Pick: 1",
+                        "links": [
+                            {
+                                "url": "1969_NFL_Draft",
+                                "text": "1969"
+                            },
+                            {
+                                "url": "List_of_first_overall_National_Football_League_Draft_picks",
+                                "text": "1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Career history",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "Buffalo Bills (1969 \u20131977) San Francisco 49ers (1978 \u20131979)",
+                        "links": [
+                            {
+                                "url": "Buffalo_Bills",
+                                "text": "Buffalo Bills"
+                            },
+                            {
+                                "url": "1969_American_Football_League_season",
+                                "text": "1969"
+                            },
+                            {
+                                "url": "1977_NFL_season",
+                                "text": "1977"
+                            },
+                            {
+                                "url": "San_Francisco_49ers",
+                                "text": "San Francisco 49ers"
+                            },
+                            {
+                                "url": "1978_NFL_season",
+                                "text": "1978"
+                            },
+                            {
+                                "url": "1979_NFL_season",
+                                "text": "1979"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Career highlights and awards",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "field",
+                        "value": "NFL Most Valuable Player (1973) NFL Offensive Player of the Year (1973) 5\u00d7 First-team All-Pro (1972 \u20131976) 5\u00d7 Pro Bowl (1972 \u20131976) AFL All-Star (1969) Bert Bell Award (1973) AP Athlete of the Year (1973) 3\u00d7 UPI AFC Offensive Player of the Year (1972, 1973, 1975) 4\u00d7 NFL rushing yards leader (1972, 1973, 1975, 1976) 2\u00d7 NFL rushing touchdowns leader (1973, 1975) NFL scoring leader (1975) NFL 1970s All-Decade Team NFL 75th Anniversary All-Time Team NFL 100th Anniversary All-Time Team Buffalo Bills Wall of Fame National champion (1967) Heisman Trophy (1968) Maxwell Award (1968) Walter Camp Award (1967) 2\u00d7 UPI Player of the Year (1967, 1968) SN Player of the Year (1968) 2\u00d7 Unanimous All-American (1967, 1968) 2\u00d7 First-team All-Pac-8 (1967, 1968) USC Trojans No. 32 retired",
+                        "links": [
+                            {
+                                "url": "NFL_Most_Valuable_Player",
+                                "text": "NFL Most Valuable Player"
+                            },
+                            {
+                                "url": "NFL_Offensive_Player_of_the_Year",
+                                "text": "NFL Offensive Player of the Year"
+                            },
+                            {
+                                "url": "All-Pro",
+                                "text": "All-Pro"
+                            },
+                            {
+                                "url": "1972_All-Pro_Team",
+                                "text": "1972"
+                            },
+                            {
+                                "url": "1976_All-Pro_Team",
+                                "text": "1976"
+                            },
+                            {
+                                "url": "Pro_Bowl",
+                                "text": "Pro Bowl"
+                            },
+                            {
+                                "url": "1973_Pro_Bowl",
+                                "text": "1972"
+                            },
+                            {
+                                "url": "1977_Pro_Bowl",
+                                "text": "1976"
+                            },
+                            {
+                                "url": "American_Football_League_All-Star_game",
+                                "text": "AFL All-Star"
+                            },
+                            {
+                                "url": "Bert_Bell_Award",
+                                "text": "Bert Bell Award"
+                            },
+                            {
+                                "url": "AP_Athlete_of_the_Year",
+                                "text": "AP Athlete of the Year"
+                            },
+                            {
+                                "url": "UPI_AFL-AFC_Player_of_the_Year",
+                                "text": "UPI AFC Offensive Player of the Year"
+                            },
+                            {
+                                "url": "List_of_National_Football_League_annual_rushing_yards_leaders",
+                                "text": "NFL rushing yards leader"
+                            },
+                            {
+                                "url": "List_of_National_Football_League_annual_rushing_touchdowns_leaders",
+                                "text": "NFL rushing touchdowns leader"
+                            },
+                            {
+                                "url": "List_of_National_Football_League_annual_scoring_leaders",
+                                "text": "NFL scoring leader"
+                            },
+                            {
+                                "url": "1975_NFL_season",
+                                "text": "1975"
+                            },
+                            {
+                                "url": "NFL_1970s_All-Decade_Team",
+                                "text": "NFL 1970s All-Decade Team"
+                            },
+                            {
+                                "url": "NFL_75th_Anniversary_All-Time_Team",
+                                "text": "NFL 75th Anniversary All-Time Team"
+                            },
+                            {
+                                "url": "NFL_100th_Anniversary_All-Time_Team",
+                                "text": "NFL 100th Anniversary All-Time Team"
+                            },
+                            {
+                                "url": "Buffalo_Bills#Wall_of_Fame",
+                                "text": "Buffalo Bills Wall of Fame"
+                            },
+                            {
+                                "url": "College_football_national_championships_in_NCAA_Division_I_FBS",
+                                "text": "National champion"
+                            },
+                            {
+                                "url": "1967_USC_Trojans_football_team",
+                                "text": "1967"
+                            },
+                            {
+                                "url": "Heisman_Trophy",
+                                "text": "Heisman Trophy"
+                            },
+                            {
+                                "url": "Maxwell_Award",
+                                "text": "Maxwell Award"
+                            },
+                            {
+                                "url": "Walter_Camp_Award",
+                                "text": "Walter Camp Award"
+                            },
+                            {
+                                "url": "UPI_College_Football_Player_of_the_Year",
+                                "text": "UPI Player of the Year"
+                            },
+                            {
+                                "url": "Sporting_News_College_Football_Player_of_the_Year",
+                                "text": "SN Player of the Year"
+                            },
+                            {
+                                "url": "List_of_unanimous_All-Americans_in_college_football",
+                                "text": "Unanimous All-American"
+                            },
+                            {
+                                "url": "1967_College_Football_All-America_Team",
+                                "text": "1967"
+                            },
+                            {
+                                "url": "1968_College_Football_All-America_Team",
+                                "text": "1968"
+                            },
+                            {
+                                "url": "List_of_All-Pac-12_Conference_football_teams",
+                                "text": "All-Pac-8"
+                            },
+                            {
+                                "url": "1967_All-Pacific-8_Conference_football_team",
+                                "text": "1967"
+                            },
+                            {
+                                "url": "1968_All-Pacific-8_Conference_football_team",
+                                "text": "1968"
+                            },
+                            {
+                                "url": "USC_Trojans_football#Heisman_Trophy_winners_and_retired_numbers",
+                                "text": "USC Trojans No. 32"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Career NFL statistics",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Rushing yards:Rushing average:Rushing touchdowns:Receptions:Receiving yards:Receiving touchdowns:",
+                        "type": "field",
+                        "value": "11,2364.7612032,14214",
+                        "links": [
+                            {
+                                "url": "Touchdown",
+                                "text": "touchdowns"
+                            },
+                            {
+                                "url": "Reception_(gridiron_football)",
+                                "text": "Receptions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rushing yards:",
+                        "type": "field",
+                        "value": "11,236"
+                    },
+                    {
+                        "name": "Rushing average:",
+                        "type": "field",
+                        "value": "4.7"
+                    },
+                    {
+                        "name": "Rushing touchdowns:",
+                        "type": "field",
+                        "value": "61",
+                        "links": [
+                            {
+                                "url": "Touchdown",
+                                "text": "touchdowns"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Receptions:",
+                        "type": "field",
+                        "value": "203",
+                        "links": [
+                            {
+                                "url": "Reception_(gridiron_football)",
+                                "text": "Receptions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Receiving yards:",
+                        "type": "field",
+                        "value": "2,142"
+                    },
+                    {
+                        "name": "Receiving touchdowns:",
+                        "type": "field",
+                        "value": "14"
+                    },
+                    {
+                        "type": "field",
+                        "value": "Player stats at NFL.com \u00b7 PFR",
+                        "links": [
+                            {
+                                "url": "http://www.nfl.com/players/o-j-simpson/stats/",
+                                "text": "NFL.com"
+                            },
+                            {
+                                "url": "https://www.pro-football-reference.com/players/S/SimpO.00.htm",
+                                "text": "PFR"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "Pro Football Hall of Fame",
+                        "links": [
+                            {
+                                "url": "http://www.profootballhof.com/players/oj-simpson",
+                                "text": "Pro Football Hall of Fame"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "field",
+                        "value": "College Football Hall of Fame",
+                        "links": [
+                            {
+                                "url": "https://footballfoundation.org/hof_search.aspx?hof=1897",
+                                "text": "College Football Hall of Fame"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "infobox",
+        "has_parts": [
+            {
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "Rushing yards:",
+                        "type": "field",
+                        "value": "11,236"
+                    },
+                    {
+                        "name": "Rushing average:",
+                        "type": "field",
+                        "value": "4.7"
+                    },
+                    {
+                        "name": "Rushing touchdowns:",
+                        "type": "field",
+                        "value": "61",
+                        "links": [
+                            {
+                                "url": "Touchdown",
+                                "text": "touchdowns"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Receptions:",
+                        "type": "field",
+                        "value": "203",
+                        "links": [
+                            {
+                                "url": "Reception_(gridiron_football)",
+                                "text": "Receptions"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Receiving yards:",
+                        "type": "field",
+                        "value": "2,142"
+                    },
+                    {
+                        "name": "Receiving touchdowns:",
+                        "type": "field",
+                        "value": "14"
+                    }
+                ]
+            }
+        ]
+    }
+]
