@@ -135,6 +135,8 @@ def extract_datetime_object(date_string):
         return None
 
 
+from datetime import datetime
+
 @task(name="Calculate Age")
 def get_age(birth_date, death_date):
     """Get the age of the person based on two datetime objects
@@ -148,17 +150,15 @@ def get_age(birth_date, death_date):
     """
     if death_date:
         age = death_date.year - birth_date.year
+        if (death_date.month, death_date.day) < (birth_date.month, birth_date.day):
+            age -= 1
     else:
         current_date = datetime.now()
-        age = (
-            current_date.year
-            - birth_date.year
-            - (
-                (current_date.month, current_date.day)
-                < (birth_date.month, birth_date.day)
-            )
-        )
+        age = current_date.year - birth_date.year
+        if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
+            age -= 1
     return age
+
 
 
 @flow(name="Verify Deadpool Alive or Dead and Age")
