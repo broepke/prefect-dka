@@ -177,8 +177,8 @@ def dead_pool_status_check():
 
     connection = get_snowflake_connection("snowflake-dka")
 
-    wiki_page = "Cher"
-    name = "Cher"
+    wiki_page = "Rosie_O%27Donnell"
+    name = "Rosie O'Donnel"
 
     # Set the person you wish to check status of
     person = wiki_page.replace("_", " ")
@@ -212,6 +212,7 @@ def dead_pool_status_check():
             logger.info("Death Date (datetime object): %s", death_date)
             logger.info("DEAD: Deadpool Winning Pick!!!")
 
+            name = name.replace("'", "''")
             set_string = f"""SET birth_date = '{birth_date}', death_date = '{death_date}', age = {age}"""
             conditionals = f"""WHERE name = '{name}'
             """
@@ -235,7 +236,8 @@ def dead_pool_status_check():
         # If they're not dead yet, log that
         if birth_date and not death_date:
             logger.info("ALIVE: Better Luck Next Time!")
-
+            logger.info(name)            
+            name = name.replace("'", "''")
             set_string = f"""SET birth_date = '{birth_date}', age = {age}"""
             conditionals = f"""WHERE name = '{name}'
             """

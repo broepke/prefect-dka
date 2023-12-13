@@ -225,6 +225,7 @@ def dead_pool_status_check():
                 logger.info("Death Date (datetime object): %s", death_date)
                 logger.info("DEAD: Deadpool Winning Pick!!!")
 
+                name = name.replace("'", "''")
                 set_string = f"""SET birth_date = '{birth_date}', death_date = '{death_date}', age = {age}"""
                 conditionals = f"""WHERE name = '{name}'
                 """
@@ -248,7 +249,8 @@ def dead_pool_status_check():
             # If they're not dead yet, log that
             if birth_date and not death_date:
                 logger.info("ALIVE: Better Luck Next Time!")
-
+                
+                name = name.replace("'", "''")
                 set_string = f"""SET birth_date = '{birth_date}', age = {age}"""
                 conditionals = f"""WHERE name = '{name}'
                 """
