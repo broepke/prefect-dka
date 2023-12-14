@@ -60,7 +60,7 @@ def get_infobox(person, access_token):
 
         # Writing the JSON data to a file
         with open(file_path, "w") as file:
-            json.dump(infobox_all, file, indent=4)
+            json.dump(infobox, file, indent=4)
 
         return infobox
 
@@ -118,7 +118,7 @@ def dead_pool_status_check():
     # Login and Get the Access Token
     access_token = authenticate_to_wikipedia(username=username, password=password)
 
-    wiki_page = "Tina_Turner"
+    # wiki_page = "Tina_Turner"
     # wiki_page = "O._J._Simpson"
     # wiki_page = "Kanye_West"
     # wiki_page = "Willie_Mays"

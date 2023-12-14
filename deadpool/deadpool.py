@@ -61,10 +61,10 @@ def get_infobox(person, access_token):
     }
 
     response = requests.post(url, json=data, headers=headers, timeout=5)
-
     infobox_all = json.loads(response.text)
+    
     try:
-        infobox = infobox_all[0]["infobox"]
+        infobox = infobox_all[0]["infobox"]    
         return infobox
     except:
         return None
@@ -192,6 +192,10 @@ def dead_pool_status_check():
     for index, row in names_to_check.iterrows():
         name = row["NAME"]
         wiki_page = row["WIKI_PAGE"]
+        
+        # Strip leading and trailing spaces just in case there are in the DB
+        name = name.strip()
+        wiki_page = wiki_page.strip()
 
         # Set the person you wish to check status of
         person = wiki_page.replace("_", " ")
@@ -199,6 +203,7 @@ def dead_pool_status_check():
 
         # Get the Infobox JSON
         infobox = get_infobox(wiki_page, access_token)
+        logger.info("Infobox: %s", infobox)
         if infobox != None:
             # Initialize variables to hold birth and death dates
             birth_date = None
