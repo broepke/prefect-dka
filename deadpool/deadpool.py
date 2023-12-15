@@ -62,9 +62,9 @@ def get_infobox(person, access_token):
 
     response = requests.post(url, json=data, headers=headers, timeout=5)
     infobox_all = json.loads(response.text)
-    
+
     try:
-        infobox = infobox_all[0]["infobox"]    
+        infobox = infobox_all[0]["infobox"]
         return infobox
     except:
         return None
@@ -93,9 +93,12 @@ def extract_date(json_data, date_type):
         # Check for both exact match and match with colon in the 'name' key
         # Also check in 'value' key for directly provided dates
         for key, value in json_data.items():
-            if key == 'name' and (value.strip().lower() == date_type.lower() or value.strip().lower() == f"{date_type.lower()}:"):
-                return json_data.get('value')
-            elif key == 'value' and date_type.lower() in value.lower():
+            if key == "name" and (
+                value.strip().lower() == date_type.lower()
+                or value.strip().lower() == f"{date_type.lower()}:"
+            ):
+                return json_data.get("value")
+            elif key == "value" and date_type.lower() in value.lower():
                 return value
 
             # Otherwise, iterate through nested structures
@@ -122,7 +125,7 @@ def extract_datetime_object(date_string):
     logger = get_run_logger()
     # Regular expression pattern for dates (assuming format "Month Day, Year")
     date_pattern = r"(?:(\d{1,2}) )?(January|February|March|April|May|June|July|August|September|October|November|December)(?: (\d{1,2}),)? (\d{4})"
-    
+
     logger.info("Date String to Extract %s", date_string)
     extracted_date = re.search(date_pattern, date_string)
     if extracted_date:
@@ -136,6 +139,7 @@ def extract_datetime_object(date_string):
 
 
 from datetime import datetime
+
 
 @task(name="Calculate Age")
 def get_age(birth_date, death_date):
@@ -158,7 +162,6 @@ def get_age(birth_date, death_date):
         if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
             age -= 1
     return age
-
 
 
 @flow(name="Verify Deadpool Alive or Dead and Age")
@@ -184,7 +187,7 @@ def dead_pool_status_check():
         schema_name="ONE",
         table_name="PICKS",
         column_name="NAME, WIKI_PAGE",
-        conditionals="WHERE DEATH_DATE IS NULL",
+        conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024",
         return_list=False,
     )
 
@@ -192,18 +195,13 @@ def dead_pool_status_check():
     for index, row in names_to_check.iterrows():
         name = row["NAME"]
         wiki_page = row["WIKI_PAGE"]
-        
+
         # Strip leading and trailing spaces just in case there are in the DB
         name = name.strip()
         wiki_page = wiki_page.strip()
 
-        # Set the person you wish to check status of
-        person = wiki_page.replace("_", " ")
-        logger.info("Person: %s", person)
-
         # Get the Infobox JSON
         infobox = get_infobox(wiki_page, access_token)
-        logger.info("Infobox: %s", infobox)
         if infobox != None:
             # Initialize variables to hold birth and death dates
             birth_date = None
@@ -244,7 +242,7 @@ def dead_pool_status_check():
                 )
 
                 death_notification(
-                    person=person,
+                    person=name,
                     birth_date=birth_date,
                     death_date=death_date,
                     age=age,
@@ -254,7 +252,7 @@ def dead_pool_status_check():
             # If they're not dead yet, log that
             if birth_date and not death_date:
                 logger.info("ALIVE: Better Luck Next Time!")
-                
+
                 name = name.replace("'", "''")
                 set_string = f"""SET birth_date = '{birth_date}', age = {age}"""
                 conditionals = f"""WHERE name = '{name}'
@@ -269,8 +267,8 @@ def dead_pool_status_check():
                 )
 
         else:
-            bad_wiki_page(person, wiki_page, ":memo:")
-            logger.info("No valid wiki page for %s", person)
+            bad_wiki_page(name, wiki_page, ":memo:")
+            logger.info("No valid wiki page for %s", name)
 
 
 if __name__ == "__main__":
