@@ -15,4 +15,5 @@ pymongo
 python-whois
 fuzzywuzzy
 python-Levenshtein
+twilio
 snowflake-connector-python[pandas]
