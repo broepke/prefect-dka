@@ -13,6 +13,7 @@ from utilities.util_slack import bad_wiki_page
 from utilities.util_snowflake import get_existing_values
 from utilities.util_snowflake import update_rows
 from utilities.util_snowflake import get_snowflake_connection
+from utilities.util_twilio import send_sms_via_api
 
 
 @task(name="Authenticate to Wikipedia")
@@ -248,6 +249,18 @@ def dead_pool_status_check():
                     age=age,
                     emoji=":skull_and_crossbones:",
                 )
+
+                # Send out SMS messages to all Opted in Users
+                sms_to_list = get_existing_values(
+                    connection=connection,
+                    database_name="DEADPOOL",
+                    schema_name="ONE",
+                    table_name="DRAFT_OPTED_IN",
+                    column_name="SMS",
+                )
+
+                sms_message = f"{name} has died at the age of {age}"
+                send_sms_via_api(sms_message, sms_to_list)
 
             # If they're not dead yet, log that
             if birth_date and not death_date:
