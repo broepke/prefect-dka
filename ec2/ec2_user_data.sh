@@ -44,6 +44,7 @@ sudo -u prefect -i bash -c "pip install --user \
     python-whois \
     fuzzywuzzy \
     python-Levenshtein \
+    twilio \
     snowflake-connector-python[pandas]"
 
 # Reload environment variables to reflect changes
