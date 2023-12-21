@@ -1,0 +1,1963 @@
+[
+    {
+        "name": "Tom Brokaw",
+        "identifier": 167290,
+        "abstract": "Thomas John Brokaw is an American retired network television journalist and author. He first served as the co-anchor of The Today Show from 1976 to 1981 with Jane Pauley, then as the anchor and managing editor of NBC Nightly News for 22 years (1982\u20132004). In the previous decade he served as a weekend anchor for the program from 1973 to 1976. He is the only person to have hosted all three major NBC News programs: The Today Show, NBC Nightly News, and, briefly, Meet the Press. He formerly held a special correspondent post for NBC News. Along with his competitors Peter Jennings at ABC News and Dan Rather at CBS News, Brokaw was one of the \"Big Three\" U.S. news anchors during the 1980s, 1990s and early 2000s. All three hosted their networks' flagship nightly news programs for more than 20 years. Brokaw has also written several books on American history and society in the 20th century including The Greatest Generation (1998). He occasionally writes and narrates documentaries for other outlets. In 2021, NBC announced that Brokaw would retire after 55 years at the network, one of the longest standing anchors in the world at the same news network. Brokaw is recipient of numerous awards and honors including the two Peabody Awards, and two Emmy Awards, as well the Presidential Medal of Freedom, which was awarded to him by President Barack Obama in 2014. and the French Legion of Honor in 2016.",
+        "version": {
+            "identifier": 1189979611,
+            "tags": [
+                "visualeditor",
+                "editcheck-newreference"
+            ],
+            "scores": {
+                "revertrisk": {
+                    "probability": {
+                        "false": 0.5072408318519592,
+                        "true": 0.49275916814804077
+                    }
+                }
+            },
+            "editor": {
+                "identifier": 34986788,
+                "name": "Eric Schucht",
+                "edit_count": 16048,
+                "groups": [
+                    "extendedconfirmed",
+                    "*",
+                    "user",
+                    "autoconfirmed"
+                ],
+                "date_started": "2018-10-26T12:55:23Z"
+            },
+            "number_of_characters": 53215,
+            "size": {
+                "value": 53301,
+                "unit_text": "B"
+            },
+            "maintenance_tags": {}
+        },
+        "url": "https://en.wikipedia.org/wiki/Tom_Brokaw",
+        "date_created": "2003-01-09T21:02:46Z",
+        "date_modified": "2023-12-15T05:27:55Z",
+        "main_entity": {
+            "identifier": "Q919527",
+            "url": "https://www.wikidata.org/entity/Q919527"
+        },
+        "is_part_of": {
+            "identifier": "enwiki",
+            "url": "https://en.wikipedia.org"
+        },
+        "additional_entities": [
+            {
+                "identifier": "Q5",
+                "url": "https://www.wikidata.org/entity/Q5",
+                "aspects": [
+                    "O"
+                ]
+            },
+            {
+                "identifier": "Q919527",
+                "url": "https://www.wikidata.org/entity/Q919527",
+                "aspects": [
+                    "C",
+                    "D.en",
+                    "O",
+                    "S",
+                    "T"
+                ]
+            }
+        ],
+        "in_language": {
+            "identifier": "en"
+        },
+        "image": {
+            "content_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Tom_Brokaw_2015.JPG",
+            "width": 1920,
+            "height": 2568
+        },
+        "description": "American broadcast journalist and author (born 1940)",
+        "article_sections": [
+            {
+                "name": "Abstract",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "paragraph",
+                        "value": "Thomas John Brokaw (/\u02c8 b r o\u028a k \u0254\u02d0 /; born February 6, 1940) is an American retired network television journalist and author. He first served as the co-anchor of The Today Show from 1976 to 1981 with Jane Pauley, then as the anchor and managing editor of NBC Nightly News for 22 years (1982\u20132004). In the previous decade he served as a weekend anchor for the program from 1973 to 1976. He is the only person to have hosted all three major NBC News programs: The Today Show, NBC Nightly News, and, briefly, Meet the Press . He formerly held a special correspondent post for NBC News.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Help:IPA/English",
+                                "text": "/\u02c8 b r o\u028a k \u0254\u02d0 /"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Today_(American_TV_program)",
+                                "text": "The Today Show"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Jane_Pauley",
+                                "text": "Jane Pauley"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/NBC_Nightly_News",
+                                "text": "NBC Nightly News"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/NBC_News",
+                                "text": "NBC News"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Today_(U.S._TV_program)",
+                                "text": "The Today Show"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/NBC_Nightly_News",
+                                "text": "NBC Nightly News"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Meet_the_Press",
+                                "text": "Meet the Press"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Along with his competitors Peter Jennings at ABC News and Dan Rather at CBS News, Brokaw was one of the \"Big Three\" U.S. news anchors during the 1980s, 1990s and early 2000s. All three hosted their networks' flagship nightly news programs for more than 20 years.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Peter_Jennings",
+                                "text": "Peter Jennings"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/ABC_News",
+                                "text": "ABC News"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Dan_Rather",
+                                "text": "Dan Rather"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/CBS_News",
+                                "text": "CBS News"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/News_anchor",
+                                "text": "news anchors"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Brokaw has also written several books on American history and society in the 20th century including The Greatest Generation (1998). He occasionally writes and narrates documentaries for other outlets. In 2021, NBC announced that Brokaw would retire after 55 years at the network, one of the longest standing anchors in the world at the same news network.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/The_Greatest_Generation_(book)",
+                                "text": "The Greatest Generation"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Brokaw is recipient of numerous awards and honors including the two Peabody Awards, and two Emmy Awards, as well the Presidential Medal of Freedom, which was awarded to him by President Barack Obama in 2014. and the French Legion of Honor in 2016.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Peabody_Awards",
+                                "text": "Peabody Awards"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Emmy_Awards",
+                                "text": "Emmy Awards"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Presidential_Medal_of_Freedom",
+                                "text": "Presidential Medal of Freedom"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Barack_Obama",
+                                "text": "Barack Obama"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Legion_of_Honor",
+                                "text": "Legion of Honor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Early life",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "paragraph",
+                        "value": "Brokaw was born in Webster, South Dakota, the son of Eugenia \"Jean\" (n\u00e9e Conley; 1917\u20132011), who worked in sales and as a post-office clerk, and Anthony Orville \"Red\" Brokaw (1912\u20131982). He was the eldest of their three sons (brothers named William and Michael) and named for his maternal great-grandfather, Thomas Conley.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Webster,_South_Dakota",
+                                "text": "Webster, South Dakota"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/N\u00e9e",
+                                "text": "n\u00e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "His father was a descendant of Huguenot immigrants Bourgon and Catherine (n\u00e9e Le F\u00e8vre) Broucard, and his mother was Irish-American, His paternal great-grandfather, Richard P. Brokaw, founded the town of Bristol, South Dakota, and the Brokaw House, a small hotel and the first structure in Bristol.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Huguenot",
+                                "text": "Huguenot"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Bristol,_South_Dakota",
+                                "text": "Bristol, South Dakota"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Brokaw's father was a construction foreman for the Army Corps of Engineers . He worked at the Black Hills Ordnance Depot (BHOD) and helped construct Fort Randall Dam; his job often required the family to resettle throughout South Dakota during Brokaw's early childhood. The Brokaws lived for short periods in Bristol, Igloo (the small residential community of the BHOD), and Pickstown, before settling in Yankton, where Brokaw attended high school.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/United_States_Army_Corps_of_Engineers",
+                                "text": "Army Corps of Engineers"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Black_Hills_Ordnance_Depot",
+                                "text": "Black Hills Ordnance Depot"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Fort_Randall_Dam",
+                                "text": "Fort Randall Dam"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Igloo,_South_Dakota",
+                                "text": "Igloo"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Pickstown,_South_Dakota",
+                                "text": "Pickstown"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Yankton,_South_Dakota",
+                                "text": "Yankton"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "As a high school student attending Yankton Senior High School, Brokaw was governor of South Dakota American Legion Boys State, and in that capacity he accompanied then-South Dakota Governor Joe Foss to New York City for a joint appearance on a TV game show . It was to be the beginning of a long relationship with Foss, whom Brokaw would later feature in his book about World War II veterans, The Greatest Generation . Brokaw also became an Advisory Board member of the Joe Foss Institute .",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Yankton_High_School",
+                                "text": "Yankton Senior High School"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Governor_of_South_Dakota",
+                                "text": "governor of South Dakota"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/American_Legion",
+                                "text": "American Legion"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Boys_State",
+                                "text": "Boys State"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Joe_Foss",
+                                "text": "Joe Foss"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Game_show",
+                                "text": "game show"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Veterans",
+                                "text": "veterans"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Joe_Foss_Institute",
+                                "text": "Joe Foss Institute"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Brokaw matriculated at the University of Iowa in Iowa City, Iowa, but dropped out after a year as he apparently failed to keep up in his studies, in his words majoring in \"beer and co-eds\". In 2010, he was awarded an honorary doctorate from the University, and he later donated his papers to the University of Iowa Libraries. He joked that the \"honorary degree is especially coveted because it helps to make up for the uneven (to put it mildly) performance of my freshman year.\" He later transferred to the University of South Dakota, where he graduated Phi Beta Kappa in 1962 with a Bachelor of Arts degree in political science .",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/University_of_Iowa",
+                                "text": "University of Iowa"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Iowa_City,_Iowa",
+                                "text": "Iowa City, Iowa"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/University_of_Iowa",
+                                "text": "University of Iowa"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/University_of_South_Dakota",
+                                "text": "University of South Dakota"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Phi_Beta_Kappa",
+                                "text": "Phi Beta Kappa"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Bachelor_of_Arts",
+                                "text": "Bachelor of Arts"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Political_science",
+                                "text": "political science"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "For several years, Brokaw mountain-climbed with the \"Do Boys,\" whose members included Yvon Chouinard and Douglas Tompkins . He owned a home on 53 acres in Pound Ridge, New York, for over two decades.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Yvon_Chouinard",
+                                "text": "Yvon Chouinard"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Douglas_Tompkins",
+                                "text": "Douglas Tompkins"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Pound_Ridge,_New_York",
+                                "text": "Pound Ridge, New York"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Broadcasting career",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "name": "1966\u20131981: early years",
+                        "type": "section",
+                        "has_parts": [
+                            {
+                                "type": "paragraph",
+                                "value": "Brokaw's television career began at KTIV in Sioux City, Iowa followed by stints at KMTV in Omaha, Nebraska, and WSB-TV in Atlanta . In 1966 he joined NBC News, reporting from Los Angeles and anchoring the 11:00 p.m. news for KNBC . In 1973, NBC made Brokaw White House correspondent, covering the Watergate scandal, and anchor of the Saturday editions of Nightly News. He became co-host (with Jane Pauley) of NBC's Today Show in 1976 and remained in the job until 1981, when he was succeeded by Bryant Gumbel .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KTIV",
+                                        "text": "KTIV"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Sioux_City,_Iowa",
+                                        "text": "Sioux City, Iowa"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KMTV-TV",
+                                        "text": "KMTV"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Omaha,_Nebraska",
+                                        "text": "Omaha, Nebraska"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/WSB-TV",
+                                        "text": "WSB-TV"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Atlanta",
+                                        "text": "Atlanta"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_News",
+                                        "text": "NBC News"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Los_Angeles",
+                                        "text": "Los Angeles"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KNBC",
+                                        "text": "KNBC"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/White_House",
+                                        "text": "White House"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+                                        "text": "Watergate scandal"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Jane_Pauley",
+                                        "text": "Jane Pauley"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Today_(U.S._TV_program)",
+                                        "text": "Today Show"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Bryant_Gumbel",
+                                        "text": "Bryant Gumbel"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "He kept a closely guarded secret for many years: in 2017 Brokaw wrote of having been offered \u2013 and having promptly turned down \u2013 the press secretary position in the Nixon White House in 1969. While living in California before Nixon made his political comeback, Brokaw had come to know H. R. 'Bob' Haldeman (White House chief of staff and initiator of the offer) as well as Nixon's press secretary, Ron Ziegler, and others members of the White House staff.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/White_House_Press_Secretary",
+                                        "text": "press secretary"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Presidency_of_Richard_Nixon",
+                                        "text": "Nixon White House"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/H._R._Haldeman",
+                                        "text": "H. R. 'Bob' Haldeman"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Ron_Ziegler",
+                                        "text": "Ron Ziegler"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In 2019, Brokaw wrote a book entitled \"The Fall of Richard Nixon: A Reporter Remembers Watergate\", about his experiences working as a reporter and experiences as a member of the White House press corps."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "1982\u20132004: NBC Nightly News",
+                        "type": "section",
+                        "has_parts": [
+                            {
+                                "type": "paragraph",
+                                "value": "On April 5, 1982, Brokaw began co-anchoring NBC Nightly News from New York with Roger Mudd in Washington, succeeding John Chancellor . After a year, NBC News president Reuven Frank concluded that the dual-anchor program was not working and selected Brokaw to be sole anchor. The NBC Nightly News with Tom Brokaw commenced on September 5, 1983. Among other news items, he covered the Challenger disaster, EDSA Revolution, the June Struggle, Loma Prieta earthquake, fall of the Berlin Wall and Hurricane Andrew .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Roger_Mudd",
+                                        "text": "Roger Mudd"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/John_Chancellor",
+                                        "text": "John Chancellor"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Reuven_Frank",
+                                        "text": "Reuven Frank"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+                                        "text": "Challenger disaster"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/People_Power_Revolution",
+                                        "text": "EDSA Revolution"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/June_Struggle",
+                                        "text": "June Struggle"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/1989_Loma_Prieta_earthquake",
+                                        "text": "Loma Prieta earthquake"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+                                        "text": "Berlin Wall"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Hurricane_Andrew",
+                                        "text": "Hurricane Andrew"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Brokaw scored a major coup when, on November 9, 1989, he was the first English-language broadcast journalist to report the Fall of the Berlin Wall . Brokaw attended a televised press conference organized in East Berlin by G\u00fcnter Schabowski, press spokesman for East German Politburo, which had just decided to allow its citizens to apply to permanently leave the country through its border with West Germany . When Schabowski was asked when this loosening of regulations would take effect, he glanced through his notes, then said, \"sofort, unverz\u00fcglich \" (\"immediately, without delay\"), touching off a stampede of East Berliners to the Wall . Brokaw had an interview with Schabowski after the press conference, who repeated his \"immediately\" statement when pressed. Later that evening Brokaw reported from the west side of Brandenburg Gate on this announcement and the pandemonium that had broken out in East Berlin because of it.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+                                        "text": "Fall of the Berlin Wall"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/East_Berlin",
+                                        "text": "East Berlin"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/G\u00fcnter_Schabowski",
+                                        "text": "G\u00fcnter Schabowski"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/East_Germany",
+                                        "text": "East German"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/West_Germany",
+                                        "text": "West Germany"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Bornholmer_Stra\u00dfe_border_crossing",
+                                        "text": "Wall"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "As anchor, Brokaw conducted the first one-on-one American television interviews with Soviet leader Mikhail Gorbachev and Russian President Vladimir Putin . He and Katie Couric hosted a prime-time newsmagazine, Now, that aired from 1993 to 1994 before being folded into the multi-night Dateline NBC program.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Mikhail_Gorbachev",
+                                        "text": "Mikhail Gorbachev"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/President_of_Russia",
+                                        "text": "Russian President"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Vladimir_Putin",
+                                        "text": "Vladimir Putin"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Katie_Couric",
+                                        "text": "Katie Couric"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Newsmagazine",
+                                        "text": "newsmagazine"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Now_with_Tom_Brokaw_and_Katie_Couric",
+                                        "text": "Now"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Also, in 1993, on the first broadcast of Late Show with David Letterman on CBS, in response to David Letterman 's monologue containing jokes about NBC, Brokaw walked on stage in a surprise cameo (accompanied by Paul Shaffer and the CBS Orchestra playing the NBC Nightly News theme). He congratulated Letterman on his new show and wished him well, but also stated he was disappointed and shocked; he subsequently walked over to the man holding the cue cards, took two, and remarked, \"These last two jokes are the intellectual property of NBC!\", leaving the stage afterwards. Letterman then remarked, \"Who would have thought you would ever hear the words 'intellectual property' and 'NBC' in the same sentence?\"",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Late_Show_with_David_Letterman",
+                                        "text": "Late Show with David Letterman"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/CBS",
+                                        "text": "CBS"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/David_Letterman",
+                                        "text": "David Letterman"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC",
+                                        "text": "NBC"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Paul_Shaffer",
+                                        "text": "Paul Shaffer"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Cue_cards",
+                                        "text": "cue cards"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Intellectual_property",
+                                        "text": "intellectual property"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In 1996 Brokaw made the following statement about Richard Jewell's suspected involvement in the 1996 Olympic Park bombing, after which Jewell sued NBC News:",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+                                        "text": "Richard Jewell's"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Centennial_Olympic_Park_bombing",
+                                        "text": "1996 Olympic Park bombing"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "The speculation is that the FBI is close to making the case. They probably have enough to arrest right now, probably enough to prosecute him, but you always want to have enough to convict him as well. There are still some holes in this case."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Even though NBC stood by its story, the network agreed to pay Jewell $500,000."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "On September 11, 2001, Brokaw joined Katie Couric and Matt Lauer around 9:30 a.m., following the live attack on the South Tower of the World Trade Center, and continued to anchor all day, until after midnight. Following the collapse of the second tower, Brokaw observed: \"This is war. This is a declaration and an execution of an attack on the United States.\" He continued to anchor coverage to midnight on the following two days. Later that month, a letter containing anthrax was addressed to him as part of the 2001 anthrax attacks . Brokaw was not harmed, but two NBC News employees were infected. In 2008, he testified before the Commission on Prevention of Weapons of Mass Destruction Proliferation and Terrorism about the anthrax attacks, publicly discussing his experiences for the first time in a detailed, day-by-day account.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Katie_Couric",
+                                        "text": "Katie Couric"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Matt_Lauer",
+                                        "text": "Matt Lauer"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/World_Trade_Center_(1973\u20132001)",
+                                        "text": "World Trade Center"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Anthrax",
+                                        "text": "anthrax"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/2001_anthrax_attacks",
+                                        "text": "2001 anthrax attacks"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Commission_on_Prevention_of_Weapons_of_Mass_Destruction_Proliferation_and_Terrorism",
+                                        "text": "Commission on Prevention of Weapons of Mass Destruction Proliferation and Terrorism"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In 2002, NBC announced that Brokaw would retire as anchor of the NBC Nightly News following the 2004 Presidential election, to be succeeded by Brian Williams . Brokaw would remain with NBC News in a part-time capacity from that point onwards, serving as an analyst and anchoring and producing documentary programs. Brokaw closed his final Nightly News broadcast in front of 15.7 million viewers on NBC on December 1, 2004, by saying:",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/U.S._presidential_election,_2004",
+                                        "text": "2004 Presidential election"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Brian_Williams",
+                                        "text": "Brian Williams"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_News",
+                                        "text": "NBC News"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Well the time is here. We've been through a lot together through dark days and nights and seasons of hope and joy. Whatever the story, I had only one objective, to get it right. When I failed, it was personally painful, and there was no greater urgency than course correction. On those occasions, I was grateful for your forbearance and always mindful that your patience and attention didn't come with a lifetime warranty."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "I was not alone here, of course. I am simply the most conspicuous part of a large, thoroughly dedicated and professional staff that extends from just beyond these cameras, across the country, and around the world. In too many instances, in places of grave danger and personal hardship and they're family to me."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "What have I learned here? More than we have time to recount this evening, but the enduring lessons through the decades are these: it's not the questions that get us in trouble, it's the answers. And just as important, no one person has all the answers."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Just ask a member of the generation that I came to know well, the men and women who came of age in the Great Depression who had great personal sacrifice, saved the world during World War II and returned home to dedicate their lives to improving the nation they had already served so nobly. They weren't perfect, no generation is, but this one left a large and vital legacy of common effort to find common ground here and abroad in which to solve our most vexing problems. They did not give up their personal beliefs and greatest passions, but they never stopped learning from each other and most of all, they did not give up on the idea that we're all in this together, we still are."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "And it is in that spirit that I say, thanks, for all that I have learned from you. That's been my richest reward."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "That's Nightly News for this Wednesday night. I'm Tom Brokaw. You'll see Brian Williams here tomorrow night, and I'll see you along the way."
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "By the end of his time as Nightly News anchor, Brokaw was regarded as the most popular news personality in the United States. Nightly News had moved into first place in the Nielsen ratings in late 1996 and held on to the spot for the remainder of Brokaw's tenure on the program, placing him ahead of ABC 's Peter Jennings and World News Tonight, and CBS 's Dan Rather and the CBS Evening News .Along with Jennings and Rather, Brokaw helped usher in the era of the TV news anchor as a lavishly compensated, globe-trotting star in the 1980s. The magnitude of a news event could be measured by whether Brokaw and his counterparts on the other two networks showed up on the scene. Brokaw's retirement in December 2004, followed by Rather's ousting from the CBS Evening News in March 2005, and Jennings's death in August 2005, brought that era to a close.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Nielsen_ratings",
+                                        "text": "Nielsen ratings"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/American_Broadcasting_Company",
+                                        "text": "ABC"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Peter_Jennings",
+                                        "text": "Peter Jennings"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/World_News_with_Charles_Gibson",
+                                        "text": "World News Tonight"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/CBS",
+                                        "text": "CBS"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Dan_Rather",
+                                        "text": "Dan Rather"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/CBS_News",
+                                        "text": "CBS Evening News"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/News_anchor",
+                                        "text": "news anchor"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/CBS_Evening_News",
+                                        "text": "CBS Evening News"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "2004\u20132021: after Nightly News",
+                        "type": "section",
+                        "has_parts": [
+                            {
+                                "type": "paragraph",
+                                "value": "After leaving the anchor chair, Brokaw remained at NBC as Special Correspondent, providing periodic reports for Nightly News . He served as an NBC analyst during the 2008 presidential election campaign and moderated the second presidential debate between Barack Obama and John McCain at Belmont University . He reported documentaries for the Discovery Channel and the History Channel and in 2006 delivered one of the eulogies during the state funeral of former President Gerald R. Ford .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Barack_Obama",
+                                        "text": "Barack Obama"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/John_McCain",
+                                        "text": "John McCain"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Belmont_University",
+                                        "text": "Belmont University"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Gerald_Ford",
+                                        "text": "state funeral of former President Gerald R. Ford"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "On June 13, 2008, when NBC interrupted its regular programming to announce the sudden death of NBC News Washington Bureau Chief and Meet the Press moderator Tim Russert, Brokaw served as the announcer. A week later, NBC announced that Brokaw would serve as host of Meet the Press on an interim basis. He was succeeded by David Gregory in December 2008.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Meet_the_Press",
+                                        "text": "Meet the Press"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Tim_Russert",
+                                        "text": "Tim Russert"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/David_Gregory_(journalist)",
+                                        "text": "David Gregory"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "Brokaw serves on the board of directors of the Council on Foreign Relations, the Committee to Protect Journalists, the International Rescue Committee and the Mayo Clinic . He is also a member of the Howard University School of Communications Board of Visitors and a trustee of the University of South Dakota, the Norton Simon Museum, the American Museum of Natural History, and the International Rescue Committee . He also provides the voiceover for a University of Iowa advertisement that airs on television during Iowa Hawkeyes athletic events.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Council_on_Foreign_Relations",
+                                        "text": "Council on Foreign Relations"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Committee_to_Protect_Journalists",
+                                        "text": "Committee to Protect Journalists"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/International_Rescue_Committee",
+                                        "text": "International Rescue Committee"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+                                        "text": "Mayo Clinic"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Howard_University",
+                                        "text": "Howard University"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_South_Dakota",
+                                        "text": "University of South Dakota"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Norton_Simon_Museum",
+                                        "text": "Norton Simon Museum"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/American_Museum_of_Natural_History",
+                                        "text": "American Museum of Natural History"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/International_Rescue_Committee",
+                                        "text": "International Rescue Committee"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Iowa",
+                                        "text": "University of Iowa"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Iowa_Hawkeyes",
+                                        "text": "Iowa Hawkeyes"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In 2011 Brokaw began hosting The Boys in the Hall, a baseball documentary series for Fox Sports Net .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Fox_Sports_Net",
+                                        "text": "Fox Sports Net"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In December 2012, Brokaw starred in the Mormon Tabernacle Choir 's annual Christmas concert, with live audiences of 84,000. The concert, titled Home for the Holidays, was nationally televised in December 2013.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Mormon_Tabernacle_Choir",
+                                        "text": "Mormon Tabernacle Choir"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Home_for_the_Holidays_(Mormon_Tabernacle_Choir_album)",
+                                        "text": "Home for the Holidays"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In April 2014, a new broadcast facility opened on the Universal Studios Hollywood lot, and named in Brokaw's honor as the Brokaw News Center. The facility houses KNBC-TV, Telemundo owned-and-operated station KVEA, and the Los Angeles bureau of NBC News .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Universal_Studios_Hollywood",
+                                        "text": "Universal Studios Hollywood"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KNBC-TV",
+                                        "text": "KNBC-TV"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Telemundo",
+                                        "text": "Telemundo"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KVEA",
+                                        "text": "KVEA"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_News",
+                                        "text": "NBC News"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "In November 2014, President Barack Obama presented Brokaw with the Presidential Medal of Freedom, American's highest civilian honor. He received the honor with the citation, \"The chronicler of the Greatest Generation...we celebrate him as one of our nation\u2019s greatest journalists\".",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/President_Barack_Obama",
+                                        "text": "President Barack Obama"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Presidential_Medal_of_Freedom",
+                                        "text": "Presidential Medal of Freedom"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "On March 11, 2016, Brokaw gave one of the eulogies for former First Lady Nancy Reagan at her funeral. He spoke about his relationship with both the Reagans as a reporter and later anchor.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Nancy_Reagan",
+                                        "text": "Nancy Reagan"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "paragraph",
+                                "value": "On January 22, 2021, NBC announced Brokaw would retire after 55 years at the network, one of the few news anchors in the world who have spent the longest time on the same news network, along with Ecuadorian news anchor Alfonso Espinosa de los Monteros who was on Ecuavisa for over 56 years from 1967 to May of 2023.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Ecuadorian",
+                                        "text": "Ecuadorian"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Alfonso_Espinosa_de_los_Monteros",
+                                        "text": "Alfonso Espinosa de los Monteros"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Personal life",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "paragraph",
+                        "value": "Since 1962, Brokaw has been married to author Meredith Lynn Auld. They have three daughters: Jennifer, Andrea, and Sarah. Brokaw and his wife spend considerable time at their ranch near Livingston, Montana, which they bought in 1989.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Livingston,_Montana",
+                                "text": "Livingston, Montana"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "On September 6, 2012, Brokaw was hospitalized after appearing on MSNBC 's Morning Joe . He later tweeted that he was \"all well\" and explained his illness as having accidentally taken half a dose of Ambien in the morning. He was diagnosed with multiple myeloma, a treatable but incurable blood cancer, in August 2013 at the Mayo Clinic . Brokaw and his physicians were \"very encouraged with his progress\". He continued to work for NBC throughout his treatments. On December 21, 2014, Brokaw announced that his cancer is in remission. His 2015 book, A Lucky Life Interrupted: A Memoir of Hope (published by Random House), was about his cancer battle.",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/MSNBC",
+                                "text": "MSNBC"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Morning_Joe",
+                                "text": "Morning Joe"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Twitter",
+                                "text": "tweeted"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Ambien",
+                                "text": "Ambien"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Multiple_myeloma",
+                                "text": "multiple myeloma"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+                                "text": "Mayo Clinic"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "In 2018, Brokaw was accused of having made unwanted sexual advances toward two women in the 1990s. Brokaw denied the allegations. In response to the allegations, former colleagues Rachel Maddow, Andrea Mitchell, Maria Shriver, Kelly O'Donnell, and 64 others, signed a letter characterizing Brokaw as \"a man of tremendous decency and integrity\".",
+                        "links": [
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Rachel_Maddow",
+                                "text": "Rachel Maddow"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Andrea_Mitchell",
+                                "text": "Andrea Mitchell"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Maria_Shriver",
+                                "text": "Maria Shriver"
+                            },
+                            {
+                                "url": "https://en.wikipedia.org/wiki/Kelly_O'Donnell",
+                                "text": "Kelly O'Donnell"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Career timeline",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "list",
+                        "has_parts": [
+                            {
+                                "type": "list_item",
+                                "value": "1960\u20131962: KTIV-TV Newscaster, weatherman, and staff announcer",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KTIV-TV",
+                                        "text": "KTIV-TV"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1962\u20131965: KMTV-TV Reporter",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KMTV-TV",
+                                        "text": "KMTV-TV"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1965: Anchor of WSB-TV late-evening news",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/WSB-TV",
+                                        "text": "WSB-TV"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1966\u20132021: NBC News 1966\u20131972: NBC News West Coast correspondent and KNBC anchor 1973\u20131976: White House correspondent and Saturday anchor of NBC Nightly News 1976\u20131981: Today Show co-anchor 1982\u20131983: NBC Nightly News co-anchor 1983\u20132004: NBC Nightly News anchor 2004\u20132021: Special correspondent 2004\u20132021: Contributing anchor 2008: Meet the Press moderator (interim)",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_News",
+                                        "text": "NBC News"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KNBC",
+                                        "text": "KNBC"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/White_House",
+                                        "text": "White House"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_Nightly_News",
+                                        "text": "NBC Nightly News"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Today_(NBC_program)",
+                                        "text": "Today Show"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Meet_the_Press",
+                                        "text": "Meet the Press"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1966\u20131972: NBC News West Coast correspondent and KNBC anchor",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/KNBC",
+                                        "text": "KNBC"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1973\u20131976: White House correspondent and Saturday anchor of NBC Nightly News",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/White_House",
+                                        "text": "White House"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/NBC_Nightly_News",
+                                        "text": "NBC Nightly News"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1976\u20131981: Today Show co-anchor",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Today_(NBC_program)",
+                                        "text": "Today Show"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1982\u20131983: NBC Nightly News co-anchor"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1983\u20132004: NBC Nightly News anchor"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2004\u20132021: Special correspondent"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2004\u20132021: Contributing anchor"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2008: Meet the Press moderator (interim)",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Meet_the_Press",
+                                        "text": "Meet the Press"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Bibliography",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "list",
+                        "has_parts": [
+                            {
+                                "type": "list_item",
+                                "value": "1998 The Greatest Generation ISBN 0-375-50202-5 (hardback) ISBN 0-385-33462-1 (paperback) depicting the Americans who came of age during the Great Depression and fought World War II;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/The_Greatest_Generation_(book)",
+                                        "text": "The Greatest Generation"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-50202-5",
+                                        "text": "0-375-50202-5"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-385-33462-1",
+                                        "text": "0-385-33462-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1999 The Greatest Generation Speaks: Letters and Reflections ISBN 0-375-50394-3 (hardback) ISBN 0-385-33538-5 (paperback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-50394-3",
+                                        "text": "0-375-50394-3"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-385-33538-5",
+                                        "text": "0-385-33538-5"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2001 An Album of Memories: Personal Histories from the Greatest Generation ISBN 0-375-50581-4 (hardback) ISBN 0-375-76041-5 (paperback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-50581-4",
+                                        "text": "0-375-50581-4"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-76041-5",
+                                        "text": "0-375-76041-5"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2002 A Long Way from Home: Growing Up in the American Heartland ISBN 0-375-50763-9 (hardback) ISBN 0-375-75935-2 (paperback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-50763-9",
+                                        "text": "0-375-50763-9"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-375-75935-2",
+                                        "text": "0-375-75935-2"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2006 Galen Rowell: A Retrospective ISBN 1-57805-115-0 (hardback) Foreword by Tom Brokaw;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/1-57805-115-0",
+                                        "text": "1-57805-115-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2007 Boom!: Voices of the Sixties Personal Reflections on the '60s and Today ISBN 1-4000-6457-0 (hardback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/1-4000-6457-0",
+                                        "text": "1-4000-6457-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2011 The Time of Our Lives: A Conversation About America ISBN 978-1-4000-6458-8 (hardback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-4000-6458-8",
+                                        "text": "978-1-4000-6458-8"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2013 Christmas from Heaven: The True Story of the Berlin Candy Bomber ISBN 978-1-6090-7700-6 (hardback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-6090-7700-6",
+                                        "text": "978-1-6090-7700-6"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2015 A Lucky Life Interrupted: A Memoir of Hope ISBN 978-1-4000-6969-9 (hardback) ISBN 978-0804-19500-3 (paperback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-4000-6969-9",
+                                        "text": "978-1-4000-6969-9"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0804-19500-3",
+                                        "text": "978-0804-19500-3"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2019 The Fall of Richard Nixon: A Reporter Remembers Watergate ISBN 978-1-4000-6970-5 (hardback) ISBN 978-0-5932-0925-7 (paperback);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-4000-6970-5",
+                                        "text": "978-1-4000-6970-5"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-5932-0925-7",
+                                        "text": "978-0-5932-0925-7"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2023 Never Give Up: A Prairie Family's Story ISBN 978-0-5935-9637-1 (hardback).",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+                                        "text": "ISBN"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-5935-9637-1",
+                                        "text": "978-0-5935-9637-1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Awards and honors",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "paragraph",
+                        "value": "Public and industry awards"
+                    },
+                    {
+                        "type": "list",
+                        "has_parts": [
+                            {
+                                "type": "list_item",
+                                "value": "1989 Peabody Award for a report called To Be an American;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Peabody_Award",
+                                        "text": "Peabody Award"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1989 Golden Plate Award of the American Academy of Achievement",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Academy_of_Achievement",
+                                        "text": "American Academy of Achievement"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Alfred I. duPont\u2013Columbia University Awards for excellence in broadcast journalism for Dateline NBC documentary special Why Can't We Live Together on hidden realities of racial separation in suburban America;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Alfred_I._duPont\u2013Columbia_University_Award",
+                                        "text": "Alfred I. duPont\u2013Columbia University Awards"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Alfred I. duPont\u2013Columbia University Award for excellence in broadcast journalism for his interview with Mikhail Gorbachev;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Seven Emmy Awards including one for China in Crisis special report;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Emmy_Award",
+                                        "text": "Emmy Awards"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1990 National Headliner Award from the National Conference of Christians and Jews for advancing the understanding of religion, race and ethnicity;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1992 Al Neuharth Award for Excellence in the Media presented by the Freedom Forum;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Freedom_Forum",
+                                        "text": "Freedom Forum"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1993 Emmy award for reporting on floods in the Midwest;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1995 Dennis Kauff Memorial Award for Lifetime Achievement in Journalism from Boston University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Boston_University",
+                                        "text": "Boston University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1995 Lowell Thomas Award from Marist College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Marist_College",
+                                        "text": "Marist College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1997 University of Missouri School of Journalism Honor Medal for Distinguished Service in Journalism;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Missouri",
+                                        "text": "University of Missouri"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Missouri_School_of_Journalism",
+                                        "text": "School of Journalism"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1998 Fred Friendly First Amendment Award, a tribute to those \"individuals whose broadcast career reflects a consistent devotion to freedom of speech and the principles embodied in the First Amendment.\";",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Fred_Friendly",
+                                        "text": "Fred Friendly"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1998 American Legion award for distinguished public service in the field of communication;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/American_Legion",
+                                        "text": "American Legion"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1998 Citizens' Scholarship Foundation of America's President's Award recognizing \"devotion to helping young people through scholarships.\";"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1999 Congressional Medal of Honor Society's \"Tex\" McCrary Excellence in Journalism Award;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "1999 Emmy award for international coverage of the Kosovo conflict;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Kosovo",
+                                        "text": "Kosovo"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2002: Paul White Award, Radio Television Digital News Association",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Paul_White_(journalist)",
+                                        "text": "Paul White"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Radio_Television_Digital_News_Association",
+                                        "text": "Radio Television Digital News Association"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2003 Peabody Award for his special report called \"A Question of Fairness\";"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2005 Elected to the American Academy of Arts and Sciences;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2005 Four Freedoms Medal: Freedom of Speech And Expression;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2006 Washington State University Edward R. Murrow School of Communications Lifetime Achievement in Broadcasting Award;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Washington_State_University",
+                                        "text": "Washington State University"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Edward_R._Murrow",
+                                        "text": "Edward R. Murrow"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2006 Sylvanus Thayer Award: United States Military Academy at West Point;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Sylvanus_Thayer_Award",
+                                        "text": "Sylvanus Thayer Award"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2006 Walter Cronkite Award for Excellence in Journalism at Arizona State University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Walter_Cronkite_Award_for_Excellence_in_Journalism",
+                                        "text": "Walter Cronkite Award for Excellence in Journalism"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2006 Induction into the Television Hall of Fame;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Television_Hall_of_Fame",
+                                        "text": "Television Hall of Fame"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2007 Horatio Alger Award for overcoming adversity to achieve success through the American free enterprise system from the Horatio Alger Association of Distinguished Americans Inc.;"
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2011 Charles Osgood Lifetime Achievement Award in Broadcast Journalism from WFUV (90.7 FM);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Charles_Osgood",
+                                        "text": "Charles Osgood"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/WFUV",
+                                        "text": "WFUV"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2012 The Nichols-Chancellor's Medal awarded by Vanderbilt University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/The_Nichols-Chancellor's_Medal",
+                                        "text": "The Nichols-Chancellor's Medal"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Vanderbilt_University",
+                                        "text": "Vanderbilt University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2012 Ken Burns Lifetime Achievement Award awarded at Old Sturbridge Village in Sturbridge, Massachusetts;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Ken_Burns_Lifetime_Achievement_Award?action=edit&redlink=1",
+                                        "text": "Ken Burns Lifetime Achievement Award"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2013 Peabody Award for enhancing his reputation since he left the NBC News desk in 2004.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Peabody_Award",
+                                        "text": "Peabody Award"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2014 Presidential Medal of Freedom",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Presidential_Medal_of_Freedom",
+                                        "text": "Presidential Medal of Freedom"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "2016 French Legion of Honor, for his support of World War II veterans, along with actor Tom Hanks and Gordon H. Mueller, president and co-founder of the National WWII Museum, New Orleans.",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/French_Legion_of_Honor",
+                                        "text": "French Legion of Honor"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Tom_Hanks",
+                                        "text": "Tom Hanks"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Gordon_H._Mueller",
+                                        "text": "Gordon H. Mueller"
+                                    },
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/The_National_WWII_Museum",
+                                        "text": "the National WWII Museum"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "value": "Honorary degrees"
+                    },
+                    {
+                        "type": "list",
+                        "has_parts": [
+                            {
+                                "type": "list_item",
+                                "value": "Air University (United States Air Force);",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Air_University_(United_States_Air_Force)",
+                                        "text": "Air University (United States Air Force)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Arizona State University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Arizona_State_University",
+                                        "text": "Arizona State University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Boston College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Boston_College",
+                                        "text": "Boston College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Brandeis University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Brandeis_University",
+                                        "text": "Brandeis University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "California Institute of Technology;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/California_Institute_of_Technology",
+                                        "text": "California Institute of Technology"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "The College of William & Mary;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/The_College_of_William_&_Mary",
+                                        "text": "The College of William & Mary"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Dartmouth College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Dartmouth_College",
+                                        "text": "Dartmouth College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Duke University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Duke_University",
+                                        "text": "Duke University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Emory University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Emory_University",
+                                        "text": "Emory University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Fairfield University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Fairfield_University",
+                                        "text": "Fairfield University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Fordham University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Fordham_University",
+                                        "text": "Fordham University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Florida State University",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Florida_State_University",
+                                        "text": "Florida State University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Hofstra University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Hofstra_University",
+                                        "text": "Hofstra University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "John Carroll University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/John_Carroll_University",
+                                        "text": "John Carroll University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Johns Hopkins University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+                                        "text": "Johns Hopkins University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Montana State University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Montana_State_University_\u2013_Bozeman",
+                                        "text": "Montana State University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Mayo Clinic and the College of Medicine;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+                                        "text": "Mayo Clinic"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Northwestern University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Northwestern_University",
+                                        "text": "Northwestern University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Providence College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Providence_College",
+                                        "text": "Providence College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Saint Anselm College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Saint_Anselm_College",
+                                        "text": "Saint Anselm College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Seton Hall University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Seton_Hall_University",
+                                        "text": "Seton Hall University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Skidmore College;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Skidmore_College",
+                                        "text": "Skidmore College"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "St. Lawrence University;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/St._Lawrence_University",
+                                        "text": "St. Lawrence University"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of Iowa;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Iowa",
+                                        "text": "University of Iowa"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of Montana;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Montana",
+                                        "text": "University of Montana"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of Notre Dame;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+                                        "text": "University of Notre Dame"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of Oklahoma;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+                                        "text": "University of Oklahoma"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of Pennsylvania;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+                                        "text": "University of Pennsylvania"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of South Dakota;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_South_Dakota",
+                                        "text": "University of South Dakota"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "University of South Carolina;",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+                                        "text": "University of South Carolina"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "value": "Washington University in St. Louis .",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/Washington_University_in_St._Louis",
+                                        "text": "Washington University in St. Louis"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "See also",
+                "type": "section",
+                "has_parts": [
+                    {
+                        "type": "list",
+                        "has_parts": [
+                            {
+                                "type": "list_item",
+                                "value": "New Yorkers in journalism",
+                                "links": [
+                                    {
+                                        "url": "https://en.wikipedia.org/wiki/New_Yorkers_in_journalism",
+                                        "text": "New Yorkers in journalism"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

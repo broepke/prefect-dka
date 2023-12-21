@@ -1,4 +1,6 @@
-import os
+"""
+General Twilio and SMS sending utilities
+"""
 from twilio.rest import Client
 from prefect.blocks.notifications import TwilioSMS
 from prefect.blocks.system import Secret

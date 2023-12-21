@@ -3,14 +3,12 @@ Script to look up a person's birth and death on Wikipedia
 """
 import re
 import json
-import pandas as pd
 from datetime import datetime
 import requests
 from prefect import task, flow, get_run_logger
 from prefect.blocks.system import Secret
 from utilities.util_slack import death_notification
 from utilities.util_slack import bad_wiki_page
-from utilities.util_snowflake import get_existing_values
 from utilities.util_snowflake import update_rows
 from utilities.util_snowflake import get_snowflake_connection
 

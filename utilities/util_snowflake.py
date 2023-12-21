@@ -21,10 +21,12 @@ def create_table(connection, database_name, schema_name, table_name, DDL):
     """
 
     statement = (
-        f"CREATE TABLE IF NOT EXISTS {database_name}.{schema_name}.{table_name} ({DDL})"
+        f"CREATE TABLE IF NOT EXISTS {database_name}.{schema_name}."
+        f"{table_name} ({DDL})"
     )
     with connection.cursor() as cursor:
         cursor.execute(statement)
+
 
 def update_rows(
     connection,
@@ -34,10 +36,25 @@ def update_rows(
     set_string,
     conditionals=None
 ):
-    statement = f"UPDATE {database_name}.{schema_name}.{table_name} {set_string} {conditionals};"
+    """_summary_
+
+    Args:
+        connection (_type_): _description_
+        database_name (_type_): _description_
+        schema_name (_type_): _description_
+        table_name (_type_): _description_
+        set_string (_type_): _description_
+        conditionals (_type_, optional): _description_. Defaults to None.
+    """
+
+    statement = (
+        f"UPDATE {database_name}.{schema_name}.{table_name} "
+        f"{set_string} {conditionals};"
+    )
+
     with connection.cursor() as cursor:
         cursor.execute(statement)
-    
+
     return
 
 
@@ -66,8 +83,12 @@ def get_existing_values(
     Returns:
         list: Flat list of all values for iteration
     """
-    #logger = get_run_logger()
-    statement = f"SELECT {column_name} FROM {database_name}.{schema_name}.{table_name} {conditionals};"
+
+    statement = (
+        f"SELECT {column_name} FROM {database_name}.{schema_name}."
+        f"{table_name} {conditionals};"
+    )
+
     with connection.cursor() as cursor:
         cursor.execute(statement)
         df = cursor.fetch_pandas_all()
@@ -80,7 +101,11 @@ def get_existing_values(
 
 
 @task(name="Write Dataframe to Snowflake")
-def write_dataframe(connection, database_name, schema_name, table_name, filtered_df):
+def write_dataframe(connection,
+                    database_name,
+                    schema_name,
+                    table_name,
+                    filtered_df):
     """_summary_
 
     Args:

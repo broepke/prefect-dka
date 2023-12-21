@@ -3,7 +3,6 @@ Script to look up a person's birth and death on Wikipedia
 """
 import re
 import json
-import pandas as pd
 from datetime import datetime
 import requests
 from prefect import task, flow, get_run_logger
@@ -50,7 +49,10 @@ def get_infobox(person, access_token):
     Returns:
         json: JSON object of just the infobox from the page.
     """
-    url = "https://api.enterprise.wikimedia.com/v2/structured-contents/" + person
+    logger = get_run_logger()
+
+    WIKI_URL = "https://api.enterprise.wikimedia.com/v2/structured-contents/"
+    url = WIKI_URL + person
     headers = {
         "accept": "application/json",
         "Authorization": "Bearer " + access_token,
@@ -67,13 +69,15 @@ def get_infobox(person, access_token):
     try:
         infobox = infobox_all[0]["infobox"]
         return infobox
-    except:
+    except Exception as e:
+        logger.info(e)
         return None
 
 
 def extract_date(json_data, date_type):
     """
-    Extracts birth or death date from a JSON object, handling variations in the key naming.
+    Extracts birth or death date from a JSON object,
+    handling variations in the key naming.
 
     Args:
     json_data (list or dict): JSON object representing the data.
@@ -125,7 +129,7 @@ def extract_datetime_object(date_string):
     """
     logger = get_run_logger()
     # Regular expression pattern for dates (assuming format "Month Day, Year")
-    date_pattern = r"(?:(\d{1,2}) )?(January|February|March|April|May|June|July|August|September|October|November|December)(?: (\d{1,2}),)? (\d{4})"
+    date_pattern = r"(?:(\d{1,2}) )?(January|February|March|April|May|June|July|August|September|October|November|December)(?: (\d{1,2}),)? (\d{4})"  # noqa: E501
 
     logger.info("Date String to Extract %s", date_string)
     extracted_date = re.search(date_pattern, date_string)
@@ -139,28 +143,25 @@ def extract_datetime_object(date_string):
         return None
 
 
-from datetime import datetime
-
-
 @task(name="Calculate Age")
-def get_age(birth_date, death_date):
+def get_age(b_date, d_date):
     """Get the age of the person based on two datetime objects
 
     Args:
-        birth_date (datetime): Birth Date
-        death_date (datetime): Date of death if exists
+        b_date (datetime): Birth Date
+        d_date (datetime): Date of death if exists
 
     Returns:
         int: The person's age
     """
-    if death_date:
-        age = death_date.year - birth_date.year
-        if (death_date.month, death_date.day) < (birth_date.month, birth_date.day):
+    if d_date:
+        age = d_date.year - b_date.year
+        if (d_date.month, d_date.day) < (b_date.month, b_date.day):
             age -= 1
     else:
         current_date = datetime.now()
-        age = current_date.year - birth_date.year
-        if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
+        age = current_date.year - b_date.year
+        if (current_date.month, current_date.day) < (b_date.month, b_date.day):
             age -= 1
     return age
 
@@ -173,11 +174,11 @@ def dead_pool_status_check():
     # Get the credetials from Prefect
     wiki_user_block = Secret.load("wiki-user")
     wiki_pass_block = Secret.load("wiki-pass")
-    username = wiki_user_block.get()
-    password = wiki_pass_block.get()
+    w_user = wiki_user_block.get()
+    w_pass = wiki_pass_block.get()
 
     # Login and Get the Access Token
-    access_token = authenticate_to_wikipedia(username=username, password=password)
+    access_token = authenticate_to_wikipedia(username=w_user, password=w_pass)
 
     connection = get_snowflake_connection("snowflake-dka")
 
@@ -203,7 +204,7 @@ def dead_pool_status_check():
 
         # Get the Infobox JSON
         infobox = get_infobox(wiki_page, access_token)
-        if infobox != None:
+        if infobox is not None:
             # Initialize variables to hold birth and death dates
             birth_date = None
             death_date = None
@@ -230,7 +231,8 @@ def dead_pool_status_check():
                 logger.info("DEAD: Deadpool Winning Pick!!!")
 
                 name = name.replace("'", "''")
-                set_string = f"""SET birth_date = '{birth_date}', death_date = '{death_date}', age = {age}"""
+                set_string = f"""SET birth_date = '{birth_date}', death_date \
+                    = '{death_date}', age = {age}"""
                 conditionals = f"""WHERE name = '{name}'
                 """
                 update_rows(
@@ -267,9 +269,9 @@ def dead_pool_status_check():
                 logger.info("ALIVE: Better Luck Next Time!")
 
                 name = name.replace("'", "''")
-                set_string = f"""SET birth_date = '{birth_date}', age = {age}"""
-                conditionals = f"""WHERE name = '{name}'
-                """
+                set_string = f"SET birth_date = '{birth_date}', age = {age}"
+                conditionals = f"WHERE name = '{name}'"
+
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",

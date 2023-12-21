@@ -52,7 +52,7 @@ def get_infobox(person, access_token):
     response = requests.post(url, json=data, headers=headers, timeout=5)
 
     infobox_all = json.loads(response.text)
-        
+
     try:
         infobox = infobox_all[0]["infobox"]
 
@@ -60,17 +60,19 @@ def get_infobox(person, access_token):
 
         # Writing the JSON data to a file
         with open(file_path, "w") as file:
-            json.dump(infobox, file, indent=4)
+            json.dump(infobox_all, file, indent=4)
 
         return infobox
 
-    except:
+    except Exception as e:
+        print(e)
         return None
 
 
 def extract_date(json_data, date_type):
     """
-    Extracts birth or death date from a JSON object, handling variations in the key naming.
+    Extracts birth or death date from a JSON object, 
+    handling variations in the key naming.
 
     Args:
     json_data (list or dict): JSON object representing the data.
@@ -91,7 +93,10 @@ def extract_date(json_data, date_type):
         # Check for both exact match and match with colon in the 'name' key
         # Also check in 'value' key for directly provided dates
         for key, value in json_data.items():
-            if key == 'name' and (value.strip().lower() == date_type.lower() or value.strip().lower() == f"{date_type.lower()}:"):
+            if key == 'name' and (
+                value.strip().lower() == date_type.lower() or
+                value.strip().lower() == f"{date_type.lower()}:"
+            ):
                 return json_data.get('value')
             elif key == 'value' and date_type.lower() in value.lower():
                 return value
@@ -116,7 +121,7 @@ def dead_pool_status_check():
     password = os.environ.get("WIKI_PASS")
 
     # Login and Get the Access Token
-    access_token = authenticate_to_wikipedia(username=username, password=password)
+    access_token = authenticate_to_wikipedia(username, password)
 
     # wiki_page = "Tina_Turner"
     # wiki_page = "O._J._Simpson"
@@ -124,12 +129,9 @@ def dead_pool_status_check():
     # wiki_page = "Willie_Mays"
     wiki_page = "Tom_Brokaw"
 
-    # Set the person you wish to check status of
-    person = wiki_page.replace("_", " ")
-
     # Get the Infobox JSON
     infobox = get_infobox(wiki_page, access_token)
-    if infobox != None:
+    if infobox is not None:
         # Initialize variables to hold birth and death dates
         birth_date = None
         death_date = None
@@ -142,6 +144,7 @@ def dead_pool_status_check():
         print(death_date)
     else:
         print("Didn't find infobox")
+
 
 if __name__ == "__main__":
     dead_pool_status_check()
