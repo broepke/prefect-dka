@@ -186,7 +186,7 @@ def dead_pool_status_check():
     names_to_check = get_existing_values(
         connection,
         database_name="DEADPOOL",
-        schema_name="ONE",
+        schema_name="PROD",
         table_name="PICKS",
         column_name="NAME, WIKI_PAGE",
         conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024",
@@ -238,7 +238,7 @@ def dead_pool_status_check():
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",
-                    schema_name="ONE",
+                    schema_name="PROD",
                     table_name="PICKS",
                     set_string=set_string,
                     conditionals=conditionals,
@@ -256,7 +256,7 @@ def dead_pool_status_check():
                 sms_to_list = get_existing_values(
                     connection=connection,
                     database_name="DEADPOOL",
-                    schema_name="ONE",
+                    schema_name="PROD",
                     table_name="DRAFT_OPTED_IN",
                     column_name="SMS",
                 )
@@ -275,7 +275,7 @@ def dead_pool_status_check():
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",
-                    schema_name="ONE",
+                    schema_name="PROD",
                     table_name="PICKS",
                     set_string=set_string,
                     conditionals=conditionals,
