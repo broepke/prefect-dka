@@ -77,7 +77,7 @@ def get_infobox(person, access_token):
 def extract_date(json_data, date_type):
     """
     Extracts birth or death date from a JSON object,
-    handling variations in the key naming.
+    handling variations in the key naming and ignoring marriage dates.
 
     Args:
     json_data (list or dict): JSON object representing the data.
@@ -95,16 +95,19 @@ def extract_date(json_data, date_type):
 
     # Check if the input is a dictionary and process accordingly
     elif isinstance(json_data, dict):
-        # Check for both exact match and match with colon in the 'name' key
-        # Also check in 'value' key for directly provided dates
         for key, value in json_data.items():
             if key == "name" and (
                 value.strip().lower() == date_type.lower()
                 or value.strip().lower() == f"{date_type.lower()}:"
             ):
                 return json_data.get("value")
-            elif key == "value" and date_type.lower() in value.lower():
-                return value
+            elif key == "value":
+                # Check if the value contains a marriage date and skip it
+                if "m." in value and any(char.isdigit() for char in value):
+                    continue
+                # Check for death date in the value
+                if date_type.lower() in value.lower():
+                    return value
 
             # Otherwise, iterate through nested structures
             if isinstance(value, (dict, list)):
