@@ -100,7 +100,7 @@ def dead_pool_status_check():
         schema_name="PROD",
         table_name="PICKS",
         column_name="NAME, WIKI_PAGE",
-        conditionals="WHERE YEAR = 2023",  # DEATH_DATE IS NULL AND
+        conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024",
         return_list=False,
     )
 
