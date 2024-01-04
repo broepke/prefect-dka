@@ -4,6 +4,7 @@ General Twilio and SMS sending utilities
 from twilio.rest import Client
 from prefect.blocks.notifications import TwilioSMS
 from prefect.blocks.system import Secret
+from utilities.util_apify import the_arbiter
 
 
 def send_sms_via_prefect(message):
@@ -12,7 +13,7 @@ def send_sms_via_prefect(message):
     twilio_webhook_block.notify(message)
 
 
-def send_sms_via_api(message_text, distro_list):
+def send_sms_via_api(message_text, distro_list, arbiter=False):
     account_sid_block = Secret.load("twilio-sid")
     auth_token_block = Secret.load("twilio-token")
     from_number_block = Secret.load("twilio-from")
@@ -21,6 +22,9 @@ def send_sms_via_api(message_text, distro_list):
     account_sid = account_sid_block.get()
     auth_token = auth_token_block.get()
     from_number = from_number_block.get()
+
+    if arbiter:
+        message_text = the_arbiter(message_text)
 
     client = Client(account_sid, auth_token)
 

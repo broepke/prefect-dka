@@ -175,8 +175,9 @@ def dead_pool_status_check():
                 
                 logger.info(sms_to_list)
 
-                sms_message = f"{name} has died at the age of {age}"
-                send_sms_via_api(sms_message, sms_to_list)
+                sms_message = f"Insult the player about their pick {name} \
+                    that died at the age {age}.  Ensure the message is no more than 15 words."
+                send_sms_via_api(sms_message, sms_to_list, arbiter=True)
 
             # If they're not dead yet, log that
             if birth_date and not death_date:
