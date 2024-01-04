@@ -24,9 +24,12 @@ def send_sms_via_api(message_text, distro_list):
 
     client = Client(account_sid, auth_token)
 
-    for number in distro_list:
-        message = client.messages.create(
-            from_=from_number, body=message_text, to=number
-        )
+    if distro_list == []:
+        return None
+    else:
+        for number in distro_list:
+            message = client.messages.create(
+                from_=from_number, body=message_text, to=number
+            )
 
     return message.sid
