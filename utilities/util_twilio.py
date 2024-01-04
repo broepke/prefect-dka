@@ -14,6 +14,16 @@ def send_sms_via_prefect(message):
 
 
 def send_sms_via_api(message_text, distro_list, arbiter=False):
+    """Send and SMS via Twillio to a list of numbers
+
+    Args:
+        message_text (str): Any string
+        distro_list (list): numbers must be strings like - "+1231231234"
+        arbiter (bool, optional): do you want to use the AI Chatbot. Defaults to False.
+
+    Returns:
+        _type_: _description_
+    """
     account_sid_block = Secret.load("twilio-sid")
     auth_token_block = Secret.load("twilio-token")
     from_number_block = Secret.load("twilio-from")
