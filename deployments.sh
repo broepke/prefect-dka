@@ -13,7 +13,7 @@ prefect deployment build deadpool/deadpool.py:dead_pool_status_check \
     --skip-upload
 
 prefect deployment build deadpool/deadpool_nndb.py:deadpool_nndb_date_updates \
-    --name deadpool-github \
+    --name deadpool-nndb-github \
     --storage-block github/github-repo \
     --work-queue default  \
     --apply \
