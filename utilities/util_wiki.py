@@ -54,7 +54,7 @@ def resolve_redirect(title):
         page_id = next(iter(data["query"]["pages"]))
         final_title = data["query"]["pages"][page_id]["title"]
     else:
-        final_title = title  # No normalization or redirects, use the original title
+        final_title = title  # No normalization or redirects, use the original
 
     return final_title
 
