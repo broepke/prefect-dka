@@ -10,7 +10,6 @@ from utilities.util_snowflake import get_snowflake_connection
 from utilities.util_wiki import get_birth_death_date
 
 
-@task(name="Calculate Age")
 def get_age(b_date, d_date):
     """Get the age of the person based on two datetime objects
 

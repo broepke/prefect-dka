@@ -16,7 +16,7 @@ def fetch_wikidata(params):
     """
     wikidata_url = "https://www.wikidata.org/w/api.php"
     try:
-        response = requests.get(wikidata_url, params=params)
+        response = requests.get(wikidata_url, params=params, timeout=5)
         return response.json()
     except requests.exceptions.RequestException as e:
         return f"There was an error: {e}"
@@ -36,7 +36,7 @@ def resolve_redirect(title):
 
     def query_wikipedia(t):
         params = {"action": "query", "titles": t, "redirects": 1, "format": "json"}
-        response = requests.get(wikipedia_api_url, params=params)
+        response = requests.get(wikipedia_api_url, params=params, timeout=5)
         return response.json()
 
     data = query_wikipedia(title)
