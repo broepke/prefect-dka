@@ -2,7 +2,6 @@
 Script to look up a person's birth and death on Wikipedia
 """
 from datetime import datetime
-import requests
 import urllib.parse
 from prefect import task, flow, get_run_logger
 from utilities.util_slack import death_notification
@@ -11,92 +10,8 @@ from utilities.util_snowflake import get_existing_values
 from utilities.util_snowflake import update_rows
 from utilities.util_snowflake import get_snowflake_connection
 from utilities.util_twilio import send_sms_via_api
-
-
-def fetch_wikidata(params):
-    wikidata_url = "https://www.wikidata.org/w/api.php"
-    try:
-        response = requests.get(wikidata_url, params=params)
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        return f"There was an error: {e}"
-
-
-# Function to resolve multiple redirects on Wikipedia
-def resolve_redirect(title):
-    wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
-
-    def query_wikipedia(t):
-        params = {
-            "action": "query",
-            "titles": t,
-            "redirects": 1,
-            "format": "json"
-        }
-        response = requests.get(wikipedia_api_url, params=params)
-        return response.json()
-
-    data = query_wikipedia(title)
-
-    # Loop to follow through all redirects
-    while 'redirects' in data['query']:
-        # Get the last redirect target
-        redirects = data['query']['redirects']
-        final_redirect = redirects[-1]['to']
-        data = query_wikipedia(final_redirect)
-
-    if 'normalized' in data['query']:
-        final_title = data['query']['normalized'][0]['to']
-    elif 'pages' in data['query']:
-        page_id = next(iter(data['query']['pages']))
-        final_title = data['query']['pages'][page_id]['title']
-    else:
-        final_title = title  # No normalization or redirects, use the original title
-
-    return final_title
-
-
-# Function to get the Wikidata ID from a Wikipedia page title
-def get_wiki_id_from_page(page_title):
-    final_title = resolve_redirect(page_title)  # Resolve redirects first
-    params = {
-        "action": "wbgetentities",
-        "format": "json",
-        "sites": "enwiki",
-        "titles": final_title,
-        "languages": "en",
-        "redirects": "yes",
-    }
-    data = fetch_wikidata(params)
-    if isinstance(data, str) or 'entities' not in data or len(data['entities']) == 0:
-        return None
-
-    entity_id = list(data['entities'].keys())[0]
-    return entity_id
-
-
-def get_birth_death_date(identifier, entity_id):
-    # Create parameters
-    params = {
-        "action": "wbgetentities",
-        "ids": entity_id,
-        "format": "json",
-        "languages": "en",
-    }
-
-    # Fetch the API
-    data = fetch_wikidata(params)
-
-    # Extract birth date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
-
-    # Check the format of the date string and parse accordingly
-    if date_str.endswith("-00-00T00:00:00Z"):  # Year only
-        date_obj = datetime.strptime(date_str, "+%Y-00-00T00:00:00Z")
-    else:  # Full date
-        date_obj = datetime.strptime(date_str, "+%Y-%m-%dT%H:%M:%SZ")
-
-    return date_obj
+from utilities.util_wiki import get_wiki_id_from_page
+from utilities.util_wiki import get_birth_death_date
 
 
 @task(name="Calculate Age")
@@ -208,11 +123,12 @@ def dead_pool_status_check():
                     table_name="DRAFT_OPTED_IN",
                     column_name="SMS",
                 )
-                
+
                 logger.info(sms_to_list)
 
                 sms_message = f"Insult the player about their pick {name} \
-                    that died at the age {age}.  Ensure the message is no more than 15 words."
+                    that died at the age {age}.  \
+                        Ensure the message is no more than 15 words."
                 send_sms_via_api(sms_message, sms_to_list, arbiter=True)
 
             # If they're not dead yet, log that
