@@ -28,7 +28,8 @@ def get_wiki_id_from_page(page_title):
         "format": "json",
         "sites": "enwiki",  # This specifies the English Wikipedia
         "titles": page_title,
-        "languages": "en",  # Language for labels and descriptions
+        "languages": "en",
+        "redirects": "yes",
     }
 
     # Fetch API
