@@ -106,7 +106,7 @@ def get_birth_death_date(identifier, entity_id):
     # Fetch the API
     data = fetch_wikidata(params)
 
-    # Extract birth date
+    # Extract birth or death date
     date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
 
     # Remove the '+' or '-' sign from the date string if present
@@ -116,6 +116,8 @@ def get_birth_death_date(identifier, entity_id):
     # Check the format of the date string and parse accordingly
     if date_str.endswith("-00-00T00:00:00Z"):  # Year only
         date_obj = datetime.strptime(date_str, "%Y-00-00T00:00:00Z")
+    elif date_str[5:7] != "00" and date_str.endswith("-00T00:00:00Z"):  # Year and month only
+        date_obj = datetime.strptime(date_str, "%Y-%m-00T00:00:00Z")
     else:  # Full date
         date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
 
