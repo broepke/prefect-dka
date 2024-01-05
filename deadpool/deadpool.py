@@ -124,8 +124,6 @@ def dead_pool_status_check():
                     column_name="SMS",
                 )
 
-                logger.info(sms_to_list)
-
                 sms_message = f"Insult the player about their pick {name} \
                     that died at the age {age}.  \
                         Ensure the message is no more than 15 words."
