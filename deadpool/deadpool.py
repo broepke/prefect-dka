@@ -14,29 +14,64 @@ from utilities.util_twilio import send_sms_via_api
 
 
 def fetch_wikidata(params):
-    url = "https://www.wikidata.org/w/api.php"
+    wikidata_url = "https://www.wikidata.org/w/api.php"
     try:
-        response = requests.get(url, params=params)
-        return response.json()  # Return JSON content here
+        response = requests.get(wikidata_url, params=params)
+        return response.json()
     except requests.exceptions.RequestException as e:
         return f"There was an error: {e}"
 
 
+# Function to resolve multiple redirects on Wikipedia
+def resolve_redirect(title):
+    wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
+
+    def query_wikipedia(t):
+        params = {
+            "action": "query",
+            "titles": t,
+            "redirects": 1,
+            "format": "json"
+        }
+        response = requests.get(wikipedia_api_url, params=params)
+        return response.json()
+
+    data = query_wikipedia(title)
+
+    # Loop to follow through all redirects
+    while 'redirects' in data['query']:
+        # Get the last redirect target
+        redirects = data['query']['redirects']
+        final_redirect = redirects[-1]['to']
+        data = query_wikipedia(final_redirect)
+
+    if 'normalized' in data['query']:
+        final_title = data['query']['normalized'][0]['to']
+    elif 'pages' in data['query']:
+        page_id = next(iter(data['query']['pages']))
+        final_title = data['query']['pages'][page_id]['title']
+    else:
+        final_title = title  # No normalization or redirects, use the original title
+
+    return final_title
+
+
+# Function to get the Wikidata ID from a Wikipedia page title
 def get_wiki_id_from_page(page_title):
+    final_title = resolve_redirect(page_title)  # Resolve redirects first
     params = {
         "action": "wbgetentities",
         "format": "json",
-        "sites": "enwiki",  # This specifies the English Wikipedia
-        "titles": page_title,
+        "sites": "enwiki",
+        "titles": final_title,
         "languages": "en",
         "redirects": "yes",
     }
-
-    # Fetch API
     data = fetch_wikidata(params)
+    if isinstance(data, str) or 'entities' not in data or len(data['entities']) == 0:
+        return None
 
-    # Extract the Wikidata entity ID
-    entity_id = list(data["entities"].keys())[0]
+    entity_id = list(data['entities'].keys())[0]
     return entity_id
 
 
@@ -196,9 +231,9 @@ def dead_pool_status_check():
                     conditionals=conditionals,
                 )
 
-            else:
-                bad_wiki_page(name, wiki_page, ":memo:")
-                logger.info("No valid wiki page for %s", name)
+        else:
+            bad_wiki_page(name, wiki_page, ":memo:")
+            logger.info("No valid wiki page for %s", name)
 
 
 if __name__ == "__main__":
