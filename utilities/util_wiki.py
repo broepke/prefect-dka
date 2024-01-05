@@ -3,6 +3,7 @@ Wikipedia lookup tools
 """
 import requests
 from datetime import datetime
+from prefect import task
 
 
 def fetch_wikidata(params):
@@ -85,6 +86,7 @@ def get_wiki_id_from_page(page_title):
     return entity_id
 
 
+@task(name="Get Birth or Death Date", timeout_seconds=5)
 def get_birth_death_date(identifier, entity_id):
     """Get a birth or death data based
 
