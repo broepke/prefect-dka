@@ -23,7 +23,6 @@ def fetch_wikidata(params):
         return f"There was an error: {e}"
 
 
-# Function to resolve multiple redirects on Wikipedia
 def resolve_redirect(title):
     """Function to assist when Wiki Pages have 1-n redirects
 
@@ -59,7 +58,7 @@ def resolve_redirect(title):
 
     return final_title
 
-
+@task(name="Get Wiki ID", timeout_seconds=5)
 def get_wiki_id_from_page(page_title):
     """Function to get the Wikidata ID from a Wikipedia page title
 
