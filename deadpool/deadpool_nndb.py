@@ -3,6 +3,7 @@ Script to look up a person's birth and death on Wikipedia
 """
 from datetime import datetime
 import urllib.parse
+import logging
 from prefect import task, flow, get_run_logger
 from utilities.util_snowflake import get_existing_values
 from utilities.util_snowflake import update_rows
@@ -37,6 +38,7 @@ def get_age(b_date, d_date):
 def deadpool_nndb_date_updates():
     """Main Flow Logic"""
     logger = get_run_logger()
+    logger.setLevel(logging.DEBUG)
 
     connection = get_snowflake_connection("snowflake-dka")
 
