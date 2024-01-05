@@ -106,21 +106,16 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"][
-        "datavalue"
-    ]["value"]["time"]
+    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
 
-    # Handle BCE years
-    if date_str.startswith("-"):  # BCE year
-        date_str = date_str[1:]  # Remove the negative sign
-        year_format = "-%Y"
-    else:
-        year_format = "+%Y"
+    # Remove the '+' or '-' sign from the date string if present
+    if date_str.startswith('-') or date_str.startswith('+'):
+        date_str = date_str[1:]
 
     # Check the format of the date string and parse accordingly
     if date_str.endswith("-00-00T00:00:00Z"):  # Year only
-        date_obj = datetime.strptime(date_str, f"{year_format}-00-00T00:00:00Z")
+        date_obj = datetime.strptime(date_str, "%Y-00-00T00:00:00Z")
     else:  # Full date
-        date_obj = datetime.strptime(date_str, f"{year_format}-%m-%dT%H:%M:%SZ")
+        date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
 
     return date_obj
