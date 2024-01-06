@@ -3,7 +3,6 @@ Wikipedia lookup tools
 """
 import requests
 from datetime import datetime
-from prefect import task
 
 
 def fetch_wikidata(params):
@@ -58,7 +57,7 @@ def resolve_redirect(title):
 
     return final_title
 
-@task(name="Get Wiki ID", timeout_seconds=5)
+
 def get_wiki_id_from_page(page_title):
     """Function to get the Wikidata ID from a Wikipedia page title
 
@@ -85,7 +84,6 @@ def get_wiki_id_from_page(page_title):
     return entity_id
 
 
-@task(name="Get Birth or Death Date", timeout_seconds=5)
 def get_birth_death_date(identifier, entity_id):
     """Get a birth or death data based
 
@@ -107,16 +105,20 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth or death date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
+    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"][
+        "datavalue"
+    ]["value"]["time"]
 
     # Remove the '+' or '-' sign from the date string if present
-    if date_str.startswith('-') or date_str.startswith('+'):
+    if date_str.startswith("-") or date_str.startswith("+"):
         date_str = date_str[1:]
 
     # Check the format of the date string and parse accordingly
     if date_str.endswith("-00-00T00:00:00Z"):  # Year only
         date_obj = datetime.strptime(date_str, "%Y-00-00T00:00:00Z")
-    elif date_str[5:7] != "00" and date_str.endswith("-00T00:00:00Z"):  # Year and month only
+    elif date_str[5:7] != "00" and date_str.endswith(
+        "-00T00:00:00Z"
+    ):  # Year and month only
         date_obj = datetime.strptime(date_str, "%Y-%m-00T00:00:00Z")
     else:  # Full date
         date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
