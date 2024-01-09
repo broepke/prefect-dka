@@ -19,7 +19,7 @@ def send_sms_via_api(message_text, distro_list, arbiter=False):
     Args:
         message_text (str): Any string
         distro_list (list): numbers must be strings like - "+1231231234"
-        arbiter (bool, optional): do you want to use the AI Chatbot. Defaults to False.
+        arbiter (bool, optional): do you want to use the AI Chatbot.
 
     Returns:
         _type_: _description_
