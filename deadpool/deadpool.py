@@ -74,14 +74,18 @@ def dead_pool_status_check():
         logger.info(str(wiki_page) + " : " + str(wiki_id))
         if wiki_id != "-1":
             # Get bith and death dates
-            birth_date = get_birth_death_date("P569", wiki_id)
-            logger.info("Birth Date: %s", birth_date)
+            try:
+                birth_date = get_birth_death_date("P569", wiki_id)
+                logger.info("Birth Date: %s", birth_date)
+            except KeyError:
+                logger.info("No Birth Date for: %s", wiki_page)
+                None
 
             try:
                 death_date = get_birth_death_date("P570", wiki_id)
                 logger.info("Death Date: %s", death_date)
-            except Exception as e:
-                logger.info("No Death Date for: %s code: %s", wiki_page, e)
+            except KeyError:
+                logger.info("No Death Date for: %s", wiki_page)
                 None
 
             if birth_date:
