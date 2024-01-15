@@ -105,9 +105,7 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth or death date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"][
-        "datavalue"
-    ]["value"]["time"]
+    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
 
     # Remove the '+' or '-' sign from the date string if present
     if date_str.startswith("-") or date_str.startswith("+"):

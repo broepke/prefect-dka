@@ -50,7 +50,7 @@ def dead_pool_status_check():
         database_name="DEADPOOL",
         schema_name="PROD",
         table_name="PICKS",
-        column_name="NAME, WIKI_PAGE",
+        column_name="NAME, WIKI_PAGE, WIKI_ID",
         conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024",
         return_list=False,
     )
@@ -59,18 +59,23 @@ def dead_pool_status_check():
     for index, row in names_to_check.iterrows():
         name = row["NAME"]
         wiki_page = row["WIKI_PAGE"]
+        wiki_id = row["WIKI_ID"]
 
         # Strip leading and trailing spaces just in case there are in the DB
         name = name.strip()
-        wiki_page = wiki_page.strip()
-        wiki_page = urllib.parse.unquote(wiki_page)
+        if wiki_page:
+            wiki_page = wiki_page.strip()
+            wiki_page = urllib.parse.unquote(wiki_page)
+        if wiki_id:
+            wiki_id = wiki_id.strip()
 
         # Initialize variables to hold birth and death dates
         birth_date = None
         death_date = None
 
-        # Fetch the Wiki ID from Wiki Data
-        wiki_id = get_wiki_id_from_page(wiki_page)
+        # Fetch the Wiki ID from Wiki Data if we don't already have it
+        if not wiki_id:
+            wiki_id = get_wiki_id_from_page(wiki_page)
         logger.info(str(wiki_page) + " : " + str(wiki_id))
         if wiki_id != "-1":
             # Get bith and death dates
@@ -128,10 +133,13 @@ def dead_pool_status_check():
                     column_name="SMS",
                 )
 
-                sms_message = f"Insult the player about their pick {name} \
+                sms_message = f"{name} has died at the age {age}."
+                send_sms_via_api(sms_message, sms_to_list)
+
+                arbiter_sms_message = f"Insult the player about their pick {name} \
                     that died at the age {age}.  \
-                        Ensure the message is no more than 15 words."
-                send_sms_via_api(sms_message, sms_to_list, arbiter=True)
+                    Ensure the message is no more than 15 words."
+                send_sms_via_api(arbiter_sms_message, sms_to_list, arbiter=True)
 
             # If they're not dead yet, log that
             if birth_date and not death_date:
