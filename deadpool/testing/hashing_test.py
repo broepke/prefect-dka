@@ -4,7 +4,7 @@ import hashlib
 # Function to create a hash from given variables
 def create_hash(name, wiki_page, wiki_id, age):
     combined_string = f"{name}{wiki_page}{wiki_id}{age}"
-    return hashlib.sha256(combined_string.encode()).hexdigest()
+    return hashlib.md5(combined_string.encode()).hexdigest()
 
 
 # Initial variables
@@ -26,3 +26,4 @@ print()
 print(hash1)
 print(hash2)
 print(hash1 == hash2)
+print()

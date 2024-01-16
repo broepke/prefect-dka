@@ -29,7 +29,7 @@ def create_hash(name, wiki_page, wiki_id, age):
         string: sha256 hash digest value
     """
     combined_string = f"{name}{wiki_page}{wiki_id}{age}"
-    return hashlib.sha256(combined_string.encode()).hexdigest()
+    return hashlib.md5(combined_string.encode()).hexdigest()
 
 
 @task(name="Calculate Age")
