@@ -9,19 +9,20 @@ def create_hash(name, wiki_page, wiki_id, age):
 
 # Initial variables
 name = "Tina Turner"
-wiki_page = ""
-wiki_id = None
+wiki_page = "Tina_Turner"
+wiki_id = "Q234555"
 age = 58
 
 # Creating the first hash
 hash1 = create_hash(name, wiki_page, wiki_id, age)
 
 # Updated variables
-age = 58
+age = 64
 
 # Creating the second hash
 hash2 = create_hash(name, wiki_page, wiki_id, age)
 
+print()
 print(hash1)
 print(hash2)
 print(hash1 == hash2)
