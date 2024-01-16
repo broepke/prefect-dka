@@ -3,6 +3,7 @@ Script to look up a person's birth and death on Wikipedia
 """
 from datetime import datetime
 import urllib.parse
+import hashlib
 from prefect import task, flow, get_run_logger
 from utilities.util_slack import death_notification
 from utilities.util_slack import bad_wiki_page
@@ -12,6 +13,23 @@ from utilities.util_snowflake import get_snowflake_connection
 from utilities.util_twilio import send_sms_via_api
 from utilities.util_wiki import get_wiki_id_from_page
 from utilities.util_wiki import get_birth_death_date
+
+
+# Function to create a hash from given variables
+def create_hash(name, wiki_page, wiki_id, age):
+    """Creat a hash digest from a given set of strings
+
+    Args:
+        name (str): Person's name
+        wiki_page (str): Wiki Page Identifier
+        wiki_id (str): Wiki Data Identifier 'Q' number
+        age (int): Age of the person
+
+    Returns:
+        string: sha256 hash digest value
+    """
+    combined_string = f"{name}{wiki_page}{wiki_id}{age}"
+    return hashlib.sha256(combined_string.encode()).hexdigest()
 
 
 @task(name="Calculate Age")
@@ -52,7 +70,7 @@ def dead_pool_status_check():
         database_name="DEADPOOL",
         schema_name="PROD",
         table_name="PICKS",
-        column_name="NAME, WIKI_PAGE, WIKI_ID",
+        column_name="NAME, WIKI_PAGE, WIKI_ID, AGE",
         conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024 AND WIKI_PAGE IS NOT NULL AND WIKI_ID IS NOT NULL",  # noqa: E501
         return_list=False,
     )
@@ -62,6 +80,7 @@ def dead_pool_status_check():
         name = row["NAME"]
         wiki_page = row["WIKI_PAGE"]
         wiki_id = row["WIKI_ID"]
+        age = row['AGE']
 
         # Strip leading and trailing spaces just in case there are in the DB
         name = name.strip()
@@ -70,6 +89,8 @@ def dead_pool_status_check():
             wiki_page = urllib.parse.unquote(wiki_page)
         if wiki_id:
             wiki_id = wiki_id.strip()
+
+        hash1 = create_hash(name, wiki_page, wiki_id, age)
 
         # Initialize variables to hold birth and death dates
         birth_date = None
@@ -145,8 +166,10 @@ def dead_pool_status_check():
                     arbiter_sms_message, sms_to_list, arbiter=True
                 )  # noqa: E501
 
+            hash2 = create_hash(name, wiki_page, wiki_id, age)
+
             # If they're not dead yet, log that
-            if birth_date and not death_date:
+            if birth_date and not death_date and hash1 != hash2:
                 name = name.replace("'", "''")
                 set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, \
                     WIKI_ID = '{wiki_id}'"
@@ -160,6 +183,8 @@ def dead_pool_status_check():
                     set_string=set_string,
                     conditionals=conditionals,
                 )
+            else:
+                logger.info("Skipping DB Write, No values changed.")
 
         else:
             bad_wiki_page(name, wiki_page, ":memo:")
