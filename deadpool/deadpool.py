@@ -126,10 +126,8 @@ def dead_pool_status_check():
                 logger.info("Death Date (datetime object): %s", death_date)
 
                 name = name.replace("'", "''")
-                set_string = f"""SET BIRTH_DATE = '{birth_date}', DEATH_DATE \
-                    = '{death_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"""
-                conditionals = f"""WHERE name = '{name}'
-                """
+                set_string = f"""SET BIRTH_DATE = '{birth_date}', DEATH_DATE = '{death_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"""  # noqa: E501
+                conditionals = f"""WHERE name = '{name}'"""
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",
@@ -159,9 +157,7 @@ def dead_pool_status_check():
                 sms_message = f"{name} has died at the age {age}."
                 send_sms_via_api(sms_message, sms_to_list)
 
-                arbiter_sms_message = f"Insult the player about their pick \
-                    {name} that died at the age {age}.  \
-                    Ensure the message is no more than 15 words."
+                arbiter_sms_message = f"Insult the player about their pick {name} that died at the age {age}. Ensure the message is no more than 15 words."  # noqa: E501
                 send_sms_via_api(
                     arbiter_sms_message, sms_to_list, arbiter=True
                 )  # noqa: E501
@@ -171,8 +167,7 @@ def dead_pool_status_check():
             # If they're not dead yet, log that
             if birth_date and not death_date and hash1 != hash2:
                 name = name.replace("'", "''")
-                set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, \
-                    WIKI_ID = '{wiki_id}'"
+                set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"  # noqa: E501
                 conditionals = f"WHERE name = '{name}'"
 
                 update_rows(
