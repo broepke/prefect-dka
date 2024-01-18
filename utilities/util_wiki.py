@@ -34,7 +34,7 @@ def resolve_redirect(title):
     wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
 
     def query_wikipedia(t):
-        params = {"action": "query", "titles": t, "redirects": 1, "format": "json"}
+        params = {"action": "query", "titles": t, "redirects": 1, "format": "json"}  # noqa: E501
         response = requests.get(wikipedia_api_url, params=params, timeout=5)
         return response.json()
 
@@ -77,7 +77,7 @@ def get_wiki_id_from_page(page_title):
         "redirects": "yes",
     }
     data = fetch_wikidata(params)
-    if isinstance(data, str) or "entities" not in data or len(data["entities"]) == 0:
+    if isinstance(data, str) or "entities" not in data or len(data["entities"]) == 0:  # noqa: E501
         return None
 
     entity_id = list(data["entities"].keys())[0]
@@ -105,7 +105,7 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth or death date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]
+    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]  # noqa: E501
 
     # Remove the '+' or '-' sign from the date string if present
     if date_str.startswith("-") or date_str.startswith("+"):
