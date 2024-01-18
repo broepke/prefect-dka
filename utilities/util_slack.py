@@ -135,30 +135,3 @@ def slack_notification(df, column_name, source_scraper, emoji):
         result = "No new companies."
 
     return result
-
-
-# def flow_completed_message(flow, flow_run, state):
-#     slack_webhook = SlackWebhook.load("slack-notifications")
-
-#     text_only_message = "The flow has completed successfully."
-#     emoji = ":white_check_mark:"
-
-#     message_block = [
-#         {
-#             "type": "section",
-#             "text": {
-#                 "type": "mrkdwn",
-#                 "text": emoji
-#                 + f" Prefect Flow: {flow} has completed run: {flow_run} in state: {state}. "  # noqa: E501
-#                 + emoji,  # noqa: E501
-#             },
-#         },
-#     ]
-
-#     result = send_incoming_webhook_message(
-#         slack_webhook=slack_webhook,
-#         text=text_only_message,
-#         slack_blocks=message_block,
-#     )
-
-#     return # result

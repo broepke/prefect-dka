@@ -71,7 +71,7 @@ def dead_pool_status_check():
         schema_name="PROD",
         table_name="PICKS",
         column_name="NAME, WIKI_PAGE, WIKI_ID, AGE",
-        conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024 AND WIKI_PAGE IS NOT NULL AND WIKI_ID IS NOT NULL LIMIT 2",  # noqa: E501
+        conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024 AND WIKI_PAGE IS NOT NULL AND WIKI_ID IS NOT NULL",  # noqa: E501
         return_list=False,
     )
 
