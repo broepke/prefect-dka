@@ -11,4 +11,4 @@ In this project I have a collection of utilities for running prefect along with 
 
 And more.  
  
-![prefect.png](Prefect Workflow Orchestration
+![Prefect Workflow Orchestration](prefect.png)
