@@ -18,3 +18,5 @@ prefect deployment build deadpool/deadpool_nndb.py:deadpool_nndb_date_updates \
     --work-queue default  \
     --apply \
     --skip-upload
+
+prefect deploy deadpool/deadpool.py:dead_pool_status_check
