@@ -13,6 +13,12 @@ And more.
  
 ![Prefect Workflow Orchestration](prefect.png)
 
-## Prefect and Docker
+## Prefect Managed Execution
 
-[https://docs.prefect.io/latest/guides/docker](https://docs.prefect.io/latest/guides/docker)
+Prefect Cloud can run your flows on your behalf with prefect:managed work pools. Flows run with this work pool do not require a worker or cloud provider account. Prefect handles the infrastructure and code execution for you.
+
+[https://docs.prefect.io/latest/guides/managed-execution/](https://docs.prefect.io/latest/guides/managed-execution/)
+
+## EC2 Execution
+
+There is a script in the EC2 folder which can be used for _User Data_ in EC2's **Launch Template** settings.

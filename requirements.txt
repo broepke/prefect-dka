@@ -1,5 +1,3 @@
-black
-pylint
 prefect
 prefect-snowflake
 prefect-shell
@@ -8,12 +6,5 @@ prefect-github
 prefect-aws
 asyncpg 
 s3fs
-pandas
-bs4
-tldextract
-pymongo
-python-whois
-fuzzywuzzy
-python-Levenshtein
 twilio
 snowflake-connector-python[pandas]

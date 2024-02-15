@@ -37,13 +37,6 @@ sudo -u prefect -i bash -c "pip install --user \
     prefect-slack \
     prefect-github \
     prefect-aws \
-    pandas \
-    bs4 \
-    tldextract \
-    pymongo \
-    python-whois \
-    fuzzywuzzy \
-    python-Levenshtein \
     twilio \
     snowflake-connector-python[pandas]"
 
