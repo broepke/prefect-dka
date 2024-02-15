@@ -22,3 +22,7 @@ Prefect Cloud can run your flows on your behalf with prefect:managed work pools.
 ## EC2 Execution
 
 There is a script in the EC2 folder which can be used for _User Data_ in EC2's **Launch Template** settings.
+
+## Docker
+
+There is a Docker file in the repo but this isn't being used.  There was testing to work with ECS but never fully got it running.
