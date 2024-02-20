@@ -90,7 +90,7 @@ def dead_pool_status_check():
         if wiki_id:
             wiki_id = wiki_id.strip()
 
-        hash1 = create_hash(name, wiki_page, wiki_id, age)
+        hash1 = create_hash(name, wiki_page, wiki_id, int(age))
 
         # Initialize variables to hold birth and death dates
         birth_date = None
@@ -162,13 +162,12 @@ def dead_pool_status_check():
                     arbiter_sms_message, sms_to_list, arbiter=True
                 )  # noqa: E501
 
-            hash2 = create_hash(name, wiki_page, wiki_id, age)
+            hash2 = create_hash(name, wiki_page, wiki_id, int(age))
 
             # If they're not dead yet, log that
             if birth_date and not death_date and hash1 != hash2:
-                name = name.replace("'", "''")
                 set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"  # noqa: E501
-                conditionals = f"WHERE name = '{name}'"
+                conditionals = f"WHERE WIKI_PAGE = '{wiki_page}'"
 
                 update_rows(
                     connection=connection,
