@@ -1,7 +1,9 @@
 """
 Wikipedia lookup tools
 """
+
 import requests
+from SPARQLWrapper import SPARQLWrapper, JSON
 from datetime import datetime
 
 
@@ -34,7 +36,12 @@ def resolve_redirect(title):
     wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
 
     def query_wikipedia(t):
-        params = {"action": "query", "titles": t, "redirects": 1, "format": "json"}  # noqa: E501
+        params = {
+            "action": "query",
+            "titles": t,
+            "redirects": 1,
+            "format": "json",
+        }  # noqa: E501
         response = requests.get(wikipedia_api_url, params=params, timeout=5)
         return response.json()
 
@@ -77,7 +84,11 @@ def get_wiki_id_from_page(page_title):
         "redirects": "yes",
     }
     data = fetch_wikidata(params)
-    if isinstance(data, str) or "entities" not in data or len(data["entities"]) == 0:  # noqa: E501
+    if (
+        isinstance(data, str)
+        or "entities" not in data
+        or len(data["entities"]) == 0  # noqa: E501
+    ):
         return None
 
     entity_id = list(data["entities"].keys())[0]
@@ -105,7 +116,11 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth or death date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"]["datavalue"]["value"]["time"]  # noqa: E501
+    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"][
+        "datavalue"
+    ]["value"][
+        "time"
+    ]  # noqa: E501
 
     # Remove the '+' or '-' sign from the date string if present
     if date_str.startswith("-") or date_str.startswith("+"):
@@ -122,3 +137,43 @@ def get_birth_death_date(identifier, entity_id):
         date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
 
     return date_obj
+
+
+def get_birth_death_date_sparql(entity_id):
+    """Fetches the birth and/or death dates of a given entity
+    from Wikidata using SPARQL.
+
+    Args:
+        entity_id (str): Wikidata entity ID.
+
+    Returns:
+        tuple: A tuple containing the birth date and death date as
+        datetime objects or None.
+    """
+    sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+
+    # Updated query to optionally match birth and death dates
+    query = f"""
+    SELECT ?birthDate ?deathDate
+    WHERE {{
+      OPTIONAL {{ wd:{entity_id} wdt:P569 ?birthDate. }}
+      OPTIONAL {{ wd:{entity_id} wdt:P570 ?deathDate. }}
+    }}
+    """
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    results = sparql.query().convert()
+
+    birth_date, death_date = None, None
+
+    for result in results["results"]["bindings"]:
+        if "birthDate" in result:
+            birth_date_str = result["birthDate"]["value"]
+            birth_date = datetime.strptime(birth_date_str, "%Y-%m-%dT%H:%M:%SZ")  # noqa: E501
+        if "deathDate" in result:
+            death_date_str = result["deathDate"]["value"]
+            death_date = datetime.strptime(death_date_str, "%Y-%m-%dT%H:%M:%SZ")  # noqa: E501
+
+    return birth_date, death_date

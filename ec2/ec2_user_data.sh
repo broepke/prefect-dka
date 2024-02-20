@@ -38,6 +38,7 @@ sudo -u prefect -i bash -c "pip install --user \
     prefect-github \
     prefect-aws \
     twilio \
+    SPARQLWrapper \
     snowflake-connector-python[pandas]"
 
 # Reload environment variables to reflect changes

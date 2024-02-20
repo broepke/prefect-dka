@@ -7,4 +7,5 @@ prefect-aws
 asyncpg 
 s3fs
 twilio
+SPARQLWrapper
 snowflake-connector-python[pandas]
