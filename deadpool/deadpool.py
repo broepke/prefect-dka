@@ -28,7 +28,7 @@ def create_hash(name, wiki_page, wiki_id, age):
     Returns:
         string: sha256 hash digest value
     """
-    combined_string = f"{name}{wiki_page}{wiki_id}{age}"
+    combined_string = f"{name}{wiki_page}{wiki_id}{int(age)}"
     return hashlib.md5(combined_string.encode()).hexdigest()
 
 
@@ -90,7 +90,7 @@ def dead_pool_status_check():
         if wiki_id:
             wiki_id = wiki_id.strip()
 
-        hash1 = create_hash(name, wiki_page, wiki_id, int(age))
+        hash1 = create_hash(name, wiki_page, wiki_id, age)
 
         # Initialize variables to hold birth and death dates
         birth_date = None
@@ -162,7 +162,7 @@ def dead_pool_status_check():
                     arbiter_sms_message, sms_to_list, arbiter=True
                 )  # noqa: E501
 
-            hash2 = create_hash(name, wiki_page, wiki_id, int(age))
+            hash2 = create_hash(name, wiki_page, wiki_id, age)
 
             # If they're not dead yet, log that
             if birth_date and not death_date and hash1 != hash2:
