@@ -31,7 +31,7 @@ def create_hash(name, wiki_page, wiki_id, age):
     """
     # Check if 'age' is NaN before converting and using it in the f-string
     if math.isnan(age):
-        age = 0 
+        age = 0
     else:
         age = int(age)
 
