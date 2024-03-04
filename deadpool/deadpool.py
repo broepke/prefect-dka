@@ -1,6 +1,7 @@
 """
 Script to look up a person's birth and death on Wikipedia
 """
+import math
 from datetime import datetime
 import urllib.parse
 import hashlib
@@ -28,7 +29,13 @@ def create_hash(name, wiki_page, wiki_id, age):
     Returns:
         string: sha256 hash digest value
     """
-    combined_string = f"{name}{wiki_page}{wiki_id}{int(age)}"
+    # Check if 'age' is NaN before converting and using it in the f-string
+    if math.isnan(age):
+        age = 0 
+    else:
+        age = int(age)
+
+    combined_string = f"{name}{wiki_page}{wiki_id}{age}"
     return hashlib.md5(combined_string.encode()).hexdigest()
 
 
