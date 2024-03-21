@@ -173,6 +173,7 @@ def dead_pool_status_check():
 
             # If they're not dead yet, log that
             if birth_date and not death_date and hash1 != hash2:
+                wiki_page = wiki_page.replace("'", "''")
                 set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"  # noqa: E501
                 conditionals = f"WHERE WIKI_PAGE = '{wiki_page}'"
 

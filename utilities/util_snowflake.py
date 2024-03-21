@@ -27,6 +27,7 @@ def create_table(connection, database_name, schema_name, table_name, DDL):
     with connection.cursor() as cursor:
         cursor.execute(statement)
 
+
 @task(name="Update Rows", timeout_seconds=15)
 def update_rows(
     connection,

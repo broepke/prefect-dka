@@ -124,12 +124,12 @@ def dead_pool_status_check():
     access_token = authenticate_to_wikipedia(username, password)
 
     wiki_pages = [
-        "Lee_Majors",
-        "Glynis_Johns",
-        "Jon_Anderson",
-        "Michael_York",
-        "Chen_Shui-bian",
-        "Jay_Stewart",
+        # "Lee_Majors",
+        # "Glynis_Johns",
+        # "Jon_Anderson",
+        # "Michael_York",
+        # "Chen_Shui-bian",
+        # "Jay_Stewart",
         # "Jerry_Kramer",
         # "Carl_XVI_Gustaf",
         # "Gene_Hackman",
@@ -186,7 +186,7 @@ def dead_pool_status_check():
         # "Violent_J",
         # "Dick_Van_Dyke",
         # "Tony_Dorsett",
-        # "Rosie_O%27Donnell",
+        "Rosie_O%27Donnell",
         # "Silvio_Berlusconi",
         # "Ryuichi_Sakamoto",
         # "Val_Kilmer",
