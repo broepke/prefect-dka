@@ -95,19 +95,19 @@ def get_wiki_id_from_page(page_title):
     return entity_id
 
 
-def get_birth_death_date(identifier, entity_id):
+def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
     """Get a birth or death data based
 
     Args:
-        identifier (str): Wiki Data ID
-        entity_id (str): P569 (birth) or P570 (death)
+        wikidata_prop_id (str): Property ID, eg.P569 (birth) or P570 (death)
+        wikidata_q_number (str): Wiki Data ID (Q Number) 
 
     Returns:
         datetime: Date of requested entitiy
     """
     params = {
         "action": "wbgetentities",
-        "ids": entity_id,
+        "ids": wikidata_q_number,
         "format": "json",
         "languages": "en",
     }
@@ -116,7 +116,7 @@ def get_birth_death_date(identifier, entity_id):
     data = fetch_wikidata(params)
 
     # Extract birth or death date
-    date_str = data["entities"][entity_id]["claims"][identifier][0]["mainsnak"][
+    date_str = data["entities"][wikidata_q_number]["claims"][wikidata_prop_id][0]["mainsnak"][
         "datavalue"
     ]["value"][
         "time"
