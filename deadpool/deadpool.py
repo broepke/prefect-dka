@@ -164,10 +164,10 @@ def dead_pool_status_check():
                 sms_message = f"{name} has died at the age {age}."
                 send_sms_via_api(sms_message, sms_to_list)
 
-                arbiter_sms_message = f"Insult the player about their pick {name} that died at the age {age}. Ensure the message is no more than 15 words.  When you calcuate the points be sure to use the formula (50 + (100-AGE))."  # noqa: E501
-                send_sms_via_api(
-                    arbiter_sms_message, sms_to_list, arbiter=True
-                )  # noqa: E501
+                # arbiter_sms_message = f"Insult the player about their pick {name} that died at the age {age}. Ensure the message is no more than 15 words.  When you calcuate the points be sure to use the formula (50 + (100-AGE))."  # noqa: E501
+                # send_sms_via_api(
+                #     arbiter_sms_message, sms_to_list, arbiter=True
+                # )  # noqa: E501
 
             hash2 = create_hash(name, wiki_page, wiki_id, age)
 
