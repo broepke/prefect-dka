@@ -71,10 +71,10 @@ def dead_pool_status_check():
 
     connection = get_snowflake_connection("snowflake-dka")
 
-    name = "Rosie O’Donnel"
-    wiki_page = "Rosie_O%27Donnell"
-    wiki_id = "Q272929"
-    age = 61
+    name = """Jake “the snake” Roberts"""
+    wiki_page = "Jake_Roberts"
+    wiki_id = "Q919492"
+    age = 69
 
     # Strip leading and trailing spaces just in case there are in the DB
     name = name.strip()
