@@ -31,7 +31,7 @@ sudo yum install -y git
 sudo -u prefect -i bash -c "pip install --user \
     asyncpg \
     s3fs \
-    prefect \
+    prefect==2.20.6 \
     prefect-snowflake \
     prefect-shell \
     prefect-slack \
@@ -59,7 +59,7 @@ Description=Prefect Agent
 [Service]
 User=prefect
 WorkingDirectory=/home/prefect
-ExecStart=/home/prefect/.local/bin/prefect agent start --work-queue "default"
+ExecStart=/home/prefect/.local/bin/prefect agent start --pool "default-agent-pool" --work-queue "default"
 Restart=always
 
 [Install]

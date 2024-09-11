@@ -6,7 +6,7 @@ if __name__ == "__main__":
         entrypoint="deadpool/deadpool.py:dead_pool_status_check",
     ).deploy(
         name="deadpool-managed",
-        work_pool_name="my-managed-pool",
+        work_pool_name="dka-managed-pool",
         job_variables={
             "pip_packages": [
                 "prefect",
