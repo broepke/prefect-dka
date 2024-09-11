@@ -4,6 +4,7 @@ prefect-shell
 prefect-slack
 prefect-github
 prefect-aws
+prefect[docker]
 asyncpg 
 s3fs
 twilio
