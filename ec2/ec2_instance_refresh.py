@@ -3,7 +3,7 @@ from prefect import flow
 from prefect_shell import ShellOperation
 
 
-@flow(name="Refresh EC2 Instances")
+@flow(name="Refresh EC2 Instances", retries=3, retry_delay_seconds=30)
 def refresh_instances():
     """
     Refresh EC2 Instances On a Schedule Set in Prefect

@@ -62,7 +62,7 @@ def get_age(b_date, d_date):
     return age
 
 
-@flow(name="Verify Deadpool Alive or Dead and Age")
+@flow(name="Verify Deadpool Alive or Dead and Age", retries=3, retry_delay_seconds=30)
 def dead_pool_status_check():
     """Main Flow Logic"""
     logger = get_run_logger()

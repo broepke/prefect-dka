@@ -33,7 +33,7 @@ def get_age(b_date, d_date):
     return age
 
 
-@flow(name="Add Dates to NNDB")
+@flow(name="Add Dates to NNDB", retries=3, retry_delay_seconds=30)
 def deadpool_nndb_date_updates():
     """Main Flow Logic"""
     logger = get_run_logger()
