@@ -196,6 +196,7 @@ def dead_pool_status_check():
 
 
 if __name__ == "__main__":
+    # dead_pool_status_check()
     dead_pool_status_check.deploy(
         name="deadpool-ecs-deployment",
         work_pool_name="dka-ecs-pool",
