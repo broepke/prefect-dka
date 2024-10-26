@@ -8,5 +8,6 @@ prefect[docker]
 asyncpg 
 s3fs
 twilio
+sendgrid
 SPARQLWrapper
 snowflake-connector-python[pandas]
