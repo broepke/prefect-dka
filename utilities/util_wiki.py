@@ -5,6 +5,7 @@ Wikipedia lookup tools
 import time
 import requests
 from functools import lru_cache
+from prefect import get_run_logger
 from SPARQLWrapper import SPARQLWrapper, JSON
 from datetime import datetime
 
@@ -20,6 +21,8 @@ def fetch_wikidata(params, retries=3, delay=2):
     Returns:
         dict: JSON response from the API, or None if all retries fail.
     """
+    logger = get_run_logger()
+    
     for attempt in range(retries):
         try:
             response = requests.get(
@@ -28,10 +31,10 @@ def fetch_wikidata(params, retries=3, delay=2):
             response.raise_for_status()  # Raise an error for HTTP issues
             return response.json()
         except (requests.exceptions.RequestException, ValueError) as e:
-            print(f"Attempt {attempt + 1} failed: {e}")
+            logger.info("Attempt %s failed: %s", attempt + 1, e)
             time.sleep(delay)  # Wait before retrying
 
-    print("All retries failed.")
+    logger.info("All retries failed.")
     return None  # Return None if all retries fail
 
 
@@ -44,6 +47,7 @@ def resolve_redirect(title):
     Returns:
         str: Fully resolved title
     """
+    
     wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
 
     def query_wikipedia(t):
@@ -121,23 +125,25 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
         "format": "json",
         "languages": "en",
     }
+    
+    logger = get_run_logger()
 
     data = fetch_wikidata(params)
 
     if not data or "entities" not in data or wikidata_q_number not in data["entities"]:
-        print(f"Invalid data for {wikidata_q_number}.")
+        logger.info("Invalid data for %s.", wikidata_q_number)
         return None
 
     try:
         claims = data["entities"][wikidata_q_number]["claims"]
         if wikidata_prop_id not in claims:
-            print(f"Property {wikidata_prop_id} not found for {wikidata_q_number}.")
+            logger.info("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
             return None
 
         date_str = claims[wikidata_prop_id][0]["mainsnak"]["datavalue"]["value"]["time"]
     except (KeyError, IndexError, TypeError) as e:
-        print(f"Error accessing data: {e}")
-        print(f"Data received: {data}")
+        logger.info("Error accessing data: %s", e)
+        logger.info("Data received: %s", data)
         return None
 
     if date_str.startswith("-") or date_str.startswith("+"):
@@ -151,7 +157,7 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
         else:
             date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
     except ValueError as e:
-        print(f"Error parsing date: {e}")
+        logger.info("Error parsing date: %s", e)
         return None
 
     return date_obj
