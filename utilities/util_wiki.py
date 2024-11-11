@@ -31,10 +31,10 @@ def fetch_wikidata(params, retries=3, delay=2):
             response.raise_for_status()  # Raise an error for HTTP issues
             return response.json()
         except (requests.exceptions.RequestException, ValueError) as e:
-            logger.info("Attempt %s failed: %s", attempt + 1, e)
+            logger.error("Attempt %s failed: %s", attempt + 1, e)
             time.sleep(delay)  # Wait before retrying
 
-    logger.info("All retries failed.")
+    logger.warning("All retries failed.")
     return None  # Return None if all retries fail
 
 
@@ -131,18 +131,18 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
     data = fetch_wikidata(params)
 
     if not data or "entities" not in data or wikidata_q_number not in data["entities"]:
-        logger.info("Invalid data for %s.", wikidata_q_number)
+        logger.warning("Invalid data for %s.", wikidata_q_number)
         return None
 
     try:
         claims = data["entities"][wikidata_q_number]["claims"]
         if wikidata_prop_id not in claims:
-            logger.info("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
+            logger.warning("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
             return None
 
         date_str = claims[wikidata_prop_id][0]["mainsnak"]["datavalue"]["value"]["time"]
     except (KeyError, IndexError, TypeError) as e:
-        logger.info("Error accessing data: %s", e)
+        logger.warning("Error accessing data: %s", e)
         logger.info("Data received: %s", data)
         return None
 
@@ -157,7 +157,7 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
         else:
             date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
     except ValueError as e:
-        logger.info("Error parsing date: %s", e)
+        logger.error("Error parsing date: %s", e)
         return None
 
     return date_obj
