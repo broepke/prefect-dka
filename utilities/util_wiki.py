@@ -137,7 +137,7 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
     try:
         claims = data["entities"][wikidata_q_number]["claims"]
         if wikidata_prop_id not in claims:
-            logger.warning("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
+            logger.info("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
             return None
 
         date_str = claims[wikidata_prop_id][0]["mainsnak"]["datavalue"]["value"]["time"]
