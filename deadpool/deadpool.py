@@ -73,19 +73,20 @@ def dead_pool_status_check():
 
     # Get the full list of people to check
     # This will skip any person that doesn't have either wiki page or id
-    # and ski anyone who's already dead to avoid processing unknown people
+    # and skip anyone who's already dead to avoid processing unknown people
     names_to_check = get_existing_values(
         connection,
         database_name="DEADPOOL",
         schema_name="PROD",
-        table_name="PICKS",
-        column_name="NAME, WIKI_PAGE, WIKI_ID, AGE",
-        conditionals="WHERE DEATH_DATE IS NULL AND YEAR = 2024 AND (WIKI_PAGE IS NOT NULL OR WIKI_ID IS NOT NULL)",  # noqa: E501
+        table_name="PICKS_CURRENT_YEAR",
+        column_name="ID, NAME, WIKI_PAGE, WIKI_ID, AGE",
+        conditionals="WHERE DEATH_DATE IS NULL AND (WIKI_PAGE IS NOT NULL OR WIKI_ID IS NOT NULL)",
         return_list=False,
     )
 
     # Iterate over the list of links to update and build the final DF
     for index, row in names_to_check.iterrows():
+        people_id = row["ID"]
         name = row["NAME"]
         wiki_page = row["WIKI_PAGE"]
         wiki_id = row["WIKI_ID"]
@@ -135,13 +136,13 @@ def dead_pool_status_check():
                 logger.info("Death Date (datetime object): %s", death_date)
 
                 name = name.replace("'", "''")
-                set_string = f"""SET BIRTH_DATE = '{birth_date}', DEATH_DATE = '{death_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"""  # noqa: E501
-                conditionals = f"""WHERE name = '{name}'"""
+                set_string = f"""SET BIRTH_DATE = '{birth_date}', DEATH_DATE = '{death_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"""
+                conditionals = f"""WHERE id = '{people_id}'"""
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",
                     schema_name="PROD",
-                    table_name="PICKS",
+                    table_name="PEOPLE",
                     set_string=set_string,
                     conditionals=conditionals,
                 )
@@ -166,24 +167,19 @@ def dead_pool_status_check():
                 sms_message = f"{name} has died at the age {age}."
                 send_sms_via_api(sms_message, sms_to_list)
 
-                # arbiter_sms_message = f"Insult the player about their pick {name} that died at the age {age}. Ensure the message is no more than 15 words.  When you calcuate the points be sure to use the formula (50 + (100-AGE))."  # noqa: E501
-                # send_sms_via_api(
-                #     arbiter_sms_message, sms_to_list, arbiter=True
-                # )  # noqa: E501
-
             hash2 = create_hash(name, wiki_page, wiki_id, age)
 
             # If they're not dead yet, log that
             if birth_date and not death_date and hash1 != hash2:
                 wiki_page = wiki_page.replace("'", "''")
-                set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"  # noqa: E501
+                set_string = f"SET BIRTH_DATE = '{birth_date}', AGE = {age}, WIKI_ID = '{wiki_id}'"
                 conditionals = f"WHERE WIKI_PAGE = '{wiki_page}'"
 
                 update_rows(
                     connection=connection,
                     database_name="DEADPOOL",
                     schema_name="PROD",
-                    table_name="PICKS",
+                    table_name="PEOPLE",
                     set_string=set_string,
                     conditionals=conditionals,
                 )
