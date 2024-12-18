@@ -1,18 +1,22 @@
 """
 General Twilio and SMS sending utilities
 """
+
+from prefect import task
 from twilio.rest import Client
 from prefect.blocks.notifications import TwilioSMS
 from prefect.blocks.system import Secret
 from utilities.util_apify import the_arbiter
 
 
+@task(name="Send Simple SMS Message")
 def send_sms_via_prefect(message):
     twilio_webhook_block = TwilioSMS.load("twilio-dka", validate=False)
     twilio_webhook_block.to_phone_numbers = ["+14155479222"]
     twilio_webhook_block.notify(message)
 
 
+@task(name="Send SMS Messages to Opt In List")
 def send_sms_via_api(message_text, distro_list, arbiter=False):
     """Send and SMS via Twillio to a list of numbers
 

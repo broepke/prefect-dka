@@ -1,4 +1,5 @@
 """General FX-Data Wragling Functions"""
+
 from prefect import task, get_run_logger
 from fuzzywuzzy import fuzz
 import ast
@@ -26,6 +27,7 @@ def dedupe_dataframe(list_of_titles, df, column_name):
     return filtered_df
 
 
+@task(name="Fuzzy Match Name")
 def has_fuzzy_match(value, value_set, threshold=92):
     """_summary_
 
@@ -48,7 +50,7 @@ def convert_names(names):
     return set(names_list)
 
 
-# TODO: Add Docstring and comments as to what each block of code does
+@task(name="Deduplicate Data Frame")
 def dedupe_and_validate(df, fx_df):
     """_summary_
 

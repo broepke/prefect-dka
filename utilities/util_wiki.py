@@ -8,8 +8,10 @@ from functools import lru_cache
 from prefect import get_run_logger
 from SPARQLWrapper import SPARQLWrapper, JSON
 from datetime import datetime
+from prefect import task
 
 
+@task(name="Fetch Wiki Data")
 def fetch_wikidata(params, retries=3, delay=2):
     """Fetch Wikidata with retries on failure.
 
@@ -22,7 +24,7 @@ def fetch_wikidata(params, retries=3, delay=2):
         dict: JSON response from the API, or None if all retries fail.
     """
     logger = get_run_logger()
-    
+
     for attempt in range(retries):
         try:
             response = requests.get(
@@ -38,6 +40,7 @@ def fetch_wikidata(params, retries=3, delay=2):
     return None  # Return None if all retries fail
 
 
+@task(name="Resolve Wiki Page Redirects")
 def resolve_redirect(title):
     """Function to assist when Wiki Pages have 1-n redirects
 
@@ -47,7 +50,7 @@ def resolve_redirect(title):
     Returns:
         str: Fully resolved title
     """
-    
+
     wikipedia_api_url = "https://en.wikipedia.org/w/api.php"
 
     def query_wikipedia(t):
@@ -80,6 +83,7 @@ def resolve_redirect(title):
     return final_title
 
 
+@task(name="Get Wiki ID from Page")
 def get_wiki_id_from_page(page_title):
     """Function to get the Wikidata ID from a Wikipedia page title
 
@@ -125,7 +129,7 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
         "format": "json",
         "languages": "en",
     }
-    
+
     logger = get_run_logger()
 
     data = fetch_wikidata(params)
@@ -137,7 +141,9 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
     try:
         claims = data["entities"][wikidata_q_number]["claims"]
         if wikidata_prop_id not in claims:
-            logger.info("Property %s not found for %s.", wikidata_prop_id, wikidata_q_number)
+            logger.info(
+                "Property %s not found for %s.", wikidata_prop_id, wikidata_q_number
+            )
             return None
 
         date_str = claims[wikidata_prop_id][0]["mainsnak"]["datavalue"]["value"]["time"]
@@ -163,6 +169,7 @@ def get_birth_death_date(wikidata_prop_id, wikidata_q_number):
     return date_obj
 
 
+@task(name="Get Birth and Death Date via SQARQL")
 def get_birth_death_date_sparql(entity_id):
     """Fetches the birth and/or death dates of a given entity
     from Wikidata using SPARQL.

@@ -1,13 +1,15 @@
 """
 Utilities for working with Domains
 """
+
 import requests
 import tldextract
 import whois
 import hashlib
-import numpy as np
+from prefect import task
 
 
+@task(name="Extract Domain Name")
 def extract_domain(url):
     """Utility to extrac the domain name from a URL
 
@@ -24,6 +26,7 @@ def extract_domain(url):
         return None
 
 
+@task(name="Follow URL Redirects")
 def follow_redirects(url):
     """Checks the redirect chain until it reaches the final URL
 
@@ -49,6 +52,7 @@ def follow_redirects(url):
     return url
 
 
+@task(name="Check Website HTTP Status Code")
 def check_website_status(url):
     """Return HTTP status code for a given URL
 
@@ -65,6 +69,7 @@ def check_website_status(url):
         return 0  # URL is not active
 
 
+@task(name="Check for Parked Domain")
 def is_domain_parked(url):
     """Requests the site and reads the page to look for certain keywords
     that might indicate a parked domain. See: http://python.is
@@ -92,6 +97,7 @@ def is_domain_parked(url):
         return False  # Error occurred while fetching the webpage
 
 
+@task(name="Check WHOIS")
 def check_whois_info(domain):
     """Runs WHOIS and returns registration information
 
@@ -156,6 +162,7 @@ def check_whois_info(domain):
         }
 
 
+@task(name="Check for Homepage Updates")
 def check_homepage_for_updates(url):
     """_summary_
 

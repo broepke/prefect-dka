@@ -19,6 +19,7 @@ from utilities.util_wiki import get_birth_death_date
 
 
 # Function to create a hash from given variables
+@task(name="Create Hash")
 def create_hash(name, wiki_page, wiki_id, age):
     """Creat a hash digest from a given set of strings
 

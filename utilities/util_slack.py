@@ -1,6 +1,7 @@
 """Functions for Interacting with Slack"""
 
 import asyncio
+from prefect import task
 from prefect_slack import SlackWebhook
 from prefect_slack.messages import send_incoming_webhook_message
 
@@ -13,6 +14,7 @@ async def send_message(slack_webhook, text_only_message, message_block):
     )
 
 
+@task(name="Slack Notification for Bad Wiki Page")
 def bad_wiki_page(person, wiki_page, emoji):
     """Deadpool Slack notifcation
 
@@ -46,6 +48,7 @@ def bad_wiki_page(person, wiki_page, emoji):
     )  # Run the async function
 
 
+@task(name="Slack Notification for Death")
 def death_notification(person, birth_date, death_date, age, emoji):
     """Deadpool Slack notifcation
 
