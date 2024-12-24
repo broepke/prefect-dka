@@ -2,6 +2,7 @@
 from prefect import task, get_run_logger
 from prefect_snowflake.database import SnowflakeConnector
 from snowflake.connector.pandas_tools import write_pandas
+from prefect.cache_policies import NONE
 
 
 @task(name="Create Snowflake Connection")
@@ -12,7 +13,7 @@ def get_snowflake_connection(block_name):
     return connection
 
 
-@task(name="Create Table in Snowflake")
+@task(name="Create Table in Snowflake", cache_policy=NONE)
 def create_table(connection, database_name, schema_name, table_name, DDL):
     """Creates the required table as needed
 
@@ -28,7 +29,7 @@ def create_table(connection, database_name, schema_name, table_name, DDL):
         cursor.execute(statement)
 
 
-@task(name="Update Rows", timeout_seconds=15)
+@task(name="Update Rows", timeout_seconds=15, cache_policy=NONE)
 def update_rows(
     connection,
     database_name,
@@ -59,7 +60,7 @@ def update_rows(
     return
 
 
-@task(name="Query Snowflake and Return Exsisting Values")
+@task(name="Query Snowflake and Return Exsisting Values", cache_policy=NONE)
 def get_existing_values(
     connection,
     database_name,
@@ -101,7 +102,7 @@ def get_existing_values(
         return df
 
 
-@task(name="Write Dataframe to Snowflake")
+@task(name="Write Dataframe to Snowflake", cache_policy=NONE)
 def write_dataframe(connection,
                     database_name,
                     schema_name,
