@@ -192,16 +192,36 @@ def dead_pool_status_check():
             logger.info("No valid wiki page for %s", name)
 
 
+# ECS Workplool - Currently broken
+# if __name__ == "__main__":
+#     dead_pool_status_check.deploy(
+#         name="deadpool-ecs-deployment",
+#         work_pool_name="dka-ecs-pool",
+#         work_queue_name="dka-ecs-queue",
+#         cron="0 17 * * *",
+#         build=True,
+#         push=True,
+#         image=DockerImage(
+#             name="222975130657.dkr.ecr.us-east-1.amazonaws.com/prefect-flows:latest",
+#             platform="linux/amd64",
+#         ),
+#     )
+
+# Local Testing
 if __name__ == "__main__":
     dead_pool_status_check()
-    # dead_pool_status_check.deploy(
-    #     name="deadpool-ecs-deployment",
-    #     work_pool_name="dka-ecs-pool",
-    #     cron="0 17 * * *",
-    #     build=True,
-    #     push=True,
-    #     image=DockerImage(
-    #         name="222975130657.dkr.ecr.us-east-1.amazonaws.com/prefect-flows:latest",
-    #         platform="linux/amd64",
-    #     ),
-    # )
+    
+# Prefect Managed Work Pool
+# if __name__ == "__main__":
+#     dead_pool_status_check.from_source(
+#         source="https://github.com/broepke/prefect-dka.git",
+#         entrypoint="deadpool/deadpool.py:dead_pool_status_check",
+#     ).deploy(
+#         name="deadpool-managed-deployment",
+#         work_pool_name="dka-managed-pool",
+#         work_queue_name="dka-managed-queue",
+#         job_variables={"pip_packages": ["prefect-snowflake", "prefect-slack", "prefect-github", "prefect-aws", "twilio", "sendgrid", "snowflake-connector-python[pandas]"]},
+#         cron="0 17 * * *",
+#     )
+    
+
