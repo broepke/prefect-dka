@@ -193,15 +193,15 @@ def dead_pool_status_check():
 
 
 if __name__ == "__main__":
-    # dead_pool_status_check()
-    dead_pool_status_check.deploy(
-        name="deadpool-ecs-deployment",
-        work_pool_name="dka-ecs-pool",
-        cron="0 17 * * *",
-        build=True,
-        push=True,
-        image=DockerImage(
-            name="222975130657.dkr.ecr.us-east-1.amazonaws.com/prefect-flows:latest",
-            platform="linux/amd64",
-        ),
-    )
+    dead_pool_status_check()
+    # dead_pool_status_check.deploy(
+    #     name="deadpool-ecs-deployment",
+    #     work_pool_name="dka-ecs-pool",
+    #     cron="0 17 * * *",
+    #     build=True,
+    #     push=True,
+    #     image=DockerImage(
+    #         name="222975130657.dkr.ecr.us-east-1.amazonaws.com/prefect-flows:latest",
+    #         platform="linux/amd64",
+    #     ),
+    # )
