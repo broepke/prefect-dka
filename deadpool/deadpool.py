@@ -7,7 +7,7 @@ from datetime import datetime
 import urllib.parse
 import hashlib
 from prefect import task, flow, get_run_logger
-from prefect.docker import DockerImage
+# from prefect.docker import DockerImage
 from utilities.util_slack import death_notification
 from utilities.util_slack import bad_wiki_page
 from utilities.util_snowflake import get_existing_values
