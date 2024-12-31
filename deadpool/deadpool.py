@@ -192,6 +192,34 @@ def dead_pool_status_check():
             logger.info("No valid wiki page for %s", name)
 
 
+# Prefect Managed Work Pool
+if __name__ == "__main__":
+    dead_pool_status_check.from_source(
+        source="https://github.com/broepke/prefect-dka.git",
+        entrypoint="deadpool/deadpool.py:dead_pool_status_check",
+    ).deploy(
+        name="deadpool-managed-deployment",
+        work_pool_name="dka-managed-pool",
+        work_queue_name="dka-managed-queue",
+        job_variables={
+            "pip_packages": [
+                "prefect[docker]",
+                "prefect-snowflake",
+                "prefect-shell",
+                "prefect-slack",
+                "prefect-github",
+                "prefect-aws",
+                "asyncpg",
+                "twilio",
+                "sendgrid",
+                "SPARQLWrapper",
+                "snowflake-connector-python[pandas]",
+            ],
+            "env": {"PREFECT_LOGGING_LEVEL": "ERROR"},
+        },
+        cron="0 17 * * *",
+    )
+
 # ECS Workplool - Currently broken
 # if __name__ == "__main__":
 #     dead_pool_status_check.deploy(
@@ -210,31 +238,3 @@ def dead_pool_status_check():
 # Local Testing
 # if __name__ == "__main__":
 #     dead_pool_status_check()
-
-# Prefect Managed Work Pool
-if __name__ == "__main__":
-    dead_pool_status_check.from_source(
-        source="https://github.com/broepke/prefect-dka.git",
-        entrypoint="deadpool/deadpool.py:dead_pool_status_check",
-    ).deploy(
-        name="deadpool-managed-deployment",
-        work_pool_name="dka-managed-pool",
-        work_queue_name="dka-managed-queue",
-        job_variables={
-            "pip_packages": [
-                "prefect[docker]",
-                "prefect-snowflake",
-                "prefect-shell",
-                "prefect-slack",
-                "prefect-github",
-                "prefect-aws",                
-                "asyncpg",
-                "twilio",
-                "sendgrid",
-                "SPARQLWrapper",
-                "snowflake-connector-python[pandas]",
-            ],
-            "env": {"PREFECT_LOGGING_LEVEL": "ERROR"},
-        },
-        cron="0 17 * * *",
-    )
