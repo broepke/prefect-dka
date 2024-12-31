@@ -1,13 +1,10 @@
-prefect
+prefect[docker]
 prefect-snowflake
 prefect-shell
 prefect-slack
 prefect-github
 prefect-aws
-prefect-docker
-prefect[docker]
 asyncpg 
-s3fs
 twilio
 sendgrid
 SPARQLWrapper

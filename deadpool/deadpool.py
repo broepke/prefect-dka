@@ -222,16 +222,13 @@ if __name__ == "__main__":
         work_queue_name="dka-managed-queue",
         job_variables={
             "pip_packages": [
-                "prefect",
+                "prefect[docker]",
                 "prefect-snowflake",
                 "prefect-shell",
                 "prefect-slack",
                 "prefect-github",
-                "prefect-aws",
-                "prefect-docker",
-                "prefect[docker]",
+                "prefect-aws",                
                 "asyncpg",
-                "s3fs",
                 "twilio",
                 "sendgrid",
                 "SPARQLWrapper",
